@@ -1,0 +1,30 @@
+C:\Users\Victor Hugo\Downloads\Crownfunding\Crownfunding Proyecto\Crownfunding Proyecto\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\Victor Hugo\Downloads\Crownfunding\Crownfunding Proyecto\Crownfunding Proyecto\bin\Debug\net6.0\appsettings.json
+C:\Users\Victor Hugo\Downloads\Crownfunding\Crownfunding Proyecto\Crownfunding Proyecto\bin\Debug\net6.0\Crownfunding Proyecto.staticwebassets.runtime.json
+C:\Users\Victor Hugo\Downloads\Crownfunding\Crownfunding Proyecto\Crownfunding Proyecto\bin\Debug\net6.0\Crownfunding Proyecto.exe
+C:\Users\Victor Hugo\Downloads\Crownfunding\Crownfunding Proyecto\Crownfunding Proyecto\bin\Debug\net6.0\Crownfunding Proyecto.deps.json
+C:\Users\Victor Hugo\Downloads\Crownfunding\Crownfunding Proyecto\Crownfunding Proyecto\bin\Debug\net6.0\Crownfunding Proyecto.runtimeconfig.json
+C:\Users\Victor Hugo\Downloads\Crownfunding\Crownfunding Proyecto\Crownfunding Proyecto\bin\Debug\net6.0\Crownfunding Proyecto.dll
+C:\Users\Victor Hugo\Downloads\Crownfunding\Crownfunding Proyecto\Crownfunding Proyecto\bin\Debug\net6.0\Crownfunding Proyecto.pdb
+C:\Users\Victor Hugo\Downloads\Crownfunding\Crownfunding Proyecto\Crownfunding Proyecto\obj\Debug\net6.0\Crownfunding Proyecto.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Victor Hugo\Downloads\Crownfunding\Crownfunding Proyecto\Crownfunding Proyecto\obj\Debug\net6.0\Crownfunding Proyecto.AssemblyInfoInputs.cache
+C:\Users\Victor Hugo\Downloads\Crownfunding\Crownfunding Proyecto\Crownfunding Proyecto\obj\Debug\net6.0\Crownfunding Proyecto.AssemblyInfo.cs
+C:\Users\Victor Hugo\Downloads\Crownfunding\Crownfunding Proyecto\Crownfunding Proyecto\obj\Debug\net6.0\Crownfunding Proyecto.csproj.CoreCompileInputs.cache
+C:\Users\Victor Hugo\Downloads\Crownfunding\Crownfunding Proyecto\Crownfunding Proyecto\obj\Debug\net6.0\Crownfunding Proyecto.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Victor Hugo\Downloads\Crownfunding\Crownfunding Proyecto\Crownfunding Proyecto\obj\Debug\net6.0\Crownfunding Proyecto.RazorAssemblyInfo.cache
+C:\Users\Victor Hugo\Downloads\Crownfunding\Crownfunding Proyecto\Crownfunding Proyecto\obj\Debug\net6.0\Crownfunding Proyecto.RazorAssemblyInfo.cs
+C:\Users\Victor Hugo\Downloads\Crownfunding\Crownfunding Proyecto\Crownfunding Proyecto\obj\Debug\net6.0\staticwebassets\msbuild.Crownfunding Proyecto.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\Victor Hugo\Downloads\Crownfunding\Crownfunding Proyecto\Crownfunding Proyecto\obj\Debug\net6.0\staticwebassets\msbuild.build.Crownfunding Proyecto.props
+C:\Users\Victor Hugo\Downloads\Crownfunding\Crownfunding Proyecto\Crownfunding Proyecto\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Crownfunding Proyecto.props
+C:\Users\Victor Hugo\Downloads\Crownfunding\Crownfunding Proyecto\Crownfunding Proyecto\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Crownfunding Proyecto.props
+C:\Users\Victor Hugo\Downloads\Crownfunding\Crownfunding Proyecto\Crownfunding Proyecto\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Users\Victor Hugo\Downloads\Crownfunding\Crownfunding Proyecto\Crownfunding Proyecto\obj\Debug\net6.0\staticwebassets.build.json
+C:\Users\Victor Hugo\Downloads\Crownfunding\Crownfunding Proyecto\Crownfunding Proyecto\obj\Debug\net6.0\staticwebassets.development.json
+C:\Users\Victor Hugo\Downloads\Crownfunding\Crownfunding Proyecto\Crownfunding Proyecto\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\Victor Hugo\Downloads\Crownfunding\Crownfunding Proyecto\Crownfunding Proyecto\obj\Debug\net6.0\scopedcss\bundle\Crownfunding Proyecto.styles.css
+C:\Users\Victor Hugo\Downloads\Crownfunding\Crownfunding Proyecto\Crownfunding Proyecto\obj\Debug\net6.0\scopedcss\projectbundle\Crownfunding Proyecto.bundle.scp.css
+C:\Users\Victor Hugo\Downloads\Crownfunding\Crownfunding Proyecto\Crownfunding Proyecto\obj\Debug\net6.0\Crownfunding Proyecto.dll
+C:\Users\Victor Hugo\Downloads\Crownfunding\Crownfunding Proyecto\Crownfunding Proyecto\obj\Debug\net6.0\refint\Crownfunding Proyecto.dll
+C:\Users\Victor Hugo\Downloads\Crownfunding\Crownfunding Proyecto\Crownfunding Proyecto\obj\Debug\net6.0\Crownfunding Proyecto.pdb
+C:\Users\Victor Hugo\Downloads\Crownfunding\Crownfunding Proyecto\Crownfunding Proyecto\obj\Debug\net6.0\Crownfunding Proyecto.genruntimeconfig.cache
+C:\Users\Victor Hugo\Downloads\Crownfunding\Crownfunding Proyecto\Crownfunding Proyecto\obj\Debug\net6.0\ref\Crownfunding Proyecto.dll
