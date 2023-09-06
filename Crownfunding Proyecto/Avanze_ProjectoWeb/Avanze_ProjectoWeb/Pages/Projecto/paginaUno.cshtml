@@ -1,0 +1,370 @@
+﻿@page
+@model Avanze_ProjectoWeb.Pages.Projecto.paginaUnoModel
+@{
+	   ViewData["Title"] = "Crear una campaña";
+        List<string> ApoyosDisponibles = new List<string>
+    {
+        "Asesoramiento y mentoría",
+        "Recursos físicos",
+        "Red de contactos",
+        "Capacitación",
+        "Acceso a datos o información",
+        "Apoyo técnico",
+        "Compartir experiencias",
+        "Promoción",
+        "Coaching en habilidades de presentación",
+        "Acceso a recursos financieros no monetarios",
+        "Orientación sobre la estrategia de negocios",
+        "Tiempo y apoyo voluntario",
+        "Reconocimiento y visibilidad"
+    };
+}
+ 
+ 
+<div class="container text-left">
+    <h1>Crear una campaña</h1>
+    <h3>Presentación del proyecto</h3>
+
+    <form method="post" enctype="multipart/form-data" onsubmit="return validarFormulario()">
+        <div class="row">
+            <div class="col-md-6">
+                <p>Escribe un título y un subtítulo de forma clara y concisa para transmitir rápidamente la esencia de tu proyecto. Ambos aparecerán tanto en la página del proyecto como en la de prelanzamiento. También los verán los posibles patrocinadores si tu proyecto aparece en las páginas de la categoría, en los resultados de búsqueda o en los correos electrónicos que enviamos a nuestra comunidad.</p>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="Titulo">Título</label>
+                    <input asp-for="In.Titulo" type="text" class="form-control" id="Titulo" name="Titulo" placeholder="Escribe el título aquí" required="true">
+                      <span asp-validation-for="In.Titulo" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                   
+                
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="DescripcionGeneral">Descripción General</label>
+                    <textarea asp-for="In.DescripcionGeneral"class="form-control" id="DescripcionGeneral" name="DescripcionGeneral" rows="6" placeholder="Escribe una descripción general aquí"></textarea>
+                          <span asp-validation-for="In.DescripcionGeneral" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <br />
+         
+          <div class="container mt-4">
+            <h1>Lista de Apoyos</h1>
+
+            <!-- Botones para agregar apoyos -->
+            <div class="btn-group">
+    @foreach (var apoyo in ApoyosDisponibles)
+    {
+        <button class="btn btn-primary" type="button" onclick="agregarApoyo('@apoyo')">@apoyo</button>
+    }
+</div>
+
+            <!-- Elemento donde se mostrarán los apoyos requeridos -->
+            <div class="mt-3">
+                <h2>Apoyos Requeridos</h2>
+                <ul id="apoyosRequeridos" class="list-group">
+                    <!-- Los apoyos requeridos se agregarán aquí mediante JavaScript -->
+                </ul>
+            </div>
+        </div>
+
+        <!--primera parte -->
+        <button type="" class="btn btn-success">Ir a la siguiente sección</button>
+
+
+        <div class="form-group text-left">
+            <h1>Presenta tu proyecto</h1>
+            <p>Cuéntale a las personas por qué deberían entusiasmarse con tu proyecto. Sé específico y a la vez claro y conciso.</p>
+        </div>
+
+        <div class="form-group text-left">
+            <h3>Misión del creador de la campaña</h3>
+            <h4>• ¿Cuál es el plan para tu proyecto y en qué margen de tiempo?</h4>
+            <p>Establece un cronograma claro y específico para los patrocinadores.</p>
+        </div>
+
+        <div class="form-group text-left">
+            <h4>• ¿Qué objetivo tienes?</h4>
+            <p>Una simple explicacion sobre las metas que tienes  y que tienes la capacidad de alcanzarlas, es decir, eres una persona trabajadora que usará el apoyo de los patrocinadores.</p>
+        </div>
+
+        <div class="form-group text-left">
+            <h4>• ¿Por qué este proyecto?</h4>
+            <p>Transmite tu entusiasmo sobre el proyecto a la gente, hazles sentir tu compromiso de llevarlo a cabo.</p>
+        </div>
+
+        <!-- Aquí puedes agregar un elemento para comentario si lo deseas -->
+
+        <h4>Comentarios</h4>
+        <div class="form-group">
+            <label for="Comentarios">¿Tienes algún comentario adicional?</label>
+            <textarea asp-for="In.ComentarioMision" class="form-control" id="ComentariosMisión" name="Comentarios" rows="4" placeholder="Escribe tus comentarios aquí"></textarea>
+                <span asp-validation-for="In.ComentarioMision" class="text-danger"></span> <!-- Mensaje de error para ComentarioMision -->
+           
+        </div>
+
+        <br />
+        <button type="submit" class="btn btn-success">Ir a la siguiente sección</button>
+
+        <div class="form-group text-left">
+            <h1>Presenta tu proyecto</h1>
+            <h2>Visión de la campaña</h2>
+        </div>
+
+        <div class="form-group text-left">
+            <h4>• ¿Qué quieres crear?</h4>
+            <p>¡Cuántos más detalles, mejor! Incluye bocetos, muestras, prototipos y contagia tu entusiasmo a los patrocinadores.</p>
+        </div>
+
+        <div class="form-group text-left">
+            <h4>• ¿Cómo surgió la idea para este proyecto?</h4>
+            <p>Cuenta cómo comenzó todo y hasta dónde has llegado en este momento. De esta forma, los patrocinadores pueden entender qué tipo de trabajo ofreces y cómo lo manejas.</p>
+        </div>
+
+        <!-- Aquí puedes agregar un elemento para comentario si lo deseas -->
+
+        <h4>Comentarios</h4>
+        <div class="form-group">
+            <label for="Comentarios2">¿Tienes algún comentario adicional?</label>
+            <textarea asp-for="In.ComentarioVision" class="form-control" id="Comentarios2Visión" name="Comentarios2" rows="4" placeholder="Escribe tus comentarios aquí"></textarea>
+           <span asp-validation-for="In.ComentarioVision" class="text-danger"></span> <!-- Mensaje de error para ComentarioVision -->
+           
+        </div>
+
+        <br />
+        <button type="submit" class="btn btn-success">Ir a la siguiente sección</button>
+
+        <div class="form-group text-left">
+            <h1>Presenta tu proyecto</h1>
+        </div>
+
+        <div class="form-group">
+            <h4>Sobre ti y/o tu equipo de trabajo</h4>
+            <h4>• ¿Quién eres?</h4>
+            <p>Preséntate. Presenta a tu equipo y trabajos similares que realizaste en el pasado, o mejor aún: ¡muestra unos ejemplos!</p>
+        </div>
+
+        <div class="form-group text-left">
+            <h4>• Riesgos y desafíos</h4>
+            <p>Sé honesto acerca de los posibles riesgos y desafíos del proyecto y cómo planeas superarlos para completarlo.</p>
+        </div>
+
+        <!-- Aquí puedes agregar un elemento para comentario si lo deseas -->
+
+        <h4>Comentarios</h4>
+        <div class="form-group">
+            <label for="Comentarios3">¿Tienes algún comentario adicional?</label>
+            <textarea asp-for="In.ComentarioSobre" class="form-control" id="Comentarios3Sobre" name="Comentarios3" rows="4" placeholder="Escribe tus comentarios aquí"></textarea>
+           <span asp-validation-for="In.ComentarioSobre" class="text-danger"></span> <!-- Mensaje de error para ComentarioSobre -->
+           
+        </div>
+
+        <br />
+        <button type="" class="btn btn-success">Ir a la siguiente sección</button>
+
+
+        
+
+<button type="submit" class="btn btn-success">Registrar</button>
+ 
+        <!-- Sección para la identidad de la campaña revisar desde acaa -->
+        <h1>Muestra gráficamente la identidad de la campaña</h1>
+        <h2>Imagen del Proyecto</h2>
+        <p>Agrega una imagen que represente claramente tu proyecto y que se vea bien en diferentes tamaños, ya que aparecerá en la página de tu proyecto, en el sitio web y (cuando se comparta) en las redes sociales. Tu imagen debe tener al menos 1024x576 píxeles. Se recortará en una proporción de 16:9. Evita imágenes con banners, distintivos o texto que podrían ser ilegibles en formatos más pequeños y ser penalizadas por el algoritmo de Facebook. Además, reducen tus posibilidades de aparecer en la página de inicio.</p>
+
+         <div class="form-group">
+        <h4>Imagen del Proyecto</h4>
+        <input asp-for="In.ImagenProyecto" type="file" class="form-control-file" name="ImagenProyecto" id="imagenProyecto">
+    </div>
+
+
+        <!-- Sección para el producto final -->
+        <h2>Producto final</h2>
+        <p>Agrega una imagen ilustrativa de tu producto final</p>
+             <div class="form-group">
+        <h4>Imagen del Producto Final</h4>
+        <input asp-for="In.ImagenProductoFinal" type="file" class="form-control-file" name="ImagenProductoFinal" id="ImagenProductoFinal">
+    </div>
+      
+
+        <!-- Sección para el proceso de producción -->
+        <h2>Proceso de producción</h2>
+        <p>Agrega una imagen del proceso de producción por el cual pasó tu producto final</p>
+         <div class="form-group">
+        <h4>Imagen del Proceso de Producción</h4>
+        <input asp-for="In.ImagenProcesoProduccion" type="file" class="form-control-file" name="ImagenProcesoProduccion" id="ImagenProcesoProduccion">
+    </div>
+ 
+        <br />
+       
+         
+ 
+    <h1>Más información</h1>
+    <div class="row ">
+        <div class="col-md-4">
+            <p>Link del video de la crowdfunding</p>
+            <input asp-for="In.Link" type="text" class="form-control" placeholder="https://www.youtube.com/embed/tuvideo"  required="true" id="Link">
+           <span asp-validation-for="In.Link" class="text-danger"></span> <!-- Mensaje de error para el campo Link -->
+
+        </div>
+        <div class="col-md-4">
+            <h4>Social Media</h4>
+            <p>Agrega el link de una red social de preferencia para una mejor visualización de la campaña.</p>
+            <input asp-for="In.Redes" type="text" class="form-control" placeholder="Facebook, Twitter o Instagram"  required="true" id="Redes">
+               <span asp-validation-for="In.Redes" class="text-danger"></span> <!-- Mensaje de error para el campo Redes -->
+
+        </div>
+        <div class="col-md-4">
+            <h4>Categoría</h4>
+            <p>Elige una categoría para ayudar a los patrocinadores a encontrar tu proyecto.</p>
+            <select asp-for="In.Tipo" class="form-control">
+                 <option value="finanzas">Asesoría financiera</option>
+                    <option value="comercial">Asesoría comercial</option>
+                    <option value="marketing">Asesoría en marketing</option>
+                    <option value="valoracion">Apoyo en valoración de empresas</option>
+                    <option value="impositiva">Asesoría en gestión impositiva</option>
+                    <option value="desarrollo_marca">Asesoría en desarrollo de marca</option>
+                    <option value="packaging">Apoyo en desarrollo de packaging</option>
+                    <option value="innovacion">Apoyo en procesos de innovación</option>
+                    <option value="investigacion_mercados">Asesoría en investigación de mercados</option>
+                    <option value="exportacion">Asesoría en procesos de exportación</option>
+                    <option value="importacion">Asesoría en procesos de importación</option>
+                    <option value="mercados_internacionales">Asesoría en apertura de mercados internacionales</option>
+                    <option value="gestion_equipos">Asesoría en gestión de equipos</option>
+                    <option value="elevator_pitch">Asesoría en elevator pitch</option>
+                    <option value="costos_contable">Asesoría en costos y estructura contable</option>
+
+                <!-- Agrega más opciones de categorías según sea necesario -->
+            </select>
+       
+    </div>
+    
+</div> 
+
+<button type="submit" class="btn btn-success">Registrar</button>
+    </form>
+    @Model.save
+</div>
+
+   <script>
+        var apoyosAgregados = new Set();
+
+        // Función para agregar un apoyo a la lista de apoyos requeridos
+        function agregarApoyo(apoyo) {
+            if (!apoyosAgregados.has(apoyo)) {
+                apoyosAgregados.add(apoyo);
+
+                var listaApoyos = document.getElementById('apoyosRequeridos');
+                var nuevoApoyo = document.createElement('li');
+                nuevoApoyo.textContent = apoyo;
+                nuevoApoyo.className = 'list-group-item d-flex justify-content-between align-items-center';
+                var botonEliminar = document.createElement('button');
+                botonEliminar.textContent = 'Eliminar';
+                botonEliminar.className = 'btn btn-danger btn-sm';
+                botonEliminar.onclick = function () {
+                    apoyosAgregados.delete(apoyo);
+                    listaApoyos.removeChild(nuevoApoyo);
+                };
+                nuevoApoyo.appendChild(botonEliminar);
+                listaApoyos.appendChild(nuevoApoyo);
+            }
+        }
+    </script>
+    <script>
+    function validarFormulario() {
+        // Valida el campo Título
+        var titulo = document.getElementById('Titulo').value;
+        if (titulo.trim() === "") {
+            alert('Por favor, ingresa un título.');
+            return false; // Evita el envío del formulario
+        }
+
+        // Valida el campo Descripción General
+        var descripcionGeneral = document.getElementById('DescripcionGeneral').value;
+        if (descripcionGeneral.trim() === "") {
+            alert('Por favor, ingresa una descripción general.');
+            return false; // Evita el envío del formulario
+        }
+
+        // Valida los apoyos requeridos
+        var apoyosRequeridos = document.getElementById('apoyosRequeridos');
+        if (apoyosRequeridos.children.length === 0) {
+            alert('Por favor, selecciona al menos un apoyo requerido.');
+            return false; // Evita el envío del formulario
+        }
+
+        // Valida la misión del creador de la campaña
+        var mision = document.getElementById('ComentariosMisión').value;
+        if (mision.trim() === "") {
+            alert('Por favor, ingresa la misión del creador de la campaña.');
+            return false; // Evita el envío del formulario
+        }
+
+        // Valida la visión de la campaña
+        var vision = document.getElementById('Comentarios2Visión').value;
+        if (vision.trim() === "") {
+            alert('Por favor, ingresa la visión de la campaña.');
+            return false; // Evita el envío del formulario
+        }
+
+        // Valida sobre ti y/o tu equipo de trabajo
+        var sobreTi = document.getElementById('Comentarios3Sobre').value;
+        if (sobreTi.trim() === "") {
+            alert('Por favor, ingresa información sobre ti y/o tu equipo de trabajo.');
+            return false; // Evita el envío del formulario
+        }
+
+        // Valida la imagen del proyecto
+        var imagenProyecto = document.getElementById('imagenProyecto').value;
+        if (imagenProyecto.trim() === "") {
+            alert('Por favor, selecciona una imagen para tu proyecto.');
+            return false; // Evita el envío del formulario
+        }
+
+        // Valida la imagen del producto final
+        var imagenProductoFinal = document.getElementById('imagenProductoFinal').value;
+        if (imagenProductoFinal.trim() === "") {
+            alert('Por favor, selecciona una imagen del producto final.');
+            return false; // Evita el envío del formulario
+        }
+
+        // Valida la imagen del proceso de producción
+        var imagenProcesoProduccion = document.getElementById('imagenProcesoProduccion').value;
+        if (imagenProcesoProduccion.trim() === "") {
+            alert('Por favor, selecciona una imagen del proceso de producción.');
+            return false; // Evita el envío del formulario
+        }
+
+        // Valida el link del video de la crowdfunding
+        var link = document.getElementById('Link').value;
+        if (link.trim() === "") {
+            alert('Por favor, ingresa el link del video de la crowdfunding.');
+            return false; // Evita el envío del formulario
+        }
+
+        // Valida las redes sociales
+        var redes = document.getElementById('Redes').value;
+        if (redes.trim() === "") {
+            alert('Por favor, ingresa al menos una red social.');
+            return false; // Evita el envío del formulario
+        }
+
+        // Valida la categoría
+        var categoria = document.getElementById('Tipo').value;
+        if (categoria === "") {
+            alert('Por favor, selecciona una categoría.');
+            return false; // Evita el envío del formulario
+        }
+
+        // Si todas las validaciones pasan, el formulario se enviará
+        return true;
+    }
+</script>
