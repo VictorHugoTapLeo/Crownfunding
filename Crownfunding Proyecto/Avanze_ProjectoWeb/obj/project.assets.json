@@ -8,19 +8,19 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Victor Hugo\\.nuget\\packages\\": {}
+    "C:\\Users\\carst\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Victor Hugo\\Downloads\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj",
+      "projectUniqueName": "C:\\Users\\carst\\OneDrive\\Escritorio\\proyectoCris\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj",
       "projectName": "Avanze_ProjectoWeb",
-      "projectPath": "C:\\Users\\Victor Hugo\\Downloads\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj",
-      "packagesPath": "C:\\Users\\Victor Hugo\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Victor Hugo\\Downloads\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb\\obj\\",
+      "projectPath": "C:\\Users\\carst\\OneDrive\\Escritorio\\proyectoCris\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj",
+      "packagesPath": "C:\\Users\\carst\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\carst\\OneDrive\\Escritorio\\proyectoCris\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Victor Hugo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\carst\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -51,8 +51,7 @@
           "net47",
           "net471",
           "net472",
-          "net48",
-          "net481"
+          "net48"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -64,7 +63,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
