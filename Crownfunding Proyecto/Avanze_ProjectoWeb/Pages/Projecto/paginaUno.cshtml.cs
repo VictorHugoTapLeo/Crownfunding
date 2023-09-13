@@ -6,11 +6,14 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
 {
     public class paginaUnoModel : PageModel
     {
-        [BindProperty] //
-        public PaginaUnoModeldos In { get; set; }
+        [BindProperty] 
+        public PaginaUnoModeldos Projecto { get; set; }
         public List<string> ApoyosRequeridos { get; set; } = new List<string>();
 
-        public string save { get; set; }
+        public string? save { get; set; }
+
+        public string successMessage = "";
+        public string errorMessage = "";
         public void OnGet()
         {
         }
@@ -19,12 +22,20 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
         {
             if (!ModelState.IsValid)
             {
-                save =
-                obj.Titulo;
-                // El modelo no es válido, muestra los mensajes de error y vuelve a cargar la página
-                Page(); // Corregido
+                errorMessage = "Error de validación. Por favor revisa los campos.";
                 return;
             }
+
+
+
+            successMessage = "Informacion enviada exitosamente";
+
+
+
+
+
+            ModelState.Clear();
+           
 
 
         }

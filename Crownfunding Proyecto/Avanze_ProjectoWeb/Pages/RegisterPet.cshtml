@@ -1,0 +1,72 @@
+﻿@page
+@model ProyectoWeb1.Pages.RegisterPetModel
+@{
+}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-2">
+        </div>
+        <div class="col-md-8 text-center">
+            <h1 class="titleRegister">
+                <img src="~/Images/register_cat.png" />
+                Registrar una mascota
+                <img src="~/Images/register_dog.png" />
+            </h1>
+        </div>
+        <div class="col-md-2">
+        </div>
+    </div>
+    <form action="">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="name">Nombre:</label>
+                    <input type="text" name="name" id="name" class="form-control" placeholder="Nombre" aria-describedby="helpId">
+                    <small id="helpId" class="text-muted">Nombre de la mascota</small>
+                </div>
+                <div class="form-group">
+                    <label for="birthday">Fecha de Nacimiento:</label>
+                    <input type="date" name="birthday" id="birthday" class="form-control" placeholder="Fecha de nacimiento" aria-describedby="helpId">
+                    <small id="helpId" class="text-muted">Fecha de nacimiento de la mascota</small>
+                </div>
+                <div class="form-group">
+                    <label for="type">Tipo:</label>
+                    <select class="form-control" name="type" id="type" aria-describedby="helpId">
+                        <option value="1">Canino</option>
+                        <option value="2">Felino</option>
+                        <option value="3">Oviparos</option>
+                        <option value="4">Otros</option>
+                    </select>
+                    <small id="helpId" class="text-muted">Tipo de mascota</small>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="race">Raza:</label>
+                    <input type="text" name="race" id="race" class="form-control" placeholder="Raza" aria-describedby="helpId">
+                    <small id="helpId" class="text-muted">Raza de la mascota</small>
+                </div>
+                <div class="form-group">
+                    <label for="race">Descripccion:</label>
+                    <label for="description"></label>
+                    <textarea class="form-control" name="description" id="description" rows="5" aria-describedby="helpId"></textarea>
+                    <small id="helpId" class="text-muted">Descripcion de la mascota, vacunas, como se ve entre otras mas</small>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-3 justify-content-center text-center">
+                <button type="submit" class="btn-pink">Registrar</button>
+            </div>
+            <div class="col-md-2">
+            </div>
+            <div class="col-md-3 justify-content-center text-center">
+                <button type="reset" class="btn-danger">Limpiar</button>
+            </div>
+            <div class="col-md-2">
+            </div>
+        </div>
+    </form>
+</div>
