@@ -12,8 +12,8 @@ namespace Avanze_ProjectoWeb.Models
         [Required(ErrorMessage = "Debes seleccionar al menos un apoyo requerido.")]
         public List<string> ListaApoyos { get; set; }
 
-        public string ComentarioMision { get; set; }
-        public string ComentarioVision { get; set; }
+        public string? ComentarioMision { get; set; }
+        public string? ComentarioVision { get; set; }
         public string ComentarioSobre { get; set; }
 
         [Required(ErrorMessage = "Debes cargar una imagen para el proyecto.")]
