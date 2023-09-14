@@ -10,6 +10,9 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
         public PaginaUnoModeldos Projecto { get; set; }
         public List<string> ApoyosRequeridos { get; set; } = new List<string>();
 
+
+        
+
         public string? save { get; set; }
 
         public string successMessage = "";
@@ -18,24 +21,51 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
         {
         }
 
-        public void OnPost(PaginaUnoModeldos obj)
+        public void OnPost()
         {
             if (!ModelState.IsValid)
             {
-                errorMessage = "Error de validación. Por favor revisa los campos.";
-                return;
+                errorMessage = "Error en los campos,revisa"; 
+
+            }
+            else
+            {
+                //limpiamos casillas
+
+                successMessage = "Informacion enviada exitosamente";
+
+                save = Projecto.Titulo + Projecto.ListaApoyos;
+
+                Projecto.Titulo = "";
+                Projecto.DescripcionGeneral = "";
+                Projecto.ListaApoyos = "";
+                Projecto.DescripcionPlanTiempo = "";
+                Projecto.DescripcionObjetivo = "";
+                Projecto.DescripcionPorque = "";
+                Projecto.DescripcionQueCrear = "";
+                Projecto.DescripcionComoSurgio = "";
+                Projecto.DescripcionQuienEres = "";
+                Projecto.DescripcionRiesgos = "";
+                Projecto.Link = "";
+                Projecto.Redes = "";
+                Projecto.Tipo = "";
+
+                ModelState.Clear();
+
+
+
+
             }
 
-
-
-            successMessage = "Informacion enviada exitosamente";
-
+            
 
 
 
 
-            ModelState.Clear();
-           
+
+
+
+
 
 
         }

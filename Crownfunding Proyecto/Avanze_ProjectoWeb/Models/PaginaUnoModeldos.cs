@@ -5,6 +5,7 @@ namespace Avanze_ProjectoWeb.Models
     public class PaginaUnoModeldos
     {
         //seccion inicio
+
         [Required(ErrorMessage = "Es necesario un titulo")]
         public string? Titulo { get; set; } = "";
 
@@ -12,8 +13,10 @@ namespace Avanze_ProjectoWeb.Models
         public string? DescripcionGeneral { get; set; }
 
         [Required(ErrorMessage = "Debes seleccionar al menos un apoyo requerido.")]
-        public List<string>? ListaApoyos { get; set; }
+        [StringLength(maximumLength: 100, MinimumLength = 14, ErrorMessage = "Selecciona al menos 5 apoyos")]
+        public string? ListaApoyos { get; set; }
 
+     
         //seccion mission
         [Required(ErrorMessage = "Completa este campo")]
         public string? DescripcionPlanTiempo { get; set; }
@@ -22,15 +25,15 @@ namespace Avanze_ProjectoWeb.Models
         [Required(ErrorMessage = "Completa este campo")]
         public string? DescripcionPorque { get; set; }
 
-        //seccion vision
+        ////seccion vision
         [Required(ErrorMessage = "Completa este campo")]
         public string? DescripcionQueCrear { get; set; }
         [Required(ErrorMessage = "Completa este campo")]
         public string? DescripcionComoSurgio { get; set; }
 
-        //seccion sobre ti
+        ////seccion sobre ti
         [Required(ErrorMessage = "Completa este campo")]
-        public string? DescripcionQuienEres{ get; set; }
+        public string? DescripcionQuienEres { get; set; }
         [Required(ErrorMessage = "Completa este campo")]
         public string? DescripcionRiesgos { get; set; }
 
@@ -40,7 +43,9 @@ namespace Avanze_ProjectoWeb.Models
         //seccion contactos
 
         [Required(ErrorMessage = "El campo Link es obligatorio.")]
-        [RegularExpression(@"^(https?://)?(www\.)?youtube\.com/embed/[^/\s]+$", ErrorMessage = "El formato del enlace de video no es válido.")]
+
+        [RegularExpression(@"^(https?://)?(www\.)?youtube\.com/watch\?v=[\w-]+$", ErrorMessage = "El formato del enlace de video no es válido.")]
+
         public string? Link { get; set; }
 
         [Required(ErrorMessage = "El campo Redes es obligatorio.")]
