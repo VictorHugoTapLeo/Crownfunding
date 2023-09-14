@@ -7,14 +7,27 @@
   "targets": {
     ".NETCoreApp,Version=v6.0": {
       "Avanze_ProjectoWeb/1.0.0": {
+        "dependencies": {
+          "CrowdFundingDAO": "1.0.0"
+        },
         "runtime": {
           "Avanze_ProjectoWeb.dll": {}
+        }
+      },
+      "CrowdFundingDAO/1.0.0": {
+        "runtime": {
+          "CrowdFundingDAO.dll": {}
         }
       }
     }
   },
   "libraries": {
     "Avanze_ProjectoWeb/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CrowdFundingDAO/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

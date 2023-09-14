@@ -1,0 +1,18 @@
+﻿@page
+@model Avanze_ProjectoWeb.Pages.Projecto.RestablecimientoContraseñaModel
+@{
+}
+<h1>Restablecer Contraseña</h1>
+<form method="post">
+    <div class="form-group">
+        <label for="nuevaContraseña">Nueva Contraseña</label>
+        <input type="password" class="form-control" id="nuevaContraseña" name="nuevaContraseña">
+    </div>
+    <div class="form-group">
+        <label for="confirmarContraseña">Confirmar Nueva Contraseña</label>
+        <input type="password" class="form-control" id="confirmarContraseña" name="confirmarContraseña">
+    </div>
+    <a asp-page="/Index" class="btn btn-danger">Salir</a>
+    <button type="submit" class="btn btn-primary" name="restablecer">Confirmar Nueva Contraseña</button>
+    
+</form>

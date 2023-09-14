@@ -1,0 +1,44 @@
+﻿@page
+@model Avanze_ProjectoWeb.Pages.Projecto.formRegistroModel
+@{
+}
+<h1>Registro</h1>
+<form method="post">
+    <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="correo">Correo:</label>
+        <input type="email" id="correo" name="correo" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="contraseña">Contraseña:</label>
+        <input type="password" id="contraseña" name="contraseña" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label for="confirmarcontraseña">Confirmar Contraseña:</label>
+        <input type="password" id="confirmarcontraseña" name="confirmarcontraseña" class="form-control" />
+    </div>
+
+    <div class="form-check">
+        <input type="checkbox" id="enviarProyectos" name="enviarProyectos" class="form-check-input" />
+        <label class="form-check-label" for="enviarProyectos">Envíenme una combinación semanal de proyectos seleccionados exclusivamente para mí, además de noticias ocasionales de Crowdfunding</label>
+    </div>
+
+    <div class="form-check">
+        <input type="checkbox" id="aceptarPoliticas" name="aceptarPoliticas" class="form-check-input" />
+        <label class="form-check-label" for="aceptarPoliticas">Acepto la Política de privacidad, Política de cookies y los Términos de uso</label>
+    </div>
+    <a asp-page="/Index" class="btn btn-danger">Salir</a>
+    <button type="submit" class="btn btn-primary">Crear Cuenta</button>
+</form>
+
