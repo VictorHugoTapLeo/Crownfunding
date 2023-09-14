@@ -14,7 +14,7 @@ namespace CrowdFundingDAO.Implementation
     {
         public int Delete(Project t)
         {
-            query = @"UPDATE [NombreDeLaTabla] SET status = 0 ,lastUpdate = CURRENT_TIMESTAMP ,userID = @userID WHERE id = @id";
+            query = @"UPDATE Project SET status = 0 ,lastUpdate = CURRENT_TIMESTAMP ,userID = @userID WHERE id = @id";
             SqlCommand command = CreateBasicCommand(query);
             command.Parameters.AddWithValue("@id", t.id);
             try

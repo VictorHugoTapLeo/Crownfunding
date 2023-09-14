@@ -14,7 +14,7 @@ namespace CrowdFundingDAO.Implementation
     {
         public int Delete(SupportVerification t)
         {
-            query = @"UPDATE [NombreDeLaTabla] SET status = 0 ,lastUpdate = CURRENT_TIMESTAMP ,userID = @userID WHERE id = @id";
+            query = @"UPDATE SupportVerification SET status = 0 ,lastUpdate = CURRENT_TIMESTAMP ,userID = @userID WHERE id = @id";
             SqlCommand command = CreateBasicCommand(query);
             command.Parameters.AddWithValue("@id", t.id);
             try

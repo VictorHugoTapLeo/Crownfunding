@@ -1,0 +1,2 @@
+C:\Users\Sacha4000\Desktop\Uni\ProyectoSistemaa\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.csproj.AssemblyReference.cache
+C:\Users\Sacha4000\Desktop\Uni\ProyectoSistemaa\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.csproj.CoreCompileInputs.cache

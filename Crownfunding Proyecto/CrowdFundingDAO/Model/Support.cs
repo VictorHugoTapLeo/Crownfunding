@@ -6,13 +6,33 @@ using System.Threading.Tasks;
 
 namespace CrowdFundingDAO.Model
 {
-    public class Support
+    public class Support : BaseModel
     {
         public int id { get; set; }
-        public int userId { get; set; }
+        public int supporterId { get; set; }
         public int projectId { get; set; }
         public string supportType { get; set; }
-        public DateTime supportDate { get; set; }
         public string supportVerification { get; set; }
+        public Support(int id, int supporterId, int projectId, string supportType, string supportVerification
+            , byte status, DateTime registerDate, DateTime lastUpdate, int userID)
+            : base(status, registerDate, lastUpdate, userID)
+        {
+            this.id = id;
+            this.supporterId = supporterId;
+            this.projectId = projectId;
+            this.supportType = supportType;
+            this.supportVerification = supportVerification;
+        }
+        public Support(int id, int supporterId, int projectId, string supportType, string supportVerification)
+        {
+            this.id = id;
+            this.supporterId = supporterId;
+            this.projectId = projectId;
+            this.supportType = supportType;
+            this.supportVerification = supportVerification;
+        }
+        public Support()
+        {
+        }
     }
 }
