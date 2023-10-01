@@ -11,5 +11,7 @@ namespace CrowdFundingDAO.Interfaces
     {
         Project Get(int id);
         int GetLastInsertedProjectId();
+        List<(int, string, string)> GetMyProjects(int id);
+        List<(int, string, string)> GetMySupports(int id);
     }
 }

@@ -5,76 +5,81 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Avanze_ProjectoWeb
 build_property.RootNamespace = Avanze_ProjectoWeb
-build_property.ProjectDir = C:\Users\carst\OneDrive\Escritorio\nuevo git\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\
+build_property.ProjectDir = C:\Users\Sacha4000\Desktop\Sistemas again\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\carst\OneDrive\Escritorio\nuevo git\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb
+build_property.MSBuildProjectDirectory = C:\Users\Sacha4000\Desktop\Sistemas again\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/carst/OneDrive/Escritorio/nuevo git/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Error.cshtml]
+[C:/Users/Sacha4000/Desktop/Sistemas again/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/carst/OneDrive/Escritorio/nuevo git/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Index.cshtml]
+[C:/Users/Sacha4000/Desktop/Sistemas again/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/carst/OneDrive/Escritorio/nuevo git/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Privacy.cshtml]
+[C:/Users/Sacha4000/Desktop/Sistemas again/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/carst/OneDrive/Escritorio/nuevo git/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/editProject.cshtml]
+[C:/Users/Sacha4000/Desktop/Sistemas again/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/editProject.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9cZWRpdFByb2plY3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/carst/OneDrive/Escritorio/nuevo git/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/editProjectLista.cshtml]
+[C:/Users/Sacha4000/Desktop/Sistemas again/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/editProjectLista.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9cZWRpdFByb2plY3RMaXN0YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/carst/OneDrive/Escritorio/nuevo git/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/formRegistro.cshtml]
+[C:/Users/Sacha4000/Desktop/Sistemas again/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/formRegistro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9cZm9ybVJlZ2lzdHJvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/carst/OneDrive/Escritorio/nuevo git/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/paginaUno.cshtml]
+[C:/Users/Sacha4000/Desktop/Sistemas again/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/paginaUno.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9ccGFnaW5hVW5vLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/carst/OneDrive/Escritorio/nuevo git/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/PeticionesDeProyectos.cshtml]
+[C:/Users/Sacha4000/Desktop/Sistemas again/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/PerfilInterfaz.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9cUGVyZmlsSW50ZXJmYXouY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Sacha4000/Desktop/Sistemas again/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/PeticionesDeProyectos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9cUGV0aWNpb25lc0RlUHJveWVjdG9zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/carst/OneDrive/Escritorio/nuevo git/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/recuperarContraseña.cshtml]
+[C:/Users/Sacha4000/Desktop/Sistemas again/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/recuperarContraseña.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9ccmVjdXBlcmFyQ29udHJhc2XDsWEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/carst/OneDrive/Escritorio/nuevo git/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/restablecimientoContraseña.cshtml]
+[C:/Users/Sacha4000/Desktop/Sistemas again/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/restablecimientoContraseña.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9ccmVzdGFibGVjaW1pZW50b0NvbnRyYXNlw7FhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/carst/OneDrive/Escritorio/nuevo git/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/RestaurarProyecto.cshtml]
+[C:/Users/Sacha4000/Desktop/Sistemas again/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/RestaurarProyecto.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9cUmVzdGF1cmFyUHJveWVjdG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/carst/OneDrive/Escritorio/nuevo git/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/RegisterPet.cshtml]
+[C:/Users/Sacha4000/Desktop/Sistemas again/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/RegisterPet.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXJQZXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/carst/OneDrive/Escritorio/nuevo git/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Sacha4000/Desktop/Sistemas again/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/carst/OneDrive/Escritorio/nuevo git/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/_ViewImports.cshtml]
+[C:/Users/Sacha4000/Desktop/Sistemas again/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/carst/OneDrive/Escritorio/nuevo git/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/_ViewStart.cshtml]
+[C:/Users/Sacha4000/Desktop/Sistemas again/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/carst/OneDrive/Escritorio/nuevo git/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Shared/_Layout.cshtml]
+[C:/Users/Sacha4000/Desktop/Sistemas again/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-wbmk0jgvxk

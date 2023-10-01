@@ -178,5 +178,70 @@ namespace CrowdFundingDAO.Implementation
                 throw ex;
             }
         }
+
+        public List<(int,string, string)> GetMyProjects(int id)
+        {
+            List<(int,string, string)> projects = new List<(int,string, string)>();
+
+            query = @"SELECT P.id, P.title , D.description
+                        FROM Project P
+                        INNER JOIN Description D ON D.projectId = P.id
+                        WHERE P.status = 1 AND P.userCampaingId = @id AND D.type = 'Description'";
+            SqlCommand command = CreateBasicCommand(query);
+            command.Parameters.AddWithValue("@id", id);
+
+            try
+            {
+                DataTable table = ExecuteDataTableCommand(command);
+
+                foreach (DataRow row in table.Rows)
+                {
+                    int i = Convert.ToInt32(row["id"]);
+                    string title = row["title"].ToString();
+                    string description = row["description"].ToString();
+
+                    projects.Add((i,title, description));
+                }
+
+                return projects;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<(int, string, string)> GetMySupports(int id)
+        {
+            List<(int, string, string)> projects = new List<(int, string, string)>();
+
+            query = @"SELECT P.id, P.title , D.description
+                        FROM Project P
+                        INNER JOIN Support S ON P.id = S.projectId
+                        INNER JOIN Description D ON D.projectId = P.id
+                        WHERE P.status = 1 AND S.supporterId = @id AND D.type = 'Description'";
+            SqlCommand command = CreateBasicCommand(query);
+            command.Parameters.AddWithValue("@id", id);
+
+            try
+            {
+                DataTable table = ExecuteDataTableCommand(command);
+
+                foreach (DataRow row in table.Rows)
+                {
+                    int i = Convert.ToInt32(row["id"]);
+                    string title = row["title"].ToString();
+                    string description = row["description"].ToString();
+
+                    projects.Add((i, title, description));
+                }
+
+                return projects;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

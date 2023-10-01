@@ -64,6 +64,7 @@
     <Compile Include="Model\Comment.cs" />
     <Compile Include="Model\Description.cs" />
     <Compile Include="Model\Project.cs" />
+    <Compile Include="Model\SessionClass.cs" />
     <Compile Include="Model\SocialMedia.cs" />
     <Compile Include="Model\Support.cs" />
     <Compile Include="Model\SupportVerification.cs" />
