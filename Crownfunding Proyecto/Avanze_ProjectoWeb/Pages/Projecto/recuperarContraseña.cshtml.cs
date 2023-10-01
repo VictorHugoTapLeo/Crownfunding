@@ -8,16 +8,32 @@ using System.Net.Mail;
 using System.Threading.Tasks;
 using System;
 
+using Microsoft.AspNetCore.Http;
 
+using System.ComponentModel.DataAnnotations;
 namespace Avanze_ProjectoWeb.Pages.Projecto
 {
     public class RecuperarContraseñaModel : PageModel
     {
         [BindProperty]
         public string Correo { get; set; }
+        public int sessionID { get; set; }
 
-        public void OnGet()
+        public IActionResult OnGet()
         {
+            //string username = HttpContext.Session.GetString("username");
+            string rol = HttpContext.Session.GetString("rol");
+            //int userId = HttpContext.Session.GetInt32("userId") ?? 0;
+            //HttpContext.Session.Clear();
+            sessionID = HttpContext.Session.GetInt32("SessionID") ?? 0;
+           
+            if (rol != "Admin")
+            {
+                return RedirectToPage("/Index");
+            }
+            return Page();
+
+            // IActionResult
         }
 
         public IActionResult OnPost()

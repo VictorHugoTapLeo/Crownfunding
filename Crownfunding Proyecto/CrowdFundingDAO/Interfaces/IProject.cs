@@ -10,5 +10,6 @@ namespace CrowdFundingDAO.Interfaces
     internal interface IProject : IBase<Project>
     {
         Project Get(int id);
+        int GetLastInsertedProjectId();
     }
 }

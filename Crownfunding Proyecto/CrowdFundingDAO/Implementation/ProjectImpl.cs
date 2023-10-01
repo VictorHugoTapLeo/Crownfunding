@@ -63,10 +63,12 @@ namespace CrowdFundingDAO.Implementation
             }
             return t;
         }
+        public int ids { get; set; }
+        public int idsUp { get; set; }
         public int Insert(Project t)
         {
-            query = @"INSERT INTO Project ( title, projectPng, finalProductPng, productionProcessPng, campaingVideo, userCampaingId,categoryId, userID)
-                        VALUES ( @title, @projectPng, @finalProductPng, @productionProcessPng, @campaingVideo, @userCampaingId, @categoryId, ,@userID)";
+            query = @"INSERT INTO Project (title, projectPng, finalProductPng, productionProcessPng, campaingVideo, userCampaingId, categoryId, userID)
+                VALUES (@title, @projectPng, @finalProductPng, @productionProcessPng, @campaingVideo, @userCampaingId, @categoryId, @userID)";
             SqlCommand command = CreateBasicCommand(query);
             command.Parameters.AddWithValue("@title", t.title);
             command.Parameters.AddWithValue("@projectPng", t.projectPng);
@@ -76,6 +78,8 @@ namespace CrowdFundingDAO.Implementation
             command.Parameters.AddWithValue("@userCampaingId", t.userCampaingId);
             command.Parameters.AddWithValue("@categoryId", t.categoryId);
             command.Parameters.AddWithValue("@userID", t.UserID);
+
+             ids = int.Parse(GetGenerateIDTable("Project"));
             //command.Parameters.AddWithValue("@userID", SessionClass.SessionId);
             try
             {
@@ -103,7 +107,7 @@ namespace CrowdFundingDAO.Implementation
         }
         public int Update(Project t)
         {
-            query = @"UPDATE Project SET title = @title, projectPng = @projectPng, finalProductPng = @finalProductPng, productionProcessPng = @productionProcessPng, campaingVideo = @campaingVideo , lastUpdate = CURRENT_TIMESTAMP , userID = @userID
+            query = @"UPDATE Project SET title = @title, projectPng = @projectPng, finalProductPng = @finalProductPng, productionProcessPng = @productionProcessPng, campaingVideo = @campaingVideo , lastUpdate = CURRENT_TIMESTAMP ,categoryId =@categoryID, userID = @userID
                         WHERE id = @id";
             SqlCommand command = CreateBasicCommand(query);
             command.Parameters.AddWithValue("@id", t.id);
@@ -112,10 +116,62 @@ namespace CrowdFundingDAO.Implementation
             command.Parameters.AddWithValue("@finalProductPng", t.finalProductPng);
             command.Parameters.AddWithValue("@productionProcessPng", t.productionProcessPng);
             command.Parameters.AddWithValue("@campaingVideo", t.campaingVideo);
+            command.Parameters.AddWithValue("@categoryID", t.categoryId);
             command.Parameters.AddWithValue("@userID", t.UserID);
+            idsUp = int.Parse(GetGenerateIDTable("Project"));
             try
             {
                 return ExecuteBasicCommand(command);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        //metodo para id de proyecto
+        public int GetLastInsertedProjectId()
+        {
+            query = @"SELECT IDENT_CURRENT('Project')";
+            SqlCommand command = CreateBasicCommand(query);
+            try
+            {
+                object result = ExecuteBasicCommand(command);
+                return Convert.ToInt32(result);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        //mis metodos 
+        public List<Project> Selectpros()
+        {
+            List<Project> projects = new List<Project>();
+
+            query = @"SELECT id, title
+                FROM Project
+                WHERE status = 1 ";
+            SqlCommand command = CreateBasicCommand(query);
+
+            try
+            {
+                DataTable table = ExecuteDataTableCommand(command);
+
+                foreach (DataRow row in table.Rows)
+                {
+                    Project project = new Project
+                    {
+                        id = Convert.ToInt32(row["id"]),
+                        title = row["title"].ToString(),
+                     
+                    };
+
+                    projects.Add(project);
+                }
+
+                return projects;
             }
             catch (Exception ex)
             {

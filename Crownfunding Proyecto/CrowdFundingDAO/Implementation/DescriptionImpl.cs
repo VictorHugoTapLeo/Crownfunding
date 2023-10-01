@@ -27,6 +27,7 @@ namespace CrowdFundingDAO.Implementation
                 throw ex;
             }
         }
+
         public Description Get(int id)
         {
             Description t = null;
@@ -59,6 +60,41 @@ namespace CrowdFundingDAO.Implementation
             }
             return t;
         }
+
+        public List<Description> GetAll(int id)
+        {
+            List<Description> descriptions = new List<Description>();
+            query = @"SELECT id, type, description, projectId,
+                status,registerDate, ISNULL(lastUpdate,CURRENT_TIMESTAMP),userID
+                FROM Description
+                WHERE projectId = @id AND status = 1";
+            SqlCommand command = CreateBasicCommand(query);
+            command.Parameters.AddWithValue("@id", id);
+            try
+            {
+                DataTable table = ExecuteDataTableCommand(command);
+                foreach (DataRow row in table.Rows)
+                {
+                    Description t = new Description(
+                        int.Parse(row[0].ToString()),
+                        row[1].ToString(),
+                        row[2].ToString(),
+                        int.Parse(row[3].ToString()),
+                        byte.Parse(row[4].ToString()),
+                        DateTime.Parse(row[5].ToString()),
+                        DateTime.Parse(row[6].ToString()),
+                        int.Parse(row[7].ToString())
+                    );
+                    descriptions.Add(t);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return descriptions;
+        }
+
         public int Insert(Description t)
         {
             query = @"INSERT INTO Description (  type, description, projectId, userID)
@@ -82,8 +118,26 @@ namespace CrowdFundingDAO.Implementation
         {
             query = @"SELECT id, type, description, projectId
                         FROM Description
-                        WHERE status = 1 ";
+                        WHERE projectId = @id AND status = 1 ";
             SqlCommand command = CreateBasicCommand(query);
+            try
+            {
+                return ExecuteDataTableCommand(command);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public DataTable Selectdes(int id)
+        {
+            query = @"SELECT id, type, description, projectId
+                        FROM Description
+                        WHERE projectId = @id AND status = 1 ";
+
+            SqlCommand command = CreateBasicCommand(query);
+            command.Parameters.AddWithValue("@id", id);
             try
             {
                 return ExecuteDataTableCommand(command);
@@ -95,12 +149,15 @@ namespace CrowdFundingDAO.Implementation
         }
         public int Update(Description t)
         {
-            query = @"UPDATE Description SET type = @type, description = @description , lastUpdate = CURRENT_TIMESTAMP , userID = @userID
-                        WHERE id = @id";
+            query = @"UPDATE Description SET  description = @description , lastUpdate = CURRENT_TIMESTAMP , userID = @userID
+                        WHERE type = @type AND projectId = @projectID";
+
+
             SqlCommand command = CreateBasicCommand(query);
             command.Parameters.AddWithValue("@id", t.id);
             command.Parameters.AddWithValue("@type", t.type);
             command.Parameters.AddWithValue("@description", t.description);
+            command.Parameters.AddWithValue("@projectID", t.projectId);
             command.Parameters.AddWithValue("@userID", t.UserID);
             try
             {
@@ -111,5 +168,7 @@ namespace CrowdFundingDAO.Implementation
                 throw ex;
             }
         }
+   
+    
     }
 }

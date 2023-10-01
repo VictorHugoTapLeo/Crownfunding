@@ -12,7 +12,7 @@ namespace CrowdFundingDAO.Implementation
     public class BaseImpl
     {
         
-        string connectionString = @"Server=DESKTOP-C5ESB22\SQLEXPRESS;Database=;User Id=;Password=;";
+        string connectionString = @"Server=COMTORRAX\SQLEXPRESS;Database=preuba;User Id=sa;Password=qwerty;";
         internal string query;
         public SqlCommand CreateBasicCommand()
         {
@@ -64,5 +64,49 @@ namespace CrowdFundingDAO.Implementation
             }
             return table;
         }
+
+
+        //sacar ultima ID
+
+        public string GetGenerateIDTable(string table)
+        {
+
+            query = "  SELECT IDENT_CURRENT('" + table + "') +IDENT_INCR('" + table + "')";
+            SqlCommand command = CreateBasicCommand(query);
+            try
+            {
+                command.Connection.Open();
+                return command.ExecuteScalar().ToString();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                command.Connection.Close();
+            }
+
+
+            //version chatgtp
+            //query = "SELECT SCOPE_IDENTITY()";
+            //       SqlCommand command = CreateBasicCommand(query);
+            //       try
+            //       {
+            //           command.Connection.Open();
+            //           return command.ExecuteScalar().ToString();
+            //       }
+            //       catch (Exception ex)
+            //       {
+            //           throw ex;
+            //       }
+            //       finally
+            //       {
+            //           command.Connection.Close();
+            //       }
+
+        }
+
     }
 }

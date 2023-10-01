@@ -32,9 +32,9 @@ namespace CrowdFundingDAO.Implementation
             SocialMedia t = null;
             query = @"SELECT id ,name , mediaLink ,projectId, status,registerDate, ISNULL(lastUpdate,CURRENT_TIMESTAMP),userID
                         FROM SocialMedia
-                        WHERE id = id AND status = 1";
+                        WHERE projectId = @projectId AND status = 1";
             SqlCommand command = CreateBasicCommand(query);
-            command.Parameters.AddWithValue("@id", id);
+            command.Parameters.AddWithValue("@projectId", id);
             try
             {
                 DataTable table = ExecuteDataTableCommand(command);
@@ -60,13 +60,13 @@ namespace CrowdFundingDAO.Implementation
         }
         public int Insert(SocialMedia t)
         {
-            query = @"INSERT INTO SocialMedia (name, mediaLink, projectId, userID)
-                        VALUES (@name, @mediaLink,@projectId, @userID)";
+            query = @"INSERT INTO SocialMedia ( mediaLink, projectId, userID)
+                        VALUES ( @mediaLink,@projectId, @userID)";
             SqlCommand command = CreateBasicCommand(query);
-            command.Parameters.AddWithValue("@name", t.name);
+           
             command.Parameters.AddWithValue("@mediaLink", t.mediaLink);
             command.Parameters.AddWithValue("@projectId", t.projectId);
-            command.Parameters.AddWithValue("@userID", t.UserID);
+            command.Parameters.AddWithValue("@userID", 1);
             //command.Parameters.AddWithValue("@userID", SessionClass.SessionId);
             try
             {
@@ -94,13 +94,13 @@ namespace CrowdFundingDAO.Implementation
         }
         public int Update(SocialMedia t)
         {
-            query = @"UPDATE SocialMedia SET name = @name, mediaLink = @mediaLink , lastUpdate = CURRENT_TIMESTAMP , userID = @userID
-                        WHERE id = @id";
+            query = @"UPDATE SocialMedia SET mediaLink = @mediaLink , lastUpdate = CURRENT_TIMESTAMP , userID = @userID
+                        WHERE projectId = @projectId";
             SqlCommand command = CreateBasicCommand(query);
-            command.Parameters.AddWithValue("@id", t.id);
-            command.Parameters.AddWithValue("@name", t.name);
+            command.Parameters.AddWithValue("@projectId", t.projectId);
+            
             command.Parameters.AddWithValue("@mediaLink", t.mediaLink);
-            command.Parameters.AddWithValue("@userID", t.UserID);
+            command.Parameters.AddWithValue("@userID", 1);
             try
             {
                 return ExecuteBasicCommand(command);

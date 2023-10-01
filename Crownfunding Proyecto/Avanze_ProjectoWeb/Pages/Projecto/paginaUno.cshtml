@@ -4,7 +4,7 @@
 	   ViewData["Title"] = "Crear una campaña";
      
 }
- 
+ <h1>@Model.sessionID</h1>
  
 <div class="container text-left">
     <h1>Crear una campaña</h1>
@@ -36,7 +36,7 @@
             <div class="col-md-6">
                 <div class="form-group">
                     <label for="Titulo">Título</label>
-                    <input asp-for="Projecto.Titulo" type="text"  placeholder="Escribe el título aquí" >
+                    <input asp-for="Projecto.Titulo" type="text"  placeholder="Escribe el título aquí" > 
                       <span asp-validation-for="Projecto.Titulo" ></span>
                 </div>
             </div>
@@ -326,28 +326,22 @@
                <span asp-validation-for="Projecto.Redes" ></span> <!-- Mensaje de error para el campo Redes -->
 
         </div>
+        <!--TODO sql data pull-->
         <div class="col-md-4">
-            <h4>Categoría</h4>
-            <p>Elige una categoría para ayudar a los patrocinadores a encontrar tu proyecto.</p>
-            <select asp-for="Projecto.Tipo" >
-                 <option value="finanzas">Asesoría financiera</option>
-                    <option value="comercial">Asesoría comercial</option>
-                    <option value="marketing">Asesoría en marketing</option>
-                    <option value="valoracion">Apoyo en valoración de empresas</option>
-                    <option value="impositiva">Asesoría en gestión impositiva</option>
-                    <option value="desarrollo_marca">Asesoría en desarrollo de marca</option>
-                    <option value="packaging">Apoyo en desarrollo de packaging</option>
-                    <option value="innovacion">Apoyo en procesos de innovación</option>
-                    <option value="investigacion_mercados">Asesoría en investigación de mercados</option>
-                    <option value="exportacion">Asesoría en procesos de exportación</option>
-                    <option value="importacion">Asesoría en procesos de importación</option>
-                    <option value="mercados_internacionales">Asesoría en apertura de mercados internacionales</option>
-                    <option value="gestion_equipos">Asesoría en gestión de equipos</option>
-                    <option value="elevator_pitch">Asesoría en elevator pitch</option>
-                    <option value="costos_contable">Asesoría en costos y estructura contable</option>
+        <h4>Categoría</h4>
+                <p>Elige una categoría para ayudar a los patrocinadores a encontrar tu proyecto.</p>
+                <select asp-for="Projecto.Tipo">
+                    @{
+                         // Obtén la lista de categorías
 
-                <!-- Agrega más opciones de categorías según sea necesario -->
-            </select>
+                        foreach (var categoria in Model.Categorias)
+                        {
+                            <option value="@categoria.id">@categoria.name </option>
+                        }
+                    }
+                </select>
+                 <span asp-validation-for="Projecto.Tipo" ></span> <!-- Mensaje de error para el campo Redes -->
+
        
     </div>
     

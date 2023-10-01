@@ -6,6 +6,7 @@ namespace Avanze_ProjectoWeb.Models
     {
         //seccion inicio
 
+        public int id { get; set; }
         [Required(ErrorMessage = "Es necesario un titulo")]
         public string? Titulo { get; set; } = "";
 
@@ -17,7 +18,7 @@ namespace Avanze_ProjectoWeb.Models
         public string? ListaApoyos { get; set; }
 
      
-        //seccion mission
+        //seccion Descripciones
         [Required(ErrorMessage = "Completa este campo")]
         public string? DescripcionPlanTiempo { get; set; }
         [Required(ErrorMessage = "Completa este campo")]
@@ -50,6 +51,7 @@ namespace Avanze_ProjectoWeb.Models
 
         [Required(ErrorMessage = "El campo Redes es obligatorio.")]
         public string? Redes { get; set; }
+        [Required(ErrorMessage = "Agreges categorias.")]
         public string? Tipo { get; set; }
 
     }

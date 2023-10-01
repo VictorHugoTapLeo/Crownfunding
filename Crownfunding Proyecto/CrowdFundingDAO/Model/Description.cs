@@ -28,8 +28,17 @@ namespace CrowdFundingDAO.Model
             this.description = description;
             this.projectId = projectId;
         }
+        //metodo descwripw 
+        public Description( string type, string description, int projectId)
+        {
+            this.id = id;
+            this.type = type;
+            this.description = description;
+            this.projectId = projectId;
+        }
         public Description()
         {
+
         }
     }
 }

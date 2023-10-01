@@ -11,8 +11,16 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
         public List<Project> projects = new List<Project>();
         ProjectImpl pImpl;
         public int tipe ;
-        public void OnGet()
+        public IActionResult OnGet()
         {
+            string rol = HttpContext.Session.GetString("rol");
+            if (rol != "Admin")
+            {
+                return RedirectToPage("/Index");
+            }
+            return Page();
+
+
             pImpl = new ProjectImpl();
             /*foreach (DataRow row in pImpl.Select().Rows)
             {

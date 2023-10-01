@@ -22,6 +22,11 @@ namespace CrowdFundingDAO.Model
             this.id = id;
             this.name = name;
         }
+        public Category( string name)
+        {
+           
+            this.name = name;
+        }
         public Category()
         {
         }

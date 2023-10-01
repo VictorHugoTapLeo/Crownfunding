@@ -28,6 +28,13 @@ namespace CrowdFundingDAO.Model
             this.mediaLink = mediaLink;
             this.projectId = projectId;
         }
+        public SocialMedia(string mediaLink, int projectId)
+        {
+       
+           
+            this.mediaLink = mediaLink;
+            this.projectId = projectId;
+        }
         public SocialMedia()
         {
         }

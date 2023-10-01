@@ -12,3 +12,9 @@ C:\Users\Sacha4000\Desktop\SistemasPR\Crownfunding\Crownfunding Proyecto\CrowdFu
 C:\Users\Sacha4000\Desktop\SistemasPR\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.csproj.CoreCompileInputs.cache
 C:\Users\Sacha4000\Desktop\SistemasPR\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.dll
 C:\Users\Sacha4000\Desktop\SistemasPR\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.pdb
+C:\Users\carst\OneDrive\Escritorio\nuevo git\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\bin\Debug\CrowdFundingDAO.dll
+C:\Users\carst\OneDrive\Escritorio\nuevo git\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\bin\Debug\CrowdFundingDAO.pdb
+C:\Users\carst\OneDrive\Escritorio\nuevo git\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.csproj.AssemblyReference.cache
+C:\Users\carst\OneDrive\Escritorio\nuevo git\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.csproj.CoreCompileInputs.cache
+C:\Users\carst\OneDrive\Escritorio\nuevo git\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.dll
+C:\Users\carst\OneDrive\Escritorio\nuevo git\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.pdb
