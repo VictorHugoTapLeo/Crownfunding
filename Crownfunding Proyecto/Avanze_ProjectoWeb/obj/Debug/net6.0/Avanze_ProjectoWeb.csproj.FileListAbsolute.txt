@@ -193,3 +193,43 @@ C:\Users\Sacha4000\Desktop\Sistemas again\Crownfunding\Crownfunding Proyecto\Ava
 C:\Users\Sacha4000\Desktop\Sistemas again\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.pdb
 C:\Users\Sacha4000\Desktop\Sistemas again\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.genruntimeconfig.cache
 C:\Users\Sacha4000\Desktop\Sistemas again\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\ref\Avanze_ProjectoWeb.dll
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\bin\Debug\net6.0\appsettings.Development.json
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\bin\Debug\net6.0\appsettings.json
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\bin\Debug\net6.0\Avanze_ProjectoWeb.staticwebassets.runtime.json
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\bin\Debug\net6.0\Avanze_ProjectoWeb.exe
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\bin\Debug\net6.0\Avanze_ProjectoWeb.deps.json
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\bin\Debug\net6.0\Avanze_ProjectoWeb.runtimeconfig.json
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\bin\Debug\net6.0\Avanze_ProjectoWeb.dll
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\bin\Debug\net6.0\Avanze_ProjectoWeb.pdb
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\bin\Debug\net6.0\System.Data.SqlClient.dll
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\bin\Debug\net6.0\runtimes\win-arm64\native\sni.dll
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\bin\Debug\net6.0\runtimes\win-x64\native\sni.dll
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\bin\Debug\net6.0\runtimes\win-x86\native\sni.dll
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\bin\Debug\net6.0\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\bin\Debug\net6.0\CrowdFundingDAO.dll
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\bin\Debug\net6.0\CrowdFundingDAO.pdb
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.csproj.AssemblyReference.cache
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.GeneratedMSBuildEditorConfig.editorconfig
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.AssemblyInfoInputs.cache
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.AssemblyInfo.cs
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.csproj.CoreCompileInputs.cache
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.MvcApplicationPartsAssemblyInfo.cache
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.RazorAssemblyInfo.cache
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.RazorAssemblyInfo.cs
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\staticwebassets\msbuild.Avanze_ProjectoWeb.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\staticwebassets\msbuild.build.Avanze_ProjectoWeb.props
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\staticwebassets\msbuild.buildMultiTargeting.Avanze_ProjectoWeb.props
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\staticwebassets\msbuild.buildTransitive.Avanze_ProjectoWeb.props
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\staticwebassets.pack.json
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\staticwebassets.build.json
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\staticwebassets.development.json
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\scopedcss\bundle\Avanze_ProjectoWeb.styles.css
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\scopedcss\projectbundle\Avanze_ProjectoWeb.bundle.scp.css
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.csproj.CopyComplete
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.dll
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\refint\Avanze_ProjectoWeb.dll
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.pdb
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.genruntimeconfig.cache
+C:\Crownfunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\ref\Avanze_ProjectoWeb.dll

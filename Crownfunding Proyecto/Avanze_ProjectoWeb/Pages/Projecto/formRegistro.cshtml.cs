@@ -6,7 +6,7 @@ using System.Net;
 using System.Net.Mail;
 using System.Threading.Tasks;
 using System;
-
+using System.Text.RegularExpressions;
 
 namespace Avanze_ProjectoWeb.Pages.Projecto
 {
@@ -17,19 +17,48 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
 
         public class InputModel
         {
-            [Required]
+            //[Required(ErrorMessage = "El campo Nombre es obligatorio.")]
+            //[RegularExpression(@"^(?:[^\s]+(\s[^\s]+)*)$|^[a-zA-ZáéíóúüñÁÉÍÓÚÜÑ\s]+$", ErrorMessage = "El campo Nombre contiene caracteres no permitidos o espacios en blanco múltiples.")]
+
+            //public string Nombre { get; set; }
+            [Required(ErrorMessage = "El campo Nombre es obligatorio.")]
+            [CustomValidation(typeof(InputModel), "ValidarNombre")]
             public string Nombre { get; set; }
 
-            [Required]
-            public string Apellido { get; set; }
+            public static ValidationResult ValidarNombre(string nombre, ValidationContext context)
+            {
+                if (string.IsNullOrWhiteSpace(nombre))
+                {
+                    return ValidationResult.Success; // La validación requerida manejará el campo vacío.
+                }
 
-            [Required]
+                // Verificar caracteres no permitidos
+                if (!Regex.IsMatch(nombre, @"^[a-zA-ZáéíóúüñÁÉÍÓÚÜÑ\s]+$"))
+                {
+                    return new ValidationResult("El campo contiene caracteres no permitidos.");
+                }
+
+                // Verificar espacios en blanco múltiples
+                if (nombre.Contains("  "))
+                {
+                    return new ValidationResult("El campo contiene espacios en blanco múltiples.");
+                }
+
+                return ValidationResult.Success;
+            }
+
+            [Required(ErrorMessage = "El campo Apellido es obligatorio.")]
+            [CustomValidation(typeof(InputModel), "ValidarNombre")]
+            public string? Apellido { get; set; }
+
+            [Required(ErrorMessage = "El campo Correo es obligatorio.")]
             [EmailAddress]
-            public string Correo { get; set; }
+
+            public string? Correo { get; set; }
 
             [Required]
             [DataType(DataType.Password)]
-            public string Contraseña { get; set; }
+            public string? Contraseña { get; set; }
 
             [Required]
             [DataType(DataType.Password)]
@@ -46,9 +75,11 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
 
         public async Task<IActionResult> OnPost()
         {
+
+
             if (!ModelState.IsValid)
             {
-                return Page();
+                return Page(); // Devuelve la página actual con mensajes de error.
             }
 
             // Genera un token de validación único (puedes usar Guid.NewGuid() por simplicidad).
