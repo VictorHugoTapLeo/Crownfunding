@@ -14,4 +14,8 @@
     <ProjectReference Include="..\CrowdFundingDAO\CrowdFundingDAO.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\imagenes\" />
+  </ItemGroup>
+
 </Project>

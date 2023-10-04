@@ -10,69 +10,74 @@
 </head>
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">Avanze_ProjectoWeb</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Projecto/paginaUno">Pagina Prueba</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Projecto/formRegistro">Form Registro</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Projecto/recuperarContraseña">Recuperar Contraseña</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Projecto/restablecimientoContraseña">Restablecimiento Contraseña</a>
-                        </li>
-                        
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Projecto/RestaurarProyecto">Restablecimiento De proyectos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Projecto/PeticionesDeProyectos">Revision De proyectos</a>
-                        </li> 
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Projecto/editProjectLista">Editar proyecto</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Projecto/PerfilInterfaz">Perfil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Projecto/ProyectosRealizados">Proyetos Con Trabajo Realizados</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Projecto/ApoyoProyectos">Apoyo de Proyetos</a>
-                        </li>
-                    </ul>
+        <div>
+            
+        </div>
+        <div>
+            <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom mb-3">
+                <ul class="navbar-nav flex-grow-1 ulHeader">
+                    <li class="nav-item">
+                        <a class="nav-link headerText" asp-area="" asp-page="/Index">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link headerText" asp-area="" asp-page="/Index">Categoria de proyectos</a>
+                    </li>
+                    <li class="nav-item"> 
+                        <a class="nav-link headerText" asp-area="" asp-page="/Projecto/preguntasFrecuentes">Preguntas Frecuentes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link headerText" asp-area="" asp-page="/Projecto/ExploradorMomentaneo">Explorador Desarrollador</a>
+                    </li>
+                </ul>
+                <div class="user-actions divB">
+                    <button class="button2">Iniciar Sesión</button>
+                    <button class="button1">Registrate</button>
                 </div>
-            </div>
-        </nav>
+            </nav>
+        </div>
     </header>
+
+
+
+
     <div class="container">
         <main role="main" class="pb-3">
             @RenderBody()
         </main>
     </div>
+    
 
-    <footer class="border-top footer text-muted">
+
+
+    <footer class="footer">
         <div class="container">
-            &copy; 2023 - Avanze_ProjectoWeb - <a asp-area="" asp-page="/Privacy">Privacy</a>
-           
+            <div class="divBox">
+                <p class="rectangulo">Nuestra Seccion</p>
+                <a class="enlaces" href="/SobreNosotros">Sobre Nosotros</a>
+                <a class="enlaces" href="/NuestrosServicios">Nuestros Servicios</a>
+                <a class="enlaces" href="/Privacy" >Politica De Privacidad</a>
+            </div>
+            <div class="divBox">
+                <p class="rectangulo">Te ayudamos</p>
+                <a class="enlaces" href="/Projecto/preguntasFrecuentes">Preguntas Frecuentes</a>
+                <a class="enlaces" href="https://www.ejemplo.com">.</a>
+                <a class="enlaces" href="https://www.ejemplo.com">.</a>
+            </div>
+            <div class="divBox">
+                <p class="rectangulo">Visita Tambien</p>
+                <a class="enlaces" href="https://www.univalle.edu/">Univalle Oficial</a>
+                <a class="enlaces" href="https://www.univalle.edu/?page_id=150">Eres Estudiante Nuevo?</a>
+                <a class="enlaces" href="https://www.univalle.edu/?page_id=147/#Registro">Mas Sobre Univalle</a>
+            </div>
+            <div class="divBox">
+                <p class="rectangulo">Siguenos En Nuestras Redes</p>
+                <a class="enlaces" href="https://www.facebook.com/UnivalleBolivia">Facebook</a>
+                <a class="enlaces" href="https://www.instagram.com/univalle_bolivia/">Instagram</a>
+                <a class="enlaces" href="https://www.tiktok.com/">Tiktok</a>
+            </div>
         </div>
     </footer>
+
 
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>

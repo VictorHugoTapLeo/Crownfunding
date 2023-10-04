@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Crownfunding\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj": {}
+    "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj": {}
   },
   "projects": {
-    "C:\\Crownfunding\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj": {
+    "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Crownfunding\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj",
+        "projectUniqueName": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj",
         "projectName": "Avanze_ProjectoWeb",
-        "projectPath": "C:\\Crownfunding\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj",
-        "packagesPath": "C:\\Users\\Diego Anthony Flores\\.nuget\\packages\\",
-        "outputPath": "C:\\Crownfunding\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\obj\\",
+        "projectPath": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj",
+        "packagesPath": "C:\\Users\\Victor Hugo\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Diego Anthony Flores\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Victor Hugo\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Crownfunding\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj": {
-                "projectPath": "C:\\Crownfunding\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj"
+              "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj": {
+                "projectPath": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj"
               }
             }
           }
@@ -72,11 +72,11 @@
         }
       }
     },
-    "C:\\Crownfunding\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj": {
+    "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Crownfunding\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj",
+        "projectUniqueName": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj",
         "projectName": "CrowdFundingDAO",
-        "projectPath": "C:\\Crownfunding\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj",
+        "projectPath": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {}

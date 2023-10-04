@@ -20,7 +20,7 @@ a[b-wbmk0jgvxk] {
 .nav-pills .nav-link.active[b-wbmk0jgvxk], .nav-pills .show > .nav-link[b-wbmk0jgvxk] {
   color: #fff;
   background-color: #1b6ec2;
-  border-color: #1861ac;
+  border-color: #1861ac;    
 }
 
 .border-top[b-wbmk0jgvxk] {
@@ -39,10 +39,109 @@ button.accept-policy[b-wbmk0jgvxk] {
   line-height: inherit;
 }
 
-.footer[b-wbmk0jgvxk] {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  white-space: nowrap;
-  line-height: 60px;
+
+
+
+
+
+
+
+
+
+/* boton rosa */
+.button1[b-wbmk0jgvxk] {
+    background-color: #F34479;
+    color: white;
+    border: 2px solid #F34479;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 13px;
+    font-family: 'Alata', sans-serif;
+    width: 125px; /* Ajusta el ancho según tus necesidades */
+    height: 50px;
 }
+    .button1:hover[b-wbmk0jgvxk] {
+        background-color: white; 
+        color: #F34479; 
+    }
+
+/* boton blanco */
+.button2[b-wbmk0jgvxk] {
+    background-color: white;
+    color: #F34479;
+    border: 2px solid #F34479;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 13px;
+    font-family: 'Alata', sans-serif;
+    width: 125px;
+    height: 50px;
+}
+    .button2:hover[b-wbmk0jgvxk] { 
+        background-color: #F34479;
+        color: white;
+    }
+
+/* li header */
+.headerText[b-wbmk0jgvxk] {
+    color: #9D9D9D;
+    font-family: 'Alata', sans-serif;
+}
+.ulHeader[b-wbmk0jgvxk] {
+    padding-left: 100px;
+}
+.divB[b-wbmk0jgvxk] {
+    padding-right: 50px;
+}
+
+
+
+
+
+.enlaces[b-wbmk0jgvxk] {
+    color: gray;
+    font-size: 11px;
+    margin: 5px 0;
+    text-decoration: none;
+    padding-left:35px;
+}
+.divBox[b-wbmk0jgvxk] {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.footer[b-wbmk0jgvxk] {
+    font-family: 'Alata', sans-serif;
+    background-color: #393939;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+.rectangulo[b-wbmk0jgvxk] {
+    color: white;
+    font-size: 13px;
+    padding: 2px; 
+    margin: 0; 
+    position: relative;
+}
+    .rectangulo[b-wbmk0jgvxk]::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1.5px;
+        background-color: #F34479; 
+    }
+
+

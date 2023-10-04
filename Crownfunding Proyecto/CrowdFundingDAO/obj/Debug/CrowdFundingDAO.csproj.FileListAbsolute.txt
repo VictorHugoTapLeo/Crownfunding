@@ -30,3 +30,9 @@ C:\Crownfunding\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\Cro
 C:\Crownfunding\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.csproj.CoreCompileInputs.cache
 C:\Crownfunding\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.dll
 C:\Crownfunding\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.pdb
+C:\Users\Victor Hugo\Desktop\crow proyecto\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\bin\Debug\CrowdFundingDAO.dll
+C:\Users\Victor Hugo\Desktop\crow proyecto\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\bin\Debug\CrowdFundingDAO.pdb
+C:\Users\Victor Hugo\Desktop\crow proyecto\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.csproj.AssemblyReference.cache
+C:\Users\Victor Hugo\Desktop\crow proyecto\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.csproj.CoreCompileInputs.cache
+C:\Users\Victor Hugo\Desktop\crow proyecto\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.dll
+C:\Users\Victor Hugo\Desktop\crow proyecto\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.pdb

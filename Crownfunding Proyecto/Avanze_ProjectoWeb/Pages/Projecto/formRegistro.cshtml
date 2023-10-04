@@ -2,51 +2,65 @@
 @model Avanze_ProjectoWeb.Pages.Projecto.formRegistroModel
 @{
 }
-<h1>Registro</h1>
-<form method="post">
-    <div class="form-group">
-        <label for="nombre">Nombre</label>
-        <input asp-for="Input.Nombre" type="text" placeholder="Ingrese su nombre Completo" class="form-control">
-        <br />
-        <span asp-validation-for="Input.Nombre"></span>
-    </div>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/registro.css" asp-append-version="true" />
+</head>
 
-    <div class="form-group">
-        <label for="apellido">Apellido:</label>
-        <input asp-for="Input.Apellido" type="text" placeholder="Ingrese su Apellido" class="form-control">
-        <br />
-        <span asp-validation-for="Input.Apellido"></span>
-    </div>
 
-    <div class="form-group">
-        <label for="correo">Correo:</label>
-        <input asp-for="Input.Correo" name="correo" type="text" placeholder="Ingrese su Correo" class="form-control">
-        <br />
-        <span asp-validation-for="Input.Correo"></span>
-    </div>
-    <div class="form-group">
-        <label for="contraseña">Contraseña:</label>
-        <input asp-for="Input.Contraseña" type="password" name="contraseña" placeholder="Ingrese su Contraseña" class="form-control">
-        <br />
-        <span asp-validation-for="Input.Contraseña"></span>
-    </div>
+<body>
+    <div class="container">
+        <div class="box2">
+            <h2>¡Bienvenido!</h2>
+            <p class="p1">Estamos a tu disposición para ayudarte.</p>
+            <p class="p2">¿Ya tienes cuenta?</p>
+            <button class="button2">Iniciar Session</button>
+        </div>
+        <div class="box1">
+            <h2>Registro</h2>
+            <form method="post">
+                <div class="separacion">
+                    <input asp-for="Input.Nombre" type="text" placeholder="Ingrese su nombre Completo" class="input">
+                    <br />
+                    <span asp-validation-for="Input.Nombre"></span>
+                </div>
 
-    <div class="form-group">
-        <label for="confirmarcontraseña">Confirmar Contraseña:</label>
-        <input asp-for="Input.ConfirmarContraseña" id="confirmarcontraseña" type="password" name="confirmarcontraseña" placeholder="Confirmar su Contraseña" class="form-control">
-        <br />
-        <span asp-validation-for="Input.ConfirmarContraseña"></span>
-    </div>
+                <div class ="separacion">
+                    <input asp-for="Input.Apellido" type="text" placeholder="Ingrese su Apellido" class="input">
+                    <br />
+                    <span asp-validation-for="Input.Apellido"></span>
+                </div>
 
-    <div class="form-check">
-        <input type="checkbox" id="enviarProyectos" name="enviarProyectos" class="form-check-input" />
-        <label class="form-check-label" for="enviarProyectos">Envíenme una combinación semanal de proyectos seleccionados exclusivamente para mí, además de noticias ocasionales de Crowdfunding</label>
-    </div>
+                <div class="separacion">
+                    <input asp-for="Input.Correo" name="correo" type="text" placeholder="Ingrese su Correo" class="input">
+                    <br />
+                    <span asp-validation-for="Input.Correo"></span>
+                </div>
 
-    <div class="form-check">
-        <input type="checkbox" id="aceptarPoliticas" name="aceptarPoliticas" class="form-check-input" />
-        <label class="form-check-label" for="aceptarPoliticas">Acepto la Política de privacidad, Política de cookies y los Términos de uso</label>
+                <div class="separacion">
+                    <input asp-for="Input.Contraseña" type="password" name="contraseña" placeholder="Ingrese su Contraseña" class="input">
+                    <br />
+                    <span asp-validation-for="Input.Contraseña"></span>
+                </div>
+
+                <div class="separacion">
+                    <input asp-for="Input.ConfirmarContraseña" id="confirmarcontraseña" type="password" name="confirmarcontraseña" placeholder="Confirmar su Contraseña" class="input">
+                    <br />
+                    <span asp-validation-for="Input.ConfirmarContraseña"></span>
+                </div>
+
+                <div class="form-check separacion">
+                    <input type="checkbox" id="enviarProyectos" name="enviarProyectos" class="form-check-input" />
+                    <label class="check" for="enviarProyectos">Envíenme una combinación semanal de proyectos seleccionados exclusivamente para mí, además de noticias ocasionales de Crowdfunding</label>
+                </div>
+
+                <div class="form-check separacion">
+                    <input type="checkbox" id="aceptarPoliticas" name="aceptarPoliticas" class="form-check-input" />
+                    <label class="check" for="aceptarPoliticas">Acepto la Política de privacidad, Política de cookies y los Términos de uso</label>
+                </div>
+                <button type="submit" class="button2">Crear Cuenta</button>
+            </form>
+        </div>
     </div>
-    <a asp-page="/Index" class="btn btn-danger">Salir</a>
-    <button type="submit" class="btn btn-primary">Crear Cuenta</button>
-</form>
+</body>
