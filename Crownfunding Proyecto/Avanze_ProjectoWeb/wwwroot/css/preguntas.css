@@ -38,6 +38,7 @@ body {
     font-size: 14px;
     margin: 0;
 }
-h1 {
+h2 {
     font-weight: bold;
+    padding-left: 60px;
 }

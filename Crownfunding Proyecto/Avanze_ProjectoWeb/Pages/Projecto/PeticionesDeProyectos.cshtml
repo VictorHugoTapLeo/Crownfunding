@@ -3,33 +3,37 @@
 @{
 	ViewData["Title"] = "Revisiones de Proyectos";
 }
-<div class="container-fluid">
-    <div class="row" style="margin-top: 10px; background-color: aqua;">
-        @{
-            int proyectosPorFila = 3; // Número de proyectos por fila
-        }
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/proyectos.css" asp-append-version="true" />
+</head>
+<body>
+    <h2>Solicitudes de aprobacion</h2>
+</body>
+<div class="proyecto-container">
         @foreach (var proyecto in Model.projects)
         {
-            <div class="col-md-4 col-sm-6 col-12" style="padding: 10px;">
+        <div class="proyecto">
                 <!-- Botones aquí -->
                 <form method="post">
-                    <div class="row text-center">
+                <div class="titleProyect">
                         <span>@proyecto.title</span>
                         <input type="hidden" name="proyectoId" value="@proyecto.id" />
                     </div>
-                    <div class="row text-center">
+                    <div>
                         <img src="https://www.smartick.es/blog/wp-content/uploads/cuadrado.png">
                     </div>
-                    <div class="row text-center">
-                        <div class="col-6">
-                            <button type="submit" name="handler" value="Aceptar" class="btn btn-primary">Aceptar</button>
-                        </div>
-                        <div class="col-6">
-                            <button type="submit" name="handler" value="Rechazar" class="btn btn-danger">Rechazar</button>
-                        </div>
+                <div class="button-container">
+
+                    <button class="button button-red" type="submit" name="handler" value="Aceptar" class="btn btn-primary">Aceptar</button>
+
+                    <button class="button button-green" type="submit" name="handler" value="Rechazar" class="btn btn-danger">Rechazar</button>
+ 
                     </div>
-                    <div class="row text-center">
+                    <div>
                         <p>
+                            <b>
                             Guitar: Adrian Smith
                             Vocals: Blaze Bayley
                             Guitar: Dave Murray
@@ -43,10 +47,10 @@
                             Writer: Bruce Dickinson
                             Writer: Dave Murray
                             Writer: Steve Harris
+                        </b>
                         </p>
                     </div>
                 </form>
             </div>
         }
     </div>
-</div>

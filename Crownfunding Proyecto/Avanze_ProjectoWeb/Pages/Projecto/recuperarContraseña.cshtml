@@ -2,17 +2,25 @@
 @model Avanze_ProjectoWeb.Pages.Projecto.RecuperarContraseñaModel
 @{
 }
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/formSimple.css" asp-append-version="true" />
+</head>
 
-<h1>Recuperar Contraseña</h1>
-
-<form method="post">
-    <div class="form-group">
-        <label for="correo">Correo de Cuenta:</label>
-        <input type="email" class="form-control" id="correo" name="correo" required>
+<body>
+    <div class="container">
+        <div class="box1">
+            <h2>Recuperar Contraseña</h2>
+            <form method="post">
+                <div>
+                    <label for="correo">Correo de Cuenta</label><br></br>
+                    <input type="email" class="input" id="correo" name="correo" required>
+                </div>
+                <br>
+                <button type="submit" class="button2" name="enviarCorreo">Enviar Correo</button>
+            </form>
+        </div>
     </div>
+</body>
 
-    <a asp-page="/Index" class="btn btn-danger">Salir</a>
-    <button type="submit" class="btn btn-primary" name="enviarCorreo">Enviar Correo</button>
-    
-    
-</form>

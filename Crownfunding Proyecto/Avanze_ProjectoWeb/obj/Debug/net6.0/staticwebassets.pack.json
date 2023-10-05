@@ -5,12 +5,24 @@
       "PackagePath": "staticwebassets\\Avanze_ProjectoWeb.bundle.scp.css"
     },
     {
+      "Id": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\wwwroot\\css\\apoyoProyectos.css",
+      "PackagePath": "staticwebassets\\css\\apoyoProyectos.css"
+    },
+    {
       "Id": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\wwwroot\\css\\estilos.css",
       "PackagePath": "staticwebassets\\css\\estilos.css"
     },
     {
+      "Id": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\wwwroot\\css\\formSimple.css",
+      "PackagePath": "staticwebassets\\css\\formSimple.css"
+    },
+    {
       "Id": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\wwwroot\\css\\preguntas.css",
       "PackagePath": "staticwebassets\\css\\preguntas.css"
+    },
+    {
+      "Id": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\wwwroot\\css\\proyectos.css",
+      "PackagePath": "staticwebassets\\css\\proyectos.css"
     },
     {
       "Id": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\wwwroot\\css\\registro.css",

@@ -5,31 +5,24 @@
 }
 <!DOCTYPE html>
 <head>
-
-
-
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-
+    <link rel="stylesheet" href="~/css/proyectos.css" asp-append-version="true" />
 </head>
 
-<h1><b>Proyectos con trabajo Realizado</b></h1>
-<div class="container-fluid">
-    <div class="row" style="margin-top: 10px; background-color: aqua;">
-        @{
-            int proyectosPorFila = 3; // Número de proyectos por fila
-        }
+<body>
+    <h2>Proyectos con trabajo realizado</h2>
+    <div class="proyecto-container">
         @foreach (var proyecto in Model.projects)
         {
-            <div class="col-md-4 col-sm-6 col-12" style="padding: 10px;">
+            <div class="proyecto">
                 <!-- Botones aquí -->
                 <form method="post">
-                    <div class="row text-center">
+                    <div class="titleProyect">
                         <span>@proyecto.title</span>
                         <input type="hidden" name="proyectoId" value="@proyecto.id" />
                     </div>
-                    <div class="row text-center">
+                    <div>
                         <img src="https://www.smartick.es/blog/wp-content/uploads/cuadrado.png">
                     </div>
                     <br>
@@ -37,21 +30,26 @@
                         <span class="progress-text">7500bs</span>
                     </div>
                     <br>
-                    <div class="row text-center">
+                    <div>
                         <small>Meta: 7500Bs.</small>
                     </div>
                     <br>
 
-                    <div class="row text-center">
-                        <p class="row text-center">
+                    <div>
+                        <p>
                             <b>
                                 Asesoria financiera / Asesoria Comercial <br>
                                 Asesoria en Marketing / Asesoria en Gestion
                             </b>
                         </p>
                     </div>
+                    <div class="separacion">
+                        <div class="custom-progress">
+                            <span>Proyecto subido el: 21/08/2023</span>
+                        </div>
+                    </div>
                 </form>
             </div>
         }
     </div>
-</div>
+</body>

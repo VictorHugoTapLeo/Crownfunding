@@ -1,0 +1,117 @@
+﻿/* Estilo del contenedor principal */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Estilo del contenedor de la imagen */
+.image-container {
+    flex: 1; /* La imagen ocupará 1/3 del ancho del contenedor principal */
+    padding: 10px; /* Espaciado opcional alrededor de la imagen */
+}
+
+    /* Estilo de la imagen (ajusta el tamaño según tus necesidades) */
+    .image-container img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+        border-radius: 10px;
+    }
+
+/* Estilo del contenedor del contenido centrado */
+.content-container {
+    flex: 2; /* El contenido ocupará 2/3 del ancho del contenedor principal */
+    padding: 10px; /* Espaciado opcional alrededor del contenido */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de los botones */
+.button-container {
+    display: flex;
+    flex-direction: column; /* Los botones se alinearán verticalmente uno debajo del otro */
+    align-items: center; /* Centramos horizontalmente los botones */
+}
+
+
+
+.centered-content {
+
+}
+body {
+    background-color: #F5F5F5;
+    font-family: 'Alata', sans-serif;
+}
+}
+.divTitle {
+    padding-bottom: 40px;
+}
+    .divTitle h2 {
+        text-align: center;
+        font-weight: bold;
+        color: black;
+    }
+    .divTitle p {
+        padding-top:15px;
+        text-align: center;
+        font-weight: bold;
+        font-size:17px;
+        color: #4D4D4D;
+    }
+
+.progress {
+    background-color: black;
+    border-radius: 50px;
+    padding: 10px;
+    text-align: center;
+    width:400px;
+}
+
+.progress-text {
+    color: white;
+}
+.textP {
+    color: #4D4D4D;
+    font-weight: bold;
+    font-size:10px;
+}
+.text1 {
+    font-weight: bold;
+    color: black;
+    font-size: 18px;
+}
+.text2 {
+    font-weight: bold;
+    color: black;
+    font-size: 20px;
+}
+.text3 {
+    font-weight: bold;
+    color: black;
+    font-size: 15px;
+}
+.button1 {
+    background-color: #F34479;
+    color: white;
+    border: 2px solid #F34479;
+    border-radius: 10px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 10px;
+    font-family: 'Alata', sans-serif;
+    width: 140px; 
+    height: 35px;
+}
+
+    .button1:hover {
+        background-color: white;
+        color: #F34479;
+    }

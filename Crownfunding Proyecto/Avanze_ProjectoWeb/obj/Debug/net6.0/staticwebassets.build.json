@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "5C//58u+UJiwM0umfAB4TgBRHh0JaH2vWvHzjpT+4Jk=",
+  "Hash": "XLyofldniiOoIAYDslGsW/zpaW18+0AWZ/TisqoLSkI=",
   "Source": "Avanze_ProjectoWeb",
   "BasePath": "_content/Avanze_ProjectoWeb",
   "Mode": "Default",
@@ -51,6 +51,23 @@
       "OriginalItemSpec": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\obj\\Debug\\net6.0\\scopedcss\\projectbundle\\Avanze_ProjectoWeb.bundle.scp.css"
     },
     {
+      "Identity": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\wwwroot\\css\\apoyoProyectos.css",
+      "SourceId": "Avanze_ProjectoWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\wwwroot\\",
+      "BasePath": "_content/Avanze_ProjectoWeb",
+      "RelativePath": "css/apoyoProyectos.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\apoyoProyectos.css"
+    },
+    {
       "Identity": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\wwwroot\\css\\estilos.css",
       "SourceId": "Avanze_ProjectoWeb",
       "SourceType": "Discovered",
@@ -68,6 +85,23 @@
       "OriginalItemSpec": "wwwroot\\css\\estilos.css"
     },
     {
+      "Identity": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\wwwroot\\css\\formSimple.css",
+      "SourceId": "Avanze_ProjectoWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\wwwroot\\",
+      "BasePath": "_content/Avanze_ProjectoWeb",
+      "RelativePath": "css/formSimple.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\formSimple.css"
+    },
+    {
       "Identity": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\wwwroot\\css\\preguntas.css",
       "SourceId": "Avanze_ProjectoWeb",
       "SourceType": "Discovered",
@@ -83,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\preguntas.css"
+    },
+    {
+      "Identity": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\wwwroot\\css\\proyectos.css",
+      "SourceId": "Avanze_ProjectoWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\wwwroot\\",
+      "BasePath": "_content/Avanze_ProjectoWeb",
+      "RelativePath": "css/proyectos.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\proyectos.css"
     },
     {
       "Identity": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\wwwroot\\css\\registro.css",

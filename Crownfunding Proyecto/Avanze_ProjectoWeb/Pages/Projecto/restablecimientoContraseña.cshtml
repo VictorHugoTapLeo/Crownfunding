@@ -2,17 +2,26 @@
 @model Avanze_ProjectoWeb.Pages.Projecto.RestablecimientoContraseñaModel
 @{
 }
-<h1>Restablecer Contraseña</h1>
-<form method="post">
-    <div class="form-group">
-        <label for="nuevaContraseña">Nueva Contraseña</label>
-        <input type="password" class="form-control" id="nuevaContraseña" name="nuevaContraseña">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/formSimple.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="container">
+        <div class="box1">
+            <h2>Restablecer Contraseña</h2>
+            <form method="post">
+                <div>
+                    <label for="nuevaContraseña">Nueva Contraseña</label><br></br>
+                    <input type="password" class="input" id="nuevaContraseña" name="nuevaContraseña"><br></br>
+                </div>
+                <div class="">
+                    <label for="confirmarContraseña">Confirmar Nueva Contraseña</label><br></br>
+                    <input type="password" class="input" id="confirmarContraseña" name="confirmarContraseña"><br></br>
+                </div>
+                <button type="submit" class="button2 btnAncho" name="restablecer">Confirmar Nueva Contraseña</button>
+            </form>
+        </div>
     </div>
-    <div class="form-group">
-        <label for="confirmarContraseña">Confirmar Nueva Contraseña</label>
-        <input type="password" class="form-control" id="confirmarContraseña" name="confirmarContraseña">
-    </div>
-    <a asp-page="/Index" class="btn btn-danger">Salir</a>
-    <button type="submit" class="btn btn-primary" name="restablecer">Confirmar Nueva Contraseña</button>
-    
-</form>
+</body>
