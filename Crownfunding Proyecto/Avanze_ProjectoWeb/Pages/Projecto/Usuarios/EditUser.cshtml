@@ -1,0 +1,45 @@
+﻿@page
+@model Avanze_ProjectoWeb.Pages.Projecto.Usuarios.EditUserModel
+@{
+}
+
+<h2>Editar Usuario</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="Name">Nombre:</label>
+        <input type="text" class="form-control" name="name" id="name" asp-for="User.name" />
+    </div>
+    <div class="form-group">
+        <label for="LastName">Apellido:</label>
+        <input type="text" class="form-control" name="lastName" id="lastName" asp-for="User.lastName" />
+    </div>
+    <div class="form-group">
+        <label for="SecondLastName">Segundo Apellido:</label>
+        <input type="text" class="form-control" name="secondLastName" id="secondLastName" asp-for="User.secondLastName" />
+    </div>
+    <div class="form-group">
+        <label for="UserName">Nombre de Usuario:</label>
+        <input type="text" class="form-control" name="userName" id="userName" asp-for="User.userName" />
+    </div>
+    @* <div class="form-group">
+    <label for="Password">Contraseña:</label>
+    <input type="password" class="form-control" name="password" id="password" asp-for="User.password" />
+    </div> *@
+    <div class="form-group">
+        <label for="Role">Rol:</label>
+        <input type="text" class="form-control" name="role" id="role" asp-for="User.role" />
+    </div>
+    <div class="form-group">
+        <label for="Email">Correo Electrónico:</label>
+        <input type="email" class="form-control" name="email" id="email" asp-for="User.email" />
+    </div>
+    <div class="form-group">
+        <label for="PhoneNumber">Número de Teléfono:</label>
+        <input type="tel" class="form-control" name="phoneNumber" id="phoneNumber" asp-for="User.phoneNumber" />
+    </div>
+
+    <!-- Agrega campos para las demás propiedades del usuario aquí -->
+
+    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
+</form>

@@ -10,5 +10,6 @@ namespace CrowdFundingDAO.Interfaces
     internal interface IUser : IBase<User>
     {
         User Get(int id);
+        List<User> SelectAll();
     }
 }
