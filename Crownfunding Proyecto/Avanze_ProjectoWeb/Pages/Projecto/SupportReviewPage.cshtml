@@ -1,0 +1,27 @@
+﻿@page
+@model Avanze_ProjectoWeb.Pages.Projecto.SupportReviewPageModel
+@{
+}
+ <form method="post"  > 
+         <input  asp-for="idSupport"/>
+
+          
+            
+           <h1>Se cumplio con lo ofrecido?</h1>
+          <label>
+        <input type="radio" asp-for="verificationStatus" value="1" /> Si
+    </label>
+    <label>
+        <input type="radio" asp-for="verificationStatus" value="0" /> No
+    </label>
+    <span asp-validation-for="verificationStatus"></span> <!-- Mensaje de error para el campo Link -->
+
+    <h1>Observaciones</h1>
+        <textarea asp-for="reviewDescripction"  rows="3" placeholder="Escribe tus comentarios aquí"></textarea>
+    <span asp-validation-for="reviewDescripction" ></span> <!-- Mensaje de error para ComentarioMision -->
+          
+
+
+         <button type="submit" >Registrar Review</button>
+
+ </form>

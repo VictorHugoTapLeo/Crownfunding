@@ -80,6 +80,41 @@
                     </label>
                 </div>
                 <br />
+                <div>
+                    
+                     <form method="post"  > 
+
+                    <h3>Apoyo para el proyecto:</h3>
+                     <input asp-for="idA" />
+                     <p>@Model.Titulo</p>
+
+                     <select asp-for="@Model.TypoApoyo" class="form-control">
+                        <option value="Asesoría financiera">Asesoría financiera</option>
+                        <option value="Asesoría comercial">Asesoría comercial</option>
+                        <option value="Asesoría en marketing">Asesoría en marketing</option>
+                        <option value="Apoyo en valoración de empresas">Apoyo en valoración de empresas</option>
+                        <option value="Asesoría en gestión impositiva">Asesoría en gestión impositiva</option>
+                        <option value="Asesoría en desarrollo de marca">Asesoría en desarrollo de marca</option>
+                        <option value="Apoyo en desarrollo de packaging">Apoyo en desarrollo de packaging</option>
+                        <option value="Apoyo en procesos de innovación">Apoyo en procesos de innovación</option>
+                        <option value="Asesoría en investigación de mercados">Asesoría en investigación de mercados</option>
+                        <option value="Asesoría en procesos de exportación">Asesoría en procesos de exportación</option>
+                        <option value="Asesoría en procesos de importación">Asesoría en procesos de importación</option>
+                        <option value="Asesoría en apertura de mercados internacionales">Asesoría en apertura de mercados internacionales</option>
+                        <option value="Asesoría en gestión de equipos">Asesoría en gestión de equipos</option>
+                        <option value="Asesoría en elevator pitch">Asesoría en elevator pitch</option>
+                        <option value="Asesoría en costos y estructura contable">Asesoría en costos y estructura contable</option>
+
+                    </select>
+                     <span asp-validation-for="TypoApoyo" ></span> <!-- Mensaje de error para ComentarioMision -->
+           
+                      <textarea asp-for="@Model.DescriApoyo"  rows="3" placeholder="Describe tu apoyo,link,invitacion,etc"></textarea>
+                <span asp-validation-for="DescriApoyo" ></span> <!-- Mensaje de error para ComentarioMision -->
+           
+                     <button type="submit" >Registrar</button>
+                     </form>
+                </div>
+                <br />
 
             </div>
             <div class="button-container">

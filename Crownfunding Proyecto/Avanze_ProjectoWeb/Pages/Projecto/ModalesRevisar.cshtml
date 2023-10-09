@@ -1,0 +1,97 @@
+﻿@page
+@model Avanze_ProjectoWeb.Pages.ModalesRevisarModel
+@{
+    //para documentacion :https://sweetalert2.github.io/#examples
+}
+@*El link para estos modales ewsta en layout*@
+<style>
+        .my-actions { margin: 0 2em; }
+        .order-1 { order: 1; }
+        .order-2 { order: 2; }
+        .order-3 { order: 3; }
+
+        .right-gap { margin-right: auto; }
+    </style>
+
+    @*para activarlos con botones usa el onclick*@
+    <button class="btn btn-primary" onclick="displayAlerth()">Basic alert</button> 
+    <button class="btn btn-primary" onclick="FuncionSIoNO()">Si No</button> 
+<button class="btn btn-primary" onclick="displayAlert()">Basic alert</button> 
+<button class="btn btn-success" onclick="displayAlertSuccess()">Well done</button> 
+<button class="btn btn-danger" onclick="displayAlertError()">Error</button>
+
+@section Scripts{
+    <script>
+        function displayAlert() {
+            Swal.fire("Example with SweetAlert2");
+        }
+        //hecho
+        function displayAlertSuccess() {
+            Swal.fire('Excellent', 'Good job!', 'success');
+        }
+        //error  /
+        function displayAlertError() {
+            Swal.fire('Error/titulo', 'There has been an error', 'error');
+        }
+        //este es para si o no ,no funciona
+          function displayAlerth() {
+            Swal.fire({
+                title: 'Do you want to save the changes?',
+                showDenyButton: true,
+                showCancelButton: true,
+                confirmButtonText: 'Yes',
+                denyButtonText: 'No',
+                customClass: {
+                    actions: 'my-actions',
+                    cancelButton: 'order-1 right-gap',
+                    confirmButton: 'order-2',
+                    denyButton: 'order-3',
+                }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    Swal.fire('Saved!', '', 'success')
+                } else if (result.isDenied) {
+                    Swal.fire('Changes are not saved', '', 'info')
+                }
+            })
+        }
+
+
+     //este espara si o no ,funciona ,para que funcione el 
+     // boton debe ser tipo boton y tener el onclick con el combre de esta ffuncion
+    function FuncionSIoNO() {
+        Swal.fire({
+            title: 'Quiere Guardar Esto??',
+            showDenyButton: true,
+           
+            confirmButtonText: 'Yes',
+            denyButtonText: 'No',
+            customClass: {
+                actions: 'my-actions',
+               
+                confirmButton: 'order-2',
+                denyButton: 'order-3',
+            }
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Aquí enviamos el formulario si el usuario hace clic en "Yes"
+                document.querySelector('form').submit();
+            }
+        })
+    }
+
+
+    //este codigo es necesario para activar los modales desde codigo 
+    @if (ViewData["Script"] != null)
+    {
+        <text>@Html.Raw(ViewData["Script"])</text>
+    }
+
+    //
+
+
+    </script>
+}
+ 
+
+    

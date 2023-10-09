@@ -243,5 +243,77 @@ namespace CrowdFundingDAO.Implementation
                 throw ex;
             }
         }
+
+        //metodo para projectos propios ,solo mios 
+        public List<Project> SelectMyPro(int iduser)
+        {
+            List<Project> projects = new List<Project>();
+
+            query = @"SELECT id, title
+                FROM Project
+                WHERE status = 1 AND userCampaingId=@id ";
+            SqlCommand command = CreateBasicCommand(query);
+            command.Parameters.AddWithValue("@id", iduser);
+
+            try
+            {
+                DataTable table = ExecuteDataTableCommand(command);
+
+                foreach (DataRow row in table.Rows)
+                {
+                    Project project = new Project
+                    {
+                        id = Convert.ToInt32(row["id"]),
+                        title = row["title"].ToString(),
+
+                    };
+
+                    projects.Add(project);
+                }
+
+                return projects;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<Project> SupportedProByMe(int myid)
+        {
+            List<Project> projects = new List<Project>();
+
+            query = @"SELECT id,title
+                    FROM Project
+                    WHERE id IN (SELECT projectId
+                    FROM Support
+                    WHERE supporterId = @id) ";
+            SqlCommand command = CreateBasicCommand(query);
+            command.Parameters.AddWithValue("@id", myid);
+
+            try
+            {
+                DataTable table = ExecuteDataTableCommand(command);
+
+                foreach (DataRow row in table.Rows)
+                {
+                    Project project = new Project
+                    {
+                        id = Convert.ToInt32(row["id"]),
+                        title = row["title"].ToString(),
+
+                    };
+
+                    projects.Add(project);
+                }
+
+                return projects;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }

@@ -5,129 +5,140 @@ build_property.UsingMicrosoftNETSdkWeb = true
 build_property.ProjectTypeGuids = 
 build_property.InvariantGlobalization = 
 build_property.PlatformNeutralAssembly = 
-build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Avanze_ProjectoWeb
 build_property.RootNamespace = Avanze_ProjectoWeb
-build_property.ProjectDir = C:\Users\Diego Anthony Flores\Documents\CrownFunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\
+build_property.ProjectDir = C:\Users\carst\OneDrive\Escritorio\New folder\crow,nuevoDomingo\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Diego Anthony Flores\Documents\CrownFunding\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb
+build_property.MSBuildProjectDirectory = C:\Users\carst\OneDrive\Escritorio\New folder\crow,nuevoDomingo\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Diego Anthony Flores/Documents/CrownFunding/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Error.cshtml]
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diego Anthony Flores/Documents/CrownFunding/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Index.cshtml]
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diego Anthony Flores/Documents/CrownFunding/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/NuestrosServicios.cshtml]
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/NuestrosServicios.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcTnVlc3Ryb3NTZXJ2aWNpb3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diego Anthony Flores/Documents/CrownFunding/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Privacy.cshtml]
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diego Anthony Flores/Documents/CrownFunding/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/ApoyoProyectos.cshtml]
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/ApoyoProyectos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9cQXBveW9Qcm95ZWN0b3MuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diego Anthony Flores/Documents/CrownFunding/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/editProject.cshtml]
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/editProject.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9cZWRpdFByb2plY3QuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diego Anthony Flores/Documents/CrownFunding/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/editProjectLista.cshtml]
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/editProjectLista.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9cZWRpdFByb2plY3RMaXN0YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diego Anthony Flores/Documents/CrownFunding/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/ExploradorMomentaneo.cshtml]
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/ExploradorMomentaneo.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9cRXhwbG9yYWRvck1vbWVudGFuZW8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diego Anthony Flores/Documents/CrownFunding/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/formRegistro.cshtml]
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/formRegistro.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9cZm9ybVJlZ2lzdHJvLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diego Anthony Flores/Documents/CrownFunding/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/InicioPrincipal.cshtml]
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/InicioPrincipal.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9cSW5pY2lvUHJpbmNpcGFsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diego Anthony Flores/Documents/CrownFunding/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/paginaUno.cshtml]
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/ModalesRevisar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9cTW9kYWxlc1JldmlzYXIuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/paginaUno.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9ccGFnaW5hVW5vLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diego Anthony Flores/Documents/CrownFunding/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/PerfilInterfaz.cshtml]
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/PerfilInterfaz.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9cUGVyZmlsSW50ZXJmYXouY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diego Anthony Flores/Documents/CrownFunding/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/PeticionesDeProyectos.cshtml]
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/PeticionesDeProyectos.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9cUGV0aWNpb25lc0RlUHJveWVjdG9zLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diego Anthony Flores/Documents/CrownFunding/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/preguntasFrecuentes.cshtml]
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/preguntasFrecuentes.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9ccHJlZ3VudGFzRnJlY3VlbnRlcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diego Anthony Flores/Documents/CrownFunding/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/ProyectosRealizados.cshtml]
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/ProyectosRealizados.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9cUHJveWVjdG9zUmVhbGl6YWRvcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diego Anthony Flores/Documents/CrownFunding/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/recuperarContraseña.cshtml]
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/ReceivedSupport.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9cUmVjZWl2ZWRTdXBwb3J0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/recuperarContraseña.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9ccmVjdXBlcmFyQ29udHJhc2XDsWEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diego Anthony Flores/Documents/CrownFunding/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/restablecimientoContraseña.cshtml]
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/restablecimientoContraseña.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9ccmVzdGFibGVjaW1pZW50b0NvbnRyYXNlw7FhLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diego Anthony Flores/Documents/CrownFunding/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/RestaurarProyecto.cshtml]
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/RestaurarProyecto.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9cUmVzdGF1cmFyUHJveWVjdG8uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diego Anthony Flores/Documents/CrownFunding/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/Usuarios/CreateUser.cshtml]
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/SupportReviewPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9cU3VwcG9ydFJldmlld1BhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/Usuarios/CreateUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9cVXN1YXJpb3NcQ3JlYXRlVXNlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diego Anthony Flores/Documents/CrownFunding/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/Usuarios/DeleteUser.cshtml]
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/Usuarios/DeleteUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9cVXN1YXJpb3NcRGVsZXRlVXNlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diego Anthony Flores/Documents/CrownFunding/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/Usuarios/DetailsUser.cshtml]
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/Usuarios/DetailsUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9cVXN1YXJpb3NcRGV0YWlsc1VzZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diego Anthony Flores/Documents/CrownFunding/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/Usuarios/EditUser.cshtml]
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/Usuarios/EditUser.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9cVXN1YXJpb3NcRWRpdFVzZXIuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diego Anthony Flores/Documents/CrownFunding/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/Usuarios/Index.cshtml]
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/Usuarios/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9cVXN1YXJpb3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diego Anthony Flores/Documents/CrownFunding/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/RegisterPet.cshtml]
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/RegisterPet.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUmVnaXN0ZXJQZXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diego Anthony Flores/Documents/CrownFunding/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diego Anthony Flores/Documents/CrownFunding/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/SobreNosotros.cshtml]
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/SobreNosotros.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU29icmVOb3NvdHJvcy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diego Anthony Flores/Documents/CrownFunding/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/_ViewImports.cshtml]
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diego Anthony Flores/Documents/CrownFunding/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/_ViewStart.cshtml]
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Diego Anthony Flores/Documents/CrownFunding/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Shared/_Layout.cshtml]
+[C:/Users/carst/OneDrive/Escritorio/New folder/crow\,nuevoDomingo/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-wbmk0jgvxk

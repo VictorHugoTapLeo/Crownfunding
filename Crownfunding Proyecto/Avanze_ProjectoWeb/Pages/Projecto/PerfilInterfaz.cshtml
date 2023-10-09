@@ -61,6 +61,27 @@
                         <a asp-page="editProject" asp-route-id="@proyecto.Item1">Edit</a>
                         <hr>
                     }
+                    @* campañas que yo apoye*@ 
+                     <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th> ID </th>
+                                    <th> Name </th>
+           
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach(var prod in Model.SupportedByMe)
+                                {
+                                    <tr>
+                                        <td>@prod.id</td>
+                                        <td>@prod.title</td>
+
+                                       
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
                 </details>
 
                 <details style="border: solid; border-radius: 2px; padding: 5px;">
@@ -70,8 +91,36 @@
                         <h5> @proyecto.Item2 </h5>
                         <p> @proyecto.Item3 </p>
                         <a asp-page="editProject" asp-route-id="@proyecto.Item1">Edit</a>
-                        <hr>
+                         <hr>
+                        
                     }
+
+                    @*Mis campañas*@ 
+                     <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th> ID </th>
+                                    <th> Name </th>
+           
+                                </tr>
+                            </thead>
+                            <tbody>
+                                @foreach(var prod in Model.ProjectsLista)
+                                {
+                                    <tr>
+                                        <td>@prod.id</td>
+                                        <td>@prod.title</td>
+
+                                        <td>
+                                            <a asp-page="editProject" asp-route-id="@prod.id" > Edit</a>
+                                             @*boton para ver los apoyos que este proyecto recibio*@
+                                         <a asp-page="ReceivedSupport" asp-route-id="@prod.id" class="btn-success">Apoyos recibidos</a>
+                       
+                                        </td>
+                                    </tr>
+                                }
+                            </tbody>
+                        </table>
                 </details>
             </div>
 

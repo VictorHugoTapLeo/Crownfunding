@@ -106,6 +106,7 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
                 pro.productionProcessPng = "Not available";
                 pro.finalProductPng = "Not available";
                 pro.campaingVideo = Projecto.Link;
+                pro.userCampaingId = 1;
                 pro.categoryId = int.Parse(Projecto.Tipo);
                 p.Insert(pro);
 

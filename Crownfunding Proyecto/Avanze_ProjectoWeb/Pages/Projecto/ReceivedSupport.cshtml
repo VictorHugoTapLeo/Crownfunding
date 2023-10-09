@@ -1,0 +1,42 @@
+﻿@page
+@model Avanze_ProjectoWeb.Pages.Projecto.Usuarios.ReceivedSupportModel
+@{
+}
+
+
+
+
+
+<input  asp-for="idreci"/>
+
+<h1>Products List</h1>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th> ID </th>
+            <th> Name </th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var sup in Model.SupportsLista)
+        {
+             @if(sup.Status == 1)
+               {
+                 <tr>
+                            <td>@sup.id</td>
+                            <td>@sup.supportType</td>
+                            <td>
+                                <a asp-page="SupportReviewPage" asp-route-id="@sup.id">Hacer Review</a>
+                            </td>
+                    </tr>
+
+            
+        
+             }
+            
+            
+        }
+    </tbody>
+</table>
+

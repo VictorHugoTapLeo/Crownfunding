@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Diego Anthony Flores\\Documents\\CrownFunding\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj": {}
+    "C:\\Users\\carst\\OneDrive\\Escritorio\\New folder\\crow,nuevoDomingo\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Diego Anthony Flores\\Documents\\CrownFunding\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj": {
+    "C:\\Users\\carst\\OneDrive\\Escritorio\\New folder\\crow,nuevoDomingo\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Diego Anthony Flores\\Documents\\CrownFunding\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj",
+        "projectUniqueName": "C:\\Users\\carst\\OneDrive\\Escritorio\\New folder\\crow,nuevoDomingo\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj",
         "projectName": "Avanze_ProjectoWeb",
-        "projectPath": "C:\\Users\\Diego Anthony Flores\\Documents\\CrownFunding\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj",
-        "packagesPath": "C:\\Users\\Diego Anthony Flores\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Diego Anthony Flores\\Documents\\CrownFunding\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\obj\\",
+        "projectPath": "C:\\Users\\carst\\OneDrive\\Escritorio\\New folder\\crow,nuevoDomingo\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj",
+        "packagesPath": "C:\\Users\\carst\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\carst\\OneDrive\\Escritorio\\New folder\\crow,nuevoDomingo\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Diego Anthony Flores\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\carst\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -28,8 +28,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Diego Anthony Flores\\Documents\\CrownFunding\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj": {
-                "projectPath": "C:\\Users\\Diego Anthony Flores\\Documents\\CrownFunding\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj"
+              "C:\\Users\\carst\\OneDrive\\Escritorio\\New folder\\crow,nuevoDomingo\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj": {
+                "projectPath": "C:\\Users\\carst\\OneDrive\\Escritorio\\New folder\\crow,nuevoDomingo\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj"
               }
             }
           }
@@ -55,8 +55,7 @@
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
@@ -68,15 +67,15 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.400\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\Diego Anthony Flores\\Documents\\CrownFunding\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj": {
+    "C:\\Users\\carst\\OneDrive\\Escritorio\\New folder\\crow,nuevoDomingo\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\Diego Anthony Flores\\Documents\\CrownFunding\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj",
+        "projectUniqueName": "C:\\Users\\carst\\OneDrive\\Escritorio\\New folder\\crow,nuevoDomingo\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj",
         "projectName": "CrowdFundingDAO",
-        "projectPath": "C:\\Users\\Diego Anthony Flores\\Documents\\CrownFunding\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj",
+        "projectPath": "C:\\Users\\carst\\OneDrive\\Escritorio\\New folder\\crow,nuevoDomingo\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {}

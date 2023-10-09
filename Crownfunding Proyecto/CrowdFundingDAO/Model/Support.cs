@@ -31,6 +31,11 @@ namespace CrowdFundingDAO.Model
             this.supportType = supportType;
             this.supportVerification = supportVerification;
         }
+        public Support(int id)
+        {
+            this.id = id;
+           
+        }
         public Support()
         {
         }

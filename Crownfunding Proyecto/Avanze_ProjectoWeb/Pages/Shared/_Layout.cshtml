@@ -22,6 +22,9 @@
                     <li class="nav-item">
                         <a class="nav-link headerText" asp-area="" asp-page="/Index">Categoria de proyectos</a>
                     </li>
+                      <li class="nav-item">
+                        <a class="nav-link headerText" asp-area="" asp-page="/Projecto/ModalesRevisar">Modales</a>
+                    </li>
                     <li class="nav-item"> 
                         <a class="nav-link headerText" asp-area="" asp-page="/Projecto/preguntasFrecuentes">Preguntas Frecuentes</a>
                     </li>
@@ -31,6 +34,7 @@
                     <li>
                         <a class="nav-link headerText" asp-page="/Projecto/Usuarios/CreateUser">Crud Usuarios</a>
                     </li>
+
                 </ul>
                 <div class="user-actions divB">
                     <button class="button2">Iniciar Sesión</button>
@@ -85,7 +89,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

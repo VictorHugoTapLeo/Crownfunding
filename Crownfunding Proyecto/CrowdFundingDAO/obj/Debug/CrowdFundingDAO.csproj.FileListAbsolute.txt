@@ -42,3 +42,9 @@ C:\Users\Diego Anthony Flores\Documents\CrownFunding\Crownfunding\Crownfunding P
 C:\Users\Diego Anthony Flores\Documents\CrownFunding\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.csproj.CoreCompileInputs.cache
 C:\Users\Diego Anthony Flores\Documents\CrownFunding\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.dll
 C:\Users\Diego Anthony Flores\Documents\CrownFunding\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.pdb
+C:\Users\carst\OneDrive\Escritorio\New folder\crow,nuevoDomingo\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\bin\Debug\CrowdFundingDAO.dll
+C:\Users\carst\OneDrive\Escritorio\New folder\crow,nuevoDomingo\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\bin\Debug\CrowdFundingDAO.pdb
+C:\Users\carst\OneDrive\Escritorio\New folder\crow,nuevoDomingo\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.csproj.AssemblyReference.cache
+C:\Users\carst\OneDrive\Escritorio\New folder\crow,nuevoDomingo\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.csproj.CoreCompileInputs.cache
+C:\Users\carst\OneDrive\Escritorio\New folder\crow,nuevoDomingo\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.dll
+C:\Users\carst\OneDrive\Escritorio\New folder\crow,nuevoDomingo\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.pdb

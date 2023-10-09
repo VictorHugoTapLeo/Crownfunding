@@ -17,7 +17,8 @@ namespace CrowdFundingDAO.Implementation
             query = @"UPDATE Support SET status = 0 ,lastUpdate = CURRENT_TIMESTAMP ,userID = @userID WHERE id = @id";
             SqlCommand command = CreateBasicCommand(query);
             command.Parameters.AddWithValue("@id", t.id);
-            command.Parameters.AddWithValue("@userID", t.UserID);
+          //  command.Parameters.AddWithValue("@userID", t.UserID);
+            command.Parameters.AddWithValue("@userID", 1);
             try
             {
                 return ExecuteBasicCommand(command);
@@ -112,5 +113,41 @@ namespace CrowdFundingDAO.Implementation
                 throw ex;
             }
         }
+        //mis metodoss 
+        public List<Support> SelectMySupport(int idPro)
+        {
+            query = @"SELECT id, supporterId, projectId, supportType, supportVerification,status
+              FROM Support
+              WHERE status = 1 AND projectId=@id";
+            SqlCommand command = CreateBasicCommand(query);
+            command.Parameters.AddWithValue("@id", idPro);
+            try
+            {
+                DataTable table = ExecuteDataTableCommand(command);
+
+                List<Support> supports = new List<Support>();
+                foreach (DataRow row in table.Rows)
+                {
+                    Support support = new Support
+                    {
+                        id = Convert.ToInt32(row["id"]),
+                        supporterId = Convert.ToInt32(row["supporterId"]),
+                        projectId = Convert.ToInt32(row["projectId"]),
+                        supportType = row["supportType"].ToString(),
+                        supportVerification = row["supportVerification"].ToString(),
+                        Status = Convert.ToByte(row["status"])
+                    };
+
+                    supports.Add(support);
+                }
+
+                return supports;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
     }
 }
