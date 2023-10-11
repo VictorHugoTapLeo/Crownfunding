@@ -2,42 +2,52 @@
 @model Avanze_ProjectoWeb.Pages.Projecto.Usuarios.DetailsUserModel
 @{
 }
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/formSimple.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="container">
+        <div class="box1">
+            <h2>Detalles del Usuario</h2>
 
-<h1>Detalles del Usuario</h1>
+
+            @if (!string.IsNullOrEmpty(Model.NotFoundMessage))
+            {
+                <div class="alert alert-danger">
+                    @Model.NotFoundMessage
+                </div>
+            }
+            else
+            {
+                <dl class="row">
+                    <dt>ID</dt>
+                    <dd>@Model.User.id</dd>
+
+                    <dt>Nombre</dt>
+                    <dd>@Model.User.name</dd>
+
+                    <dt>Apellido</dt>
+                    <dd>@Model.User.lastName</dd>
+
+                    <dt>Correo Electrónico</dt>
+                    <dd>@Model.User.email</dd>
+
+                    <dt>Rol</dt>
+                    <dd>@Model.User.role</dd>
+
+                    <dt>UserName</dt>
+                    <dd>@Model.User.userName</dd>
+
+                    <dt>Teléfono</dt>
+                    <dd>@Model.User.phoneNumber</dd>
 
 
-@if (!string.IsNullOrEmpty(Model.NotFoundMessage))
-{
-    <div class="alert alert-danger">
-        @Model.NotFoundMessage
+                </dl>
+            }
+
+            <a class="button2 text-no-underline" asp-page="Index">Volver a la lista de usuarios</a>
+        </div>
     </div>
-}
-else
-{
-    <dl class="row">
-        <dt class="col-sm-2">ID:</dt>
-        <dd class="col-sm-10">@Model.User.id</dd>
-
-        <dt class="col-sm-2">Nombre:</dt>
-        <dd class="col-sm-10">@Model.User.name</dd>
-
-        <dt class="col-sm-2">Apellido:</dt>
-        <dd class="col-sm-10">@Model.User.lastName</dd>
-
-        <dt class="col-sm-2">Correo Electrónico:</dt>
-        <dd class="col-sm-10">@Model.User.email</dd>
-
-        <dt class="col-sm-2">Rol:</dt>
-        <dd class="col-sm-10">@Model.User.role</dd>
-
-        <dt class="col-sm-2">UserName:</dt>
-        <dd class="col-sm-10">@Model.User.userName</dd>
-
-        <dt class="col-sm-2">Teléfono:</dt>
-        <dd class="col-sm-10">@Model.User.phoneNumber</dd>
-
-
-    </dl>
-}
-
-<a asp-page="Index">Volver a la lista de usuarios</a>
+</body>

@@ -2,44 +2,62 @@
 @model Avanze_ProjectoWeb.Pages.Projecto.Usuarios.EditUserModel
 @{
 }
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/formSimple.css" asp-append-version="true" />
+</head>
 
-<h2>Editar Usuario</h2>
+<body>
+    <div class="container">
+        <div class="box1">
+            <h2>Editar Usuario</h2>
 
-<form method="post">
-    <div class="form-group">
-        <label for="Name">Nombre:</label>
-        <input type="text" class="form-control" name="name" id="name" asp-for="User.name" />
-    </div>
-    <div class="form-group">
-        <label for="LastName">Apellido:</label>
-        <input type="text" class="form-control" name="lastName" id="lastName" asp-for="User.lastName" />
-    </div>
-    <div class="form-group">
-        <label for="SecondLastName">Segundo Apellido:</label>
-        <input type="text" class="form-control" name="secondLastName" id="secondLastName" asp-for="User.secondLastName" />
-    </div>
-    <div class="form-group">
-        <label for="UserName">Nombre de Usuario:</label>
-        <input type="text" class="form-control" name="userName" id="userName" asp-for="User.userName" />
-    </div>
-    @* <div class="form-group">
-    <label for="Password">Contraseña:</label>
-    <input type="password" class="form-control" name="password" id="password" asp-for="User.password" />
-    </div> *@
-    <div class="form-group">
-        <label for="Role">Rol:</label>
-        <input type="text" class="form-control" name="role" id="role" asp-for="User.role" />
-    </div>
-    <div class="form-group">
-        <label for="Email">Correo Electrónico:</label>
-        <input type="email" class="form-control" name="email" id="email" asp-for="User.email" />
-    </div>
-    <div class="form-group">
-        <label for="PhoneNumber">Número de Teléfono:</label>
-        <input type="tel" class="form-control" name="phoneNumber" id="phoneNumber" asp-for="User.phoneNumber" />
-    </div>
+            <form method="post">
+                <div>
+                    <label for="Name">Nombre</label><br></br>
+                    <input type="text" class="input" name="name" id="name" asp-for="User.name" /><br></br>
+                </div>
 
-    <!-- Agrega campos para las demás propiedades del usuario aquí -->
+                <div>
+                    <label for="LastName">Apellido</label><br></br>
+                    <input type="text" class="input" name="lastName" id="lastName" asp-for="User.lastName" /><br></br>
+                </div>
 
-    <button type="submit" class="btn btn-primary">Guardar Cambios</button>
-</form>
+                <div>
+                    <label for="SecondLastName">Segundo Apellido</label><br></br>
+                    <input type="text" class="input" name="secondLastName" id="secondLastName" asp-for="User.secondLastName" /><br></br>
+                </div>
+
+                <div>
+                    <label for="UserName">Nombre de Usuario</label><br></br>
+                    <input type="text" class="input" name="userName" id="userName" asp-for="User.userName" /><br></br>
+                </div>
+                @* <div class="form-group">
+                <label for="Password">Contraseña</label>
+                <input type="password" class="input" name="password" id="password" asp-for="User.password" />
+                </div> *@
+
+                <div>
+                    <label for="Role">Rol</label><br></br>
+                    <input type="text" class="input" name="role" id="role" asp-for="User.role" /><br></br>
+                </div>
+
+                <div>
+                    <label for="Email">Correo Electrónico</label><br></br>
+                    <input type="email" class="input" name="email" id="email" asp-for="User.email" /><br></br>
+                </div>
+
+                <div>
+                    <label for="PhoneNumber">Número de Teléfono</label><br></br>
+                    <input type="tel" class="input" name="phoneNumber" id="phoneNumber" asp-for="User.phoneNumber" /><br></br>
+                </div>
+
+                <!-- Agrega campos para las demás propiedades del usuario aquí -->
+
+                <button type="submit" class="button1">Guardar Cambios</button><br></br>
+                <a asp-page="Index" class="button2 text-no-underline">Cancelar</a>
+            </form>
+        </div>
+    </div>
+</body>

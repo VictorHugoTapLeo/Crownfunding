@@ -1,19 +1,22 @@
 ﻿body {
     font-family: 'Alata', sans-serif;
 }
+
 .container {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
 }
+
 label {
     color: black;
     font-weight: bold;
 }
+
 .box1 {
-    min-width: 500px;
-    min-height: 450px;
+    min-width: 800px;
+    min-height: 300px;
     padding: 100px;
     text-align: center;
     background-color: #FBFBFB;
@@ -30,9 +33,8 @@ label {
         padding-bottom: 20px;
         padding-top: 25px;
     }
-.button2 {
-    background-color: white;
-    color: #F34479;
+
+.button2, .button1 {
     border: 2px solid #F34479;
     border-radius: 13px;
     padding: 10px 20px;
@@ -40,8 +42,13 @@ label {
     transition: background-color 0.3s, color 0.3s;
     font-size: 13px;
     font-family: 'Alata', sans-serif;
-    width: 140px;
-    height: 50px;
+}
+
+.button2 {
+    background-color: white;
+    color: #F34479;
+    min-width: 140px; /* Establece un ancho mínimo */
+    min-height: 50px; /* Establece una altura mínima */
 }
 
     .button2:hover {
@@ -52,21 +59,15 @@ label {
 .button1 {
     background-color: #F34479;
     color: white;
-    border: 2px solid #F34479;
-    border-radius: 8px;
-    padding: 10px 20px;
-    cursor: pointer;
-    transition: background-color 0.3s, color 0.3s;
-    font-size: 13px;
-    font-family: 'Alata', sans-serif;
-    width: 140px;
-    height: 50px;
+    min-width: 140px; /* Establece un ancho mínimo */
+    min-height: 50px; /* Establece una altura mínima */
 }
 
     .button1:hover {
         background-color: white;
         color: #F34479;
     }
+
 .input {
     border: none;
     border-radius: 8px;
@@ -74,8 +75,9 @@ label {
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     height: 30px;
     width: 300px;
+    text-align: center;
 }
-.btnAncho {
-    width: 150px;
-    height: 60px;
+
+.text-no-underline {
+    text-decoration: none;
 }

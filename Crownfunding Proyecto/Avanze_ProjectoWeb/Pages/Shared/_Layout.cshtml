@@ -11,7 +11,6 @@
 <body>
     <header>
         <div>
-            
         </div>
         <div>
             <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom mb-3">
@@ -22,10 +21,10 @@
                     <li class="nav-item">
                         <a class="nav-link headerText" asp-area="" asp-page="/Index">Categoria de proyectos</a>
                     </li>
-                      <li class="nav-item">
+                    <li class="nav-item">
                         <a class="nav-link headerText" asp-area="" asp-page="/Projecto/ModalesRevisar">Modales</a>
                     </li>
-                    <li class="nav-item"> 
+                    <li class="nav-item">
                         <a class="nav-link headerText" asp-area="" asp-page="/Projecto/preguntasFrecuentes">Preguntas Frecuentes</a>
                     </li>
                     <li class="nav-item">
@@ -52,7 +51,7 @@
             @RenderBody()
         </main>
     </div>
-    
+
 
 
 
@@ -60,25 +59,25 @@
         <div class="containerFooter">
             <div class="divBox">
                 <p class="rectangulo">Nuestra Seccion</p>
-                <a class="enlaces" href="/SobreNosotros">Sobre Nosotros</a>
+                <a class="enlaces espacioRectangulo" href="/SobreNosotros">Sobre Nosotros</a>
                 <a class="enlaces" href="/NuestrosServicios">Nuestros Servicios</a>
-                <a class="enlaces" href="/Privacy" >Politica De Privacidad</a>
+                <a class="enlaces" href="/Privacy">Politica De Privacidad</a>
             </div>
             <div class="divBox">
                 <p class="rectangulo">Te ayudamos</p>
-                <a class="enlaces" href="/Projecto/preguntasFrecuentes">Preguntas Frecuentes</a>
+                <a class="enlaces espacioRectangulo" href="/Projecto/preguntasFrecuentes">Preguntas Frecuentes</a>
                 <a class="enlaces" href="https://www.ejemplo.com">.</a>
                 <a class="enlaces" href="https://www.ejemplo.com">.</a>
             </div>
             <div class="divBox">
                 <p class="rectangulo">Visita Tambien</p>
-                <a class="enlaces" href="https://www.univalle.edu/">Univalle Oficial</a>
+                <a class="enlaces espacioRectangulo" href="https://www.univalle.edu/">Univalle Oficial</a>
                 <a class="enlaces" href="https://www.univalle.edu/?page_id=150">Eres Estudiante Nuevo?</a>
                 <a class="enlaces" href="https://www.univalle.edu/?page_id=147/#Registro">Mas Sobre Univalle</a>
             </div>
             <div class="divBox">
                 <p class="rectangulo">Siguenos En Nuestras Redes</p>
-                <a class="enlaces" href="https://www.facebook.com/UnivalleBolivia">Facebook</a>
+                <a class="enlaces espacioRectangulo" href="https://www.facebook.com/UnivalleBolivia">Facebook</a>
                 <a class="enlaces" href="https://www.instagram.com/univalle_bolivia/">Instagram</a>
                 <a class="enlaces" href="https://www.tiktok.com/">Tiktok</a>
             </div>
@@ -89,7 +88,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

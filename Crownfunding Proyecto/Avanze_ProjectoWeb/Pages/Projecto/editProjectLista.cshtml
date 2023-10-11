@@ -3,29 +3,39 @@
 @{
 }
 
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/tablas.css" asp-append-version="true" />
+</head>
 
+<body>
+    <h2>Products List</h2>
+    <br>
 
-<h1>Products List</h1>
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th> ID </th>
-            <th> Name </th>
-           
-        </tr>
-    </thead>
-    <tbody>
-        @foreach(var prod in Model.ProjectsLista)
-        {
+    <table class="styled-table">
+        <thead>
             <tr>
-                <td>@prod.id</td>
-                <td>@prod.title</td>
-
-                <td>
-                    <a asp-page="editProject" asp-route-id="@prod.id" > Edit</a>
-                 
-                </td>
+                <th> ID </th>
+                <th> Name </th>
+                <th></th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var prod in Model.ProjectsLista)
+            {
+                <tr>
+                    <td>@prod.id</td>
+                    <td>@prod.title</td>
+
+                    <td>
+                        <a class="btn1" asp-page="editProject" asp-route-id="@prod.id"> Edit</a>
+
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</body>
+
+e>

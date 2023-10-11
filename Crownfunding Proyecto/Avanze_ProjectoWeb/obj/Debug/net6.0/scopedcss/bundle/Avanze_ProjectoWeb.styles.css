@@ -3,41 +3,42 @@
 for details on configuring this project to bundle and minify static web assets. */
 
 a.navbar-brand[b-wbmk0jgvxk] {
-  white-space: normal;
-  text-align: center;
-  word-break: break-all;
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
 }
 
 a[b-wbmk0jgvxk] {
-  color: #0077cc;
+    color: #0077cc;
 }
 
 .btn-primary[b-wbmk0jgvxk] {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
 .nav-pills .nav-link.active[b-wbmk0jgvxk], .nav-pills .show > .nav-link[b-wbmk0jgvxk] {
-  color: #fff;
-  background-color: #1b6ec2;
-  border-color: #1861ac;    
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
 }
 
 .border-top[b-wbmk0jgvxk] {
-  border-top: 1px solid #e5e5e5;
+    border-top: 1px solid #e5e5e5;
 }
+
 .border-bottom[b-wbmk0jgvxk] {
-  border-bottom: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
 }
 
 .box-shadow[b-wbmk0jgvxk] {
-  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
 button.accept-policy[b-wbmk0jgvxk] {
-  font-size: 1rem;
-  line-height: inherit;
+    font-size: 1rem;
+    line-height: inherit;
 }
 
 
@@ -63,9 +64,10 @@ button.accept-policy[b-wbmk0jgvxk] {
     width: 125px; /* Ajusta el ancho según tus necesidades */
     height: 50px;
 }
+
     .button1:hover[b-wbmk0jgvxk] {
-        background-color: white; 
-        color: #F34479; 
+        background-color: white;
+        color: #F34479;
     }
 
 /* boton blanco */
@@ -82,7 +84,8 @@ button.accept-policy[b-wbmk0jgvxk] {
     width: 125px;
     height: 50px;
 }
-    .button2:hover[b-wbmk0jgvxk] { 
+
+    .button2:hover[b-wbmk0jgvxk] {
         background-color: #F34479;
         color: white;
     }
@@ -92,9 +95,11 @@ button.accept-policy[b-wbmk0jgvxk] {
     color: #9D9D9D;
     font-family: 'Alata', sans-serif;
 }
+
 .ulHeader[b-wbmk0jgvxk] {
     padding-left: 100px;
 }
+
 .divB[b-wbmk0jgvxk] {
     padding-right: 50px;
 }
@@ -104,13 +109,14 @@ button.accept-policy[b-wbmk0jgvxk] {
     padding-top: 50px;
     padding-bottom: 150px;
 }
+
 .containerFooter[b-wbmk0jgvxk] {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
     padding-left: 80px;
-
 }
+
 .footer1[b-wbmk0jgvxk] {
     font-family: 'Alata', sans-serif;
     background-color: #393939;
@@ -122,6 +128,7 @@ button.accept-policy[b-wbmk0jgvxk] {
     left: 0;
     right: 0;
 }
+
 body[b-wbmk0jgvxk] {
     margin: 0;
     padding: 0;
@@ -146,6 +153,11 @@ body[b-wbmk0jgvxk] {
     padding: 0 20px;
     text-align: center;
 }
+
+.espacioRectangulo[b-wbmk0jgvxk] {
+    padding-top: 10px;
+}
+
 .rectangulo[b-wbmk0jgvxk] {
     color: white;
     font-size: 13px;
@@ -163,5 +175,3 @@ body[b-wbmk0jgvxk] {
         height: 1.5px;
         background-color: #F34479;
     }
-
-

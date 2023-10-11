@@ -2,12 +2,23 @@
 @model Avanze_ProjectoWeb.Pages.Projecto.Usuarios.DeleteUserModel
 @{
 }
-<h2>Eliminar Usuario</h2>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/formSimple.css" asp-append-version="true" />
+</head>
 
-<p>¿Estás seguro de que deseas eliminar este usuario?</p>
+<body>
+    <div class="container">
+        <div class="box1">
+            <h2>Eliminar Usuario</h2>
 
-<form method="post">
+            <p>¿Estás seguro de que deseas eliminar este usuario?</p>
 
-    <button type="submit" class="btn btn-danger">Eliminar</button>
-    <a asp-page="Index" class="btn btn-secondary">Cancelar</a>
-</form>
+            <form method="post">
+                <button type="submit" class="button1">Eliminar</button><br></br>
+                <a asp-page="Index" class="button2 text-no-underline">Cancelar</a>
+            </form>
+        </div>
+    </div>
+</body>

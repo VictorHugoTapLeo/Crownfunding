@@ -2,133 +2,173 @@
 @model Avanze_ProjectoWeb.Pages.Projecto.TModel
 @{
 }
-<div class="container-fluid">
-    <div class="row">
-        <div class="col-1" >
-        </div>
-        <div class="col-3 text-center" >
-            <div style="background-color: white; padding: 20px; margin-top: 20px; border:solid; border-radius:1px;">
-                <h4>Mi Perfil</h4>
-                <br>
-                <img src="https://www.smartick.es/blog/wp-content/uploads/cuadrado.png" width="200" height="200">
-                <br>
-                <br>
-                <h4> @CrowdFundingDAO.Model.SessionClass.SessionUserName</h4>
-                <a href="#">&#64;@CrowdFundingDAO.Model.SessionClass.SessionUserName</a>
-                <br>
-                <a href="#">Configurar Cuenta</a> | <a href="#">Editar Perfil</a>
-                <br> <a href="#">ayuda</a>
-                <hr>
-                <div class="row">
-                    <div class="col-4">
-                        @Model.NCampañas 
-                        <br>
-                        Campañas
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/perfil.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/tablas.css" asp-append-version="true" />
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-1">
+            </div>
+            <div class="col-3 text-center">
+                <div class="contenedor-blanco">
+                    <h2>Mi Perfil</h2>
+                    <br>
+                    <img src="https://www.smartick.es/blog/wp-content/uploads/cuadrado.png" width="200" height="200">
+                    <br>
+                    <br>
+                    <h4> @CrowdFundingDAO.Model.SessionClass.SessionUserName</h4>
+                    <a class="textazul" href="#">&#64;@CrowdFundingDAO.Model.SessionClass.SessionUserName</a>
+                    <br></br>
+
+                    <div class="div1">
+                        <a class="textgris" href="#">Configurar Cuenta</a>
+                        <a class="textgris" href="#">Editar Perfil</a>
+                        <a class="textgris" href="#">Ayuda</a>
                     </div>
-                    <div class="col-4">
-                        @Model.NSeguidas
-                        <br>
-                        Seguidas
+
+                    <br>
+                    <div class="row">
+                        <div class="col-4">
+                            <div class="aumento">
+                                @Model.NCampañas
+                            </div>
+
+                            <a class="textazul" href="#">Campañas</a>
+
+                        </div>
+                        <div class="col-4">
+                            <div class="aumento">
+                                @Model.NSeguidas
+                            </div>
+
+                            <a class="textazul" href="#">Seguidas</a>
+
+                        </div>
+                        <div class="col-4">
+                            <div class="aumento">
+                                @Model.NApoyadas
+                            </div>
+
+                            <a class="textazul" href="#">Apoyadas</a>
+                        </div>
                     </div>
-                    <div class="col-4">
-                        @Model.NApoyadas
-                        <br>
-                        Apoyadas
-                    </div>
+                    <br></br>
+                    <h4>Informacion</h4>
+                    <br>
+                    <h5>Email</h5>
+                    <P class="textgris2">@CrowdFundingDAO.Model.SessionClass.SessionEmail</P>
+                    <br>
+                    <h5>Participa desde</h5>
+                    <P class="textgris2">@CrowdFundingDAO.Model.SessionClass.registerDate.ToString("dd/MM/yyyy")</P>
+                    <br></br>
                 </div>
-                <hr>
-                <h4>informacion</h4>
-                <h5>Email</h5> @CrowdFundingDAO.Model.SessionClass.SessionEmail 
-
-                <h5>Participa desde</h5>@CrowdFundingDAO.Model.SessionClass.registerDate.ToString("dd/MM/yyyy") 
-                <hr>
-            </div>
-        </div>
-        <div class="col-7" >
-            <div style="background-color: white; padding: 20px; margin-top: 20px; border:solid; border-radius:1px;">
-                <h2>Mi panel de control </h2>
-                <details style="border: solid; border-radius: 2px; padding: 5px;">
-                    <summary style="border: solid; border-radius: 2px; padding: 5px;">Campañas a las que sigues</summary>
-                    <p>Aquí puedes poner el contenido que deseas que se muestre cuando el usuario haga clic en el título del elemento desplegable.</p>
-                </details>
-
-                <details style="border: solid; border-radius: 2px; padding: 5px;">
-                    <summary style="border: solid; border-radius: 2px; padding: 5px;">Campañas a las que apoyaste</summary>
-                    @foreach (var proyecto in Model.mySupports)
-                    {
-                        <h5> @proyecto.Item2 </h5>
-                        <p> @proyecto.Item3 </p>
-                        <a asp-page="editProject" asp-route-id="@proyecto.Item1">Edit</a>
-                        <hr>
-                    }
-                    @* campañas que yo apoye*@ 
-                     <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th> ID </th>
-                                    <th> Name </th>
-           
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach(var prod in Model.SupportedByMe)
-                                {
-                                    <tr>
-                                        <td>@prod.id</td>
-                                        <td>@prod.title</td>
-
-                                       
-                                    </tr>
-                                }
-                            </tbody>
-                        </table>
-                </details>
-
-                <details style="border: solid; border-radius: 2px; padding: 5px;">
-                    <summary style="border: solid; border-radius: 2px; padding: 5px;">Mis campañas</summary>
-                    @foreach (var proyecto in Model.myProjects)
-                    {
-                        <h5> @proyecto.Item2 </h5>
-                        <p> @proyecto.Item3 </p>
-                        <a asp-page="editProject" asp-route-id="@proyecto.Item1">Edit</a>
-                         <hr>
-                        
-                    }
-
-                    @*Mis campañas*@ 
-                     <table class="table table-bordered">
-                            <thead>
-                                <tr>
-                                    <th> ID </th>
-                                    <th> Name </th>
-           
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach(var prod in Model.ProjectsLista)
-                                {
-                                    <tr>
-                                        <td>@prod.id</td>
-                                        <td>@prod.title</td>
-
-                                        <td>
-                                            <a asp-page="editProject" asp-route-id="@prod.id" > Edit</a>
-                                             @*boton para ver los apoyos que este proyecto recibio*@
-                                         <a asp-page="ReceivedSupport" asp-route-id="@prod.id" class="btn-success">Apoyos recibidos</a>
-                       
-                                        </td>
-                                    </tr>
-                                }
-                            </tbody>
-                        </table>
-                </details>
             </div>
 
+            <div class="col-7">
+                <div class="contenedor-blanco">
+                    <h2>Mi panel de control </h2>
+                    <details class="details contenedor-blanco2">
+                        <br>
+                        <summary class="contenedor-blanco2">Campañas a las que sigues</summary>
 
+                        <div class="pading">
+                            <p>Aquí puedes poner el contenido que deseas que se muestre cuando el usuario haga clic en el título del elemento desplegable.</p>
+                        </div>
+                    </details><br>
+
+                    <details class="contenedor-blanco2 details">
+                        <br>
+                        <summary class="contenedor-blanco2">Campañas a las que apoyaste</summary>
+
+                        <div class="pading">
+                            @foreach (var proyecto in Model.mySupports)
+                            {
+                                <h5> @proyecto.Item2 </h5>
+                                <p> @proyecto.Item3 </p>
+                                <a asp-page="editProject" asp-route-id="@proyecto.Item1">Edit</a>
+                                <br></br>
+                                <hr>
+                            }
+                            @* campañas que yo apoye*@
+                            <table class="styled-table">
+                                <thead>
+                                    <tr>
+                                        <th> ID </th>
+                                        <th> Name </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var prod in Model.SupportedByMe)
+                                    {
+                                        <tr>
+                                            <td>@prod.id</td>
+                                            <td>@prod.title</td>
+
+
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </details><br>
+
+                    <details class="contenedor-blanco2 details">
+                        <br>
+                        <summary class="contenedor-blanco2" ;">Mis campañas</summary>
+                        <div class="pading">
+                            @foreach (var proyecto in Model.myProjects)
+                            {
+                                <h5> @proyecto.Item2 </h5>
+                                <p> @proyecto.Item3 </p>
+                                <a asp-page="editProject" asp-route-id="@proyecto.Item1">Edit</a>
+                                <br></br>
+                                <hr>
+
+                            }
+
+                            @*Mis campañas*@
+                            <table class="styled-table">
+                                <thead>
+                                    <tr>
+                                        <th> ID </th>
+                                        <th> Name </th>
+                                        <th></th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach (var prod in Model.ProjectsLista)
+                                    {
+                                        <tr>
+                                            <td>@prod.id</td>
+                                            <td>@prod.title</td>
+
+                                            <td>
+                                                <a class="btn1" asp-page="editProject" asp-route-id="@prod.id"> Edit</a>
+                                                @*boton para ver los apoyos que este proyecto recibio*@
+                                                <a asp-page="ReceivedSupport" asp-route-id="@prod.id" class="btn1">Apoyos recibidos</a>
+
+                                            </td>
+                                        </tr>
+                                    }
+                                </tbody>
+                            </table>
+                        </div>
+                    </details><br>
+                </div>
+
+
+            </div>
+            <div class="col-1">
+            </div>
         </div>
-        <div class="col-1" >
-        </div>
+
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
 
-</div>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
