@@ -315,5 +315,42 @@ namespace CrowdFundingDAO.Implementation
             }
         }
 
+        public List<string> Serch(List<string> cat, string palabra)
+        {
+            List<string> Proyects = new List<string>();
+            query = @"SELECT P.title 
+                        FROM Project P
+                        INNER JOIN Category C ON C.id = P.categoryId
+                        WHERE P.title LIKE '%'+@palabra+'%'";
+
+            string categorys = "AND(";
+            foreach (string i in cat)
+            {
+                categorys += "C.name = '"+ i + "' OR ";
+            }
+            categorys = ")";
+            if (categorys.Length > 9)
+            {
+                query += categorys;
+            }
+            SqlCommand command = CreateBasicCommand(query);
+            command.Parameters.AddWithValue("@palabra", palabra );
+
+            try
+            {
+                DataTable table = ExecuteDataTableCommand(command);
+
+                foreach (DataRow row in table.Rows)
+                {
+                    Proyects.Add(row["title"].ToString());
+                }
+
+                return Proyects;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
