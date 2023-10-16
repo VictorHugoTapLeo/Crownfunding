@@ -9,6 +9,10 @@
       "PackagePath": "staticwebassets\\css\\apoyoProyectos.css"
     },
     {
+      "Id": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\wwwroot\\css\\crearCampaña.css",
+      "PackagePath": "staticwebassets\\css\\crearCampaña.css"
+    },
+    {
       "Id": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\wwwroot\\css\\estilos.css",
       "PackagePath": "staticwebassets\\css\\estilos.css"
     },
@@ -39,6 +43,10 @@
     {
       "Id": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\wwwroot\\css\\tablas.css",
       "PackagePath": "staticwebassets\\css\\tablas.css"
+    },
+    {
+      "Id": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\wwwroot\\css\\users.css",
+      "PackagePath": "staticwebassets\\css\\users.css"
     },
     {
       "Id": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\wwwroot\\favicon.ico",

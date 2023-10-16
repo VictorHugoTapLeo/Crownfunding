@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "et1mRldzljsmoO2LYq6n8zHqAhwNKhgMzKZX8+s3i3g=",
+  "Hash": "/TJVL7XYUn4JQ1TpGseiI+rmWV1A+4kOVC5f+DTHoZk=",
   "Source": "Avanze_ProjectoWeb",
   "BasePath": "_content/Avanze_ProjectoWeb",
   "Mode": "Default",
@@ -66,6 +66,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\apoyoProyectos.css"
+    },
+    {
+      "Identity": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\wwwroot\\css\\crearCampaña.css",
+      "SourceId": "Avanze_ProjectoWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\wwwroot\\",
+      "BasePath": "_content/Avanze_ProjectoWeb",
+      "RelativePath": "css/crearCampaña.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\crearCampaña.css"
     },
     {
       "Identity": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\wwwroot\\css\\estilos.css",
@@ -202,6 +219,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\tablas.css"
+    },
+    {
+      "Identity": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\wwwroot\\css\\users.css",
+      "SourceId": "Avanze_ProjectoWeb",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\wwwroot\\",
+      "BasePath": "_content/Avanze_ProjectoWeb",
+      "RelativePath": "css/users.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\users.css"
     },
     {
       "Identity": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\wwwroot\\favicon.ico",
