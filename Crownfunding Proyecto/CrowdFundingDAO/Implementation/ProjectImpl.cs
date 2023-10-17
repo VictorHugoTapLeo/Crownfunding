@@ -33,7 +33,7 @@ namespace CrowdFundingDAO.Implementation
             query = @"SELECT id, title, projectPng, finalProductPng, productionProcessPng, campaingVideo, userCampaingId, categoryId,
                         status,registerDate, ISNULL(lastUpdate,CURRENT_TIMESTAMP),userID
                         FROM Project
-                        WHERE id = @id AND status = 1";
+                        WHERE id = @id AND status > 0";
             SqlCommand command = CreateBasicCommand(query);
             command.Parameters.AddWithValue("@id", id);
             try
@@ -94,7 +94,7 @@ namespace CrowdFundingDAO.Implementation
         {
             query = @"SELECT id, title, projectPng, finalProductPng, productionProcessPng, campaingVideo, userCampaingId, categoryId
                         FROM Project
-                        WHERE status = 1 ";
+                        WHERE status > 0 ";
             SqlCommand command = CreateBasicCommand(query);
             try
             {
@@ -152,7 +152,7 @@ namespace CrowdFundingDAO.Implementation
 
             query = @"SELECT id, title
                 FROM Project
-                WHERE status = 1 ";
+                WHERE status > 0 ";
             SqlCommand command = CreateBasicCommand(query);
 
             try
@@ -186,7 +186,7 @@ namespace CrowdFundingDAO.Implementation
             query = @"SELECT P.id, P.title , D.description
                         FROM Project P
                         INNER JOIN Description D ON D.projectId = P.id
-                        WHERE P.status = 1 AND P.userCampaingId = @id AND D.type = 'Description'";
+                        WHERE P.status > 0 AND P.userCampaingId = @id AND D.type = 'Description'";
             SqlCommand command = CreateBasicCommand(query);
             command.Parameters.AddWithValue("@id", id);
 
@@ -219,7 +219,7 @@ namespace CrowdFundingDAO.Implementation
                         FROM Project P
                         INNER JOIN Support S ON P.id = S.projectId
                         INNER JOIN Description D ON D.projectId = P.id
-                        WHERE P.status = 1 AND S.supporterId = @id AND D.type = 'Description'";
+                        WHERE P.status = 2 AND S.supporterId = @id AND D.type = 'Description'";
             SqlCommand command = CreateBasicCommand(query);
             command.Parameters.AddWithValue("@id", id);
 
@@ -346,6 +346,104 @@ namespace CrowdFundingDAO.Implementation
                 }
 
                 return Proyects;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<Project> SelectToAcept()
+        {
+            List<Project> projects = new List<Project>();
+
+            query = @"SELECT id, title, projectPng, finalProductPng, productionProcessPng, campaingVideo, userCampaingId, categoryId
+                        FROM Project
+                        WHERE status = 1";
+            SqlCommand command = CreateBasicCommand(query);
+
+            try
+            {
+                DataTable table = ExecuteDataTableCommand(command);
+
+                foreach (DataRow row in table.Rows)
+                {
+                    Project project = new Project
+                    {
+                        id = Convert.ToInt32(row["id"]),
+                        title = row["title"].ToString(),
+
+                    };
+
+                    projects.Add(project);
+                }
+
+                return projects;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<Project> SelectToRestore()
+        {
+            List<Project> projects = new List<Project>();
+
+            query = @"SELECT id, title, projectPng, finalProductPng, productionProcessPng, campaingVideo, userCampaingId, categoryId
+                        FROM Project
+                        WHERE status = 0";
+            SqlCommand command = CreateBasicCommand(query);
+
+            try
+            {
+                DataTable table = ExecuteDataTableCommand(command);
+
+                foreach (DataRow row in table.Rows)
+                {
+                    Project project = new Project
+                    {
+                        id = Convert.ToInt32(row["id"]),
+                        title = row["title"].ToString(),
+
+                    };
+
+                    projects.Add(project);
+                }
+
+                return projects;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public int PermaDelete(Project t)
+        {
+            query = @"UPDATE Project SET status = -1 ,lastUpdate = CURRENT_TIMESTAMP ,userID = @userID WHERE id = @id";
+            SqlCommand command = CreateBasicCommand(query);
+            command.Parameters.AddWithValue("@id", t.id);
+            command.Parameters.AddWithValue("@userID", t.UserID);
+            try
+            {
+                return ExecuteBasicCommand(command);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public int Acept(Project t)
+        {
+            query = @"UPDATE Project SET status = 2 ,lastUpdate = CURRENT_TIMESTAMP ,userID = @userID WHERE id = @id";
+            SqlCommand command = CreateBasicCommand(query);
+            command.Parameters.AddWithValue("@id", t.id);
+            command.Parameters.AddWithValue("@userID", t.UserID);
+            try
+            {
+                return ExecuteBasicCommand(command);
             }
             catch (Exception ex)
             {
