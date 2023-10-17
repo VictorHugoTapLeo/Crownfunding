@@ -173,5 +173,43 @@ namespace CrowdFundingDAO.Implementation
                 throw ex;
             }
         }
+
+
+        public User Login(string email, string password)
+        {
+            User t = null;
+            query = @"SELECT id, name, lastName, secondLastName, userName, password , role , email, phoneNumber, status,registerDate, ISNULL(lastUpdate,CURRENT_TIMESTAMP),userID
+                        FROM Userr
+                        WHERE status = 1 AND email = @email AND password = HASHBYTES('md5',@password)";
+            SqlCommand command = CreateBasicCommand(query);
+            command.Parameters.AddWithValue("@email", email);
+            command.Parameters.AddWithValue("@password", password).SqlDbType = SqlDbType.VarChar;
+            try
+            {
+                DataTable table = ExecuteDataTableCommand(command);
+                if (table.Rows.Count > 0)
+                {
+                    t = new User(int.Parse(table.Rows[0][0].ToString()),
+                        table.Rows[0][1].ToString(),
+                        table.Rows[0][2].ToString(),
+                        table.Rows[0][3].ToString(),
+                        table.Rows[0][4].ToString(),
+                        table.Rows[0][5].ToString(),
+                        table.Rows[0][6].ToString(),
+                        table.Rows[0][7].ToString(),
+                        table.Rows[0][8].ToString(),
+                        //BASE
+                        byte.Parse(table.Rows[0][9].ToString()),
+                        DateTime.Parse(table.Rows[0][10].ToString()),
+                        DateTime.Parse(table.Rows[0][11].ToString()),
+                        int.Parse(table.Rows[0][12].ToString()));
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return t;
+        }
     }
 }

@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using CrowdFundingDAO.Implementation;
+using CrowdFundingDAO.Model;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
 namespace Avanze_ProjectoWeb.Pages
@@ -14,13 +16,25 @@ namespace Avanze_ProjectoWeb.Pages
 
         public void OnGet()
         {
-            //seguridad // se debe acer conel login,rescatar datos de la tabla
-            HttpContext.Session.SetString("username", "Cesar");
-            HttpContext.Session.SetString("rol", "Admin");
-            HttpContext.Session.SetInt32("userId", 4);
-
-
-
+           
         }
+
+        public IActionResult OnPost(string userName, string password)
+        {
+            UserImpl userImpl = new UserImpl();
+            User user = userImpl.Login(userName, password);
+            SessionClass.SessionUserId = user.UserID.ToString();
+            SessionClass.SessionName = user.name;
+            SessionClass.SessionLastName = user.lastName;
+            SessionClass.SessionUserName = user.userName;
+            SessionClass.SessionPassword = user.password;
+            SessionClass.SessionRole = user.role;
+            SessionClass.SessionEmail = user.email;
+            SessionClass.registerDate = user.RegisterDate;
+
+            return RedirectToPage("/Index"); //no se cual pagina sigue de eso xdxd
+            
+        }
+    
     }
 }
