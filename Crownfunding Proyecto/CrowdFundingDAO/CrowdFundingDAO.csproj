@@ -63,6 +63,7 @@
     <Compile Include="Model\Category.cs" />
     <Compile Include="Model\Comment.cs" />
     <Compile Include="Model\Description.cs" />
+    <Compile Include="Model\Patron.cs" />
     <Compile Include="Model\Project.cs" />
     <Compile Include="Model\SessionClass.cs" />
     <Compile Include="Model\SocialMedia.cs" />

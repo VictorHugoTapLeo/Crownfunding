@@ -12,31 +12,41 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
     public class paginaUnoModel : PageModel
     {
         ProjectImpl p;
+        Project hs = new Project();
         DescriptionImpl d;
 
-        [BindProperty] 
+        [BindProperty]
         public PaginaUnoModeldos Projecto { get; set; }
         public List<string> ApoyosRequeridos { get; set; } = new List<string>();
 
+        [BindProperty]
+        public List<Patron> ListaPatron { get; set; } = new List<Patron>();
 
-        
+
+
 
         public string? save { get; set; }
 
         public string successMessage = "";
         public string errorMessage = "";
 
-
+        ProjectImpl kj = new ProjectImpl();
         CategoryImpl cat = new CategoryImpl();
-        
+
         public List<Category> Categorias { get; set; }
         public List<Category> CategoriasInsert { get; set; }
 
-        public int sessionID { get; set; }
+        public string sessionID { get; set; }
         public PaginaUnoModeldos nuevo { get; set; }
         public void OnGet()
         {
-            //inserto de categorias 
+            
+
+
+
+            if (SessionClass.SessionRole == "Admin" ||SessionClass.SessionRole == "User")
+            {
+                 //inserto de categorias 
             CategoriasInsert = new List<Category>
         {
            new Category { name = "Asesoría financiera" },
@@ -69,23 +79,37 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
             // Mostrar el nombre del usuario en la vista
 
             HttpContext.Session.SetInt32("SessionID", 0);
-            sessionID = HttpContext.Session.GetInt32("SessionID") ?? 0;
+                //sessionID = HttpContext.Session.GetInt32("SessionID") ?? 0;
+                sessionID = sessionID +SessionClass.SessionRole;
+                //preuba para edit 
+                //ProjectImpl j = new ProjectImpl();
 
-            //preuba para edit 
-            ProjectImpl j = new ProjectImpl();
+                //Project k = new Project();
 
-            Project k = new Project();
+                //k = j.Get(2);
 
-            k = j.Get(2);
+                //nuevo = new PaginaUnoModeldos();
+                //nuevo.Titulo = k.title;
+                ListaPatron = kj.SelectPatron();
 
-            nuevo = new PaginaUnoModeldos();
-            nuevo.Titulo = k.title;
+            }
+            else
+            {
+                ListaPatron = kj.SelectPatron();
+                Categorias = cat.SelectList();
+                Response.Redirect("../Index");
 
-            
+            }
+
+
+             
+
+
         }
 
         public void OnPost()
         {
+            ListaPatron = kj.SelectPatron();
             Categorias = cat.SelectList();
             if (!ModelState.IsValid)
             {
@@ -106,7 +130,7 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
                 pro.productionProcessPng = "Not available";
                 pro.finalProductPng = "Not available";
                 pro.campaingVideo = Projecto.Link;
-                pro.userCampaingId = 1;
+                pro.userCampaingId = SessionClass.SessionId; //cambio id
                 pro.categoryId = int.Parse(Projecto.Tipo);
                 p.Insert(pro);
 
@@ -123,7 +147,7 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
                 List<Description> listaDescripciones = new List<Description>
                     {
                         new Description("DescripcionGeneral", Projecto.DescripcionGeneral,idProjecto),
-                        new Description("ListaApoyos", Projecto.ListaApoyos,idProjecto),
+                       // new Description("ListaApoyos", Projecto.ListaApoyos,idProjecto),
                         new Description("DescripcionPlanTiempo", Projecto.DescripcionPlanTiempo,idProjecto),
                         new Description("DescripcionObjetivo", Projecto.DescripcionObjetivo,idProjecto),
                         new Description("DescripcionPorque", Projecto.DescripcionPorque,idProjecto),
@@ -140,6 +164,21 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
 
                 }
 
+                p = new ProjectImpl();
+                //insercion de tablas porjecto y patron
+                string idSinComa = Projecto.ListaApoyos.TrimEnd(',');
+                foreach (string apoyoId in idSinComa.Split(','))
+                {
+                    string idSinCeros = apoyoId;
+
+                    if (apoyoId.Length > 1 && apoyoId[0] == '0')
+                    {
+                        idSinCeros = apoyoId.TrimStart('0');
+                    }
+
+                    int id = int.Parse(idSinCeros);
+                    p.InsertPatronProject(id, idProjecto);
+                }
 
 
 

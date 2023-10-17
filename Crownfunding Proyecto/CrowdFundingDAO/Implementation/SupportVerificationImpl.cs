@@ -68,11 +68,11 @@ namespace CrowdFundingDAO.Implementation
             SqlCommand command = CreateBasicCommand(query);
             command.Parameters.AddWithValue("@supportId", t.supportId);
             command.Parameters.AddWithValue("@verificationDetails", t.verificationDetails);
-            command.Parameters.AddWithValue("@userID", t.UserID);
+          
 
             command.Parameters.AddWithValue("@supportStatus", t.supportStatus);
             command.Parameters.AddWithValue("@supportVisible", t.supportVisible);
-            //command.Parameters.AddWithValue("@userID", SessionClass.SessionId);
+            command.Parameters.AddWithValue("@userID", SessionClass.SessionId); 
             try
             {
                 return ExecuteBasicCommand(command);

@@ -13,7 +13,7 @@ namespace CrowdFundingDAO.Model
         public static string SessionLastName = "flores";
         public static string SessionUserName = "Juanes";
         public static string SessionPassword = "ss";
-        public static string SessionRole = "Admin";
+        public static string SessionRole = "User";
         public static string SessionEmail = "juan@gmail.com";
         public static string SessionUserId = "1";
         public static DateTime registerDate = DateTime.Now;

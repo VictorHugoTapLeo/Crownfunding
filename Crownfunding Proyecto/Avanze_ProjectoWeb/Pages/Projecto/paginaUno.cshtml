@@ -11,7 +11,7 @@
 </head>
 
 <div class="container text-left">
-    <!--<h1 class="custom-h1">@Model.sessionID</h1>-->
+    <h1 class="custom-h1">@Model.sessionID</h1>
     <h1 class="custom-h1">Crear una campaña</h1>
     <h3 class="custom-h3">Presentación del proyecto</h3>
 
@@ -65,72 +65,20 @@
         <!--aumetnar checkboxes-->
         <h1 class="apoyos-title">Lista de Apoyos</h1>
         <p class="apoyos-description">Selecciona los tipos de apoyo que te gustaría recibir</p>
-        <div class="apoyos-container">
-            <div class="apoyo-item checkbox-label">
-                <input class="apoyo-checkbox very" type="checkbox" id="checkbox1" value="01" onclick="actualizarInput(this)">
-                <label class="apoyo-label" for="checkbox1">Asesoramiento y mentoría</label>
-            </div>
-            <div class="apoyo-item checkbox-label">
-                <input class="apoyo-checkbox very" type="checkbox" id="checkbox2" value="02" onclick="actualizarInput(this)">
-                <label class="apoyo-label" for="checkbox2">Recursos físicos</label>
-            </div>
-        </div>
-
-
-        <div class="apoyo-item checkbox-label">
-            <input class="apoyo-checkbox very" type="checkbox" id="checkbox3" value="03" onclick="actualizarInput(this)">
-            <label class="apoyo-label" for="checkbox3">Red de contactos</label>
-        </div>
-        <div class="apoyo-item checkbox-label">
-            <input class="apoyo-checkbox very" type="checkbox" id="checkbox4" value="04" onclick="actualizarInput(this)">
-            <label class="apoyo-label" for="checkbox4">Capacitación</label>
-        </div>
-
-
-        <div class="apoyo-item checkbox-label">
-            <input class="apoyo-checkbox very" type="checkbox" id="checkbox5" value="05" onclick="actualizarInput(this)">
-            <label class="apoyo-label" for="checkbox5">Acceso a datos o información</label>
-        </div>
-        <div class="apoyo-item checkbox-label">
-            <input class="apoyo-checkbox very" type="checkbox" id="checkbox6" value="06" onclick="actualizarInput(this)">
-            <label class="apoyo-label" for="checkbox6">Apoyo técnico</label>
-        </div>
-        <div class="apoyo-item checkbox-label">
-            <input class="apoyo-checkbox very" type="checkbox" id="checkbox7" value="07" onclick="actualizarInput(this)">
-            <label class="apoyo-label" for="checkbox7">Compartir experiencias</label>
-        </div>
-
-
-        <div class="apoyo-item checkbox-label">
-            <input class="apoyo-checkbox very" type="checkbox" id="checkbox8" value="08" onclick="actualizarInput(this)">
-            <label class="apoyo-label" for="checkbox8">Promoción</label>
-        </div>
-        <div class="apoyo-item checkbox-label">
-            <input class="apoyo-checkbox very" type="checkbox" id="checkbox9" value="09" onclick="actualizarInput(this)">
-            <label class="apoyo-label" for="checkbox9">Coaching en habilidades de presentación</label>
-        </div>
-        <div class="apoyo-item checkbox-label">
-            <input class="apoyo-checkbox very" type="checkbox" id="checkbox10" value="10" onclick="actualizarInput(this)">
-            <label class="apoyo-label" for="checkbox10">Acceso a recursos financieros no monetarios</label>
-        </div>
-
-
-        <div class="apoyo-item checkbox-label">
-            <input class="apoyo-checkbox very" type="checkbox" id="checkbox11" value="11" onclick="actualizarInput(this)">
-            <label class="apoyo-label" for="checkbox11">Orientación sobre la estrategia de negocios</label>
-        </div>
-        <div class="apoyo-item checkbox-label">
-            <input class="apoyo-checkbox very" type="checkbox" id="checkbox12" value="12" onclick="actualizarInput(this)">
-            <label class="apoyo-label" for="checkbox12">Tiempo y apoyo voluntario</label>
-        </div>
-        <div class="apoyo-item checkbox-label">
-            <input class="apoyo-checkbox very" type="checkbox" id="checkbox13" value="13" onclick="actualizarInput(this)">
-            <label class="apoyo-label" for="checkbox13">Reconocimiento y visibilidad</label>
-        </div>
+           @foreach (var patron in Model.ListaPatron)
+            {
+                var formattedId = patron.Id.ToString().PadLeft(2, '0'); // Asegura que tenga dos dígitos
+                <div>
+                    <label>
+                        <input type="checkbox" class="very" name="selectedPatrons" value="@formattedId" onclick="actualizarInput(this)"  />
+                        @patron.Name
+                    </label>
+                </div>
+            }
 
 
 
-        <input class="custom-input" type="text" id="apoyosInput" readonly asp-for="Projecto.ListaApoyos" style="display: none;" />
+        <input class="custom-input" type="text" id="apoyosInput" readonly asp-for="Projecto.ListaApoyos"  />
         <span class="custom-validation" asp-validation-for="Projecto.ListaApoyos"></span>
 
         <!--sdsdsdsdsdsdsd-->
@@ -329,23 +277,25 @@
 </div>
 
 
-<script>
-    function actualizarInput(checkbox) {
-        var apoyosInput = document.getElementById('apoyosInput');
-        var checkboxValue = checkbox.value + ',';
-        var currentValue = apoyosInput.value;
 
-        if (checkbox.checked) {
-            if (!currentValue.includes(checkboxValue)) {
-                apoyosInput.value += checkboxValue;
-                // Aquí también puedes agregar el apoyo a la lista en tu modelo C#
-                // Puedes hacerlo a través de JavaScript o haciendo una petición AJAX a tu servidor
-            }
-        } else {
-            apoyosInput.value = currentValue.replace(checkboxValue, '');
-            // También puedes quitar el apoyo de la lista en tu modelo C#
+<script>
+   function actualizarInput(checkbox) {
+    var apoyosInput = document.getElementById('apoyosInput');
+    var checkboxValue = checkbox.value.length === 1 ? '0' + checkbox.value : checkbox.value; // Agrega un cero por delante si es un solo dígito
+    checkboxValue += ',';
+    var currentValue = apoyosInput.value;
+
+    if (checkbox.checked) {
+        if (!currentValue.includes(checkboxValue)) {
+            apoyosInput.value += checkboxValue;
+            // Aquí también puedes agregar el apoyo a la lista en tu modelo C#
+            // Puedes hacerlo a través de JavaScript o haciendo una petición AJAX a tu servidor
         }
+    } else {
+        apoyosInput.value = currentValue.replace(checkboxValue, '');
+        // También puedes quitar el apoyo de la lista en tu modelo C#
     }
+}
 </script>
 <script>
     window.onload = function() {

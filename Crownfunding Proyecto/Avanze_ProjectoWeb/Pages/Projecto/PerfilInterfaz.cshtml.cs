@@ -21,6 +21,7 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
         //
         public void OnGet()
         {
+            
             p = new ProjectImpl();
             myProjects = p.GetMyProjects(SessionClass.SessionId);
             mySupports = p.GetMySupports(SessionClass.SessionId);
@@ -29,8 +30,8 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
             NApoyadas = mySupports.Count;
 
             //Codigo Cristian--Muestra los proyectos correspondiwentes al usuario logeado
-            ProjectsLista = p.SelectMyPro(1); //envez de uno tiene que ser el sessionUserID -Pendiente
-            SupportedByMe = p.SupportedProByMe(2);//porjectos a losque yo di apoyo-SessionUserID,igual
+            ProjectsLista = p.SelectMyPro(SessionClass.SessionId); //envez de uno tiene que ser el sessionUserID -Pendiente
+            SupportedByMe = p.SupportedProByMe(SessionClass.SessionId);//porjectos a losque yo di apoyo-SessionUserID,igual
         }
 
 

@@ -20,7 +20,18 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
         public List<Project> ProjectsLista { get; set; }
         public void OnGet()
         {
-            ProjectsLista= p.Selectpros();
+            if (SessionClass.SessionRole == "Admin" || SessionClass.SessionRole == "User")
+            {
+                ProjectsLista = p.Selectpros();
+            }
+            else
+            {
+                
+                Response.Redirect("../Index");
+
+            }
+
+            
 
         }
     }

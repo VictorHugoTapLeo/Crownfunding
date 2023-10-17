@@ -14,15 +14,17 @@
     <div class="container">
         <div class="box1">
             <h2>Inicio de Sesión</h2>
-            <form>
+            <form method="post">
                 <label for="email">Email</label><br><br>
-                <input class="input" type="email" id="email" name="email"><br><br>
+                <input class="input" type="email" id="email" asp-for="@Model.email"><br><br>
                 <label for="password">Contraseña</label><br><br>
-                <input class="input" type="password" id="password" name="password"><br><br>
+                <input class="input" type="password" id="password" asp-for="@Model.contraseña"><br><br>
                 <a class="a" asp-area="" asp-page="/Projecto/recuperar">¿Olvidaste tu contraseña?</a><br><br>
+           
+                <button type="submit" >Iniciar Sesión</button>
+        
             </form>
-            <button class="button2" id="iniciar-sesion2">Iniciar Sesión</button>
-        </div>
+         </div>
         <div class="box2">
             <h2>¡Bienvenido!</h2>
             <p class="p1">Estamos a tu disposición para ayudarte.</p>

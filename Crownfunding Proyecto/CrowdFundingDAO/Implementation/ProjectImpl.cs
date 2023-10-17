@@ -450,5 +450,132 @@ namespace CrowdFundingDAO.Implementation
                 throw ex;
             }
         }
+
+        //metodo para apoyos 
+        public List<Patron> SelectPatron()
+        {
+            query = @"SELECT id, name
+                FROM PatronProvided
+                WHERE status = 1";
+            SqlCommand command = CreateBasicCommand(query);
+            try
+            {
+                DataTable dataTable = ExecuteDataTableCommand(command);
+                List<Patron> patronList = new List<Patron>();
+
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    Patron patron = new Patron
+                    {
+                        Id = Convert.ToInt32(row["id"]),
+                        Name = row["name"].ToString()
+                    };
+                    patronList.Add(patron);
+                }
+
+                return patronList;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public int InsertPatronProject(int idPatron, int idProject)
+        {
+            query = @"INSERT INTO PatronProject (idPatron, idProject)
+              VALUES (@idPatron, @idProject)";
+            SqlCommand command = CreateBasicCommand(query);
+            command.Parameters.AddWithValue("@idPatron", idPatron);
+            command.Parameters.AddWithValue("@idProject", idProject);
+
+            try
+            {
+                return ExecuteBasicCommand(command);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        //select de apoyos 
+        public List<Patron> GetPatronsForProject(int idProjecto)
+        {
+            List<Patron> patrons = new List<Patron>();
+
+            // Tu código de conexión y configuración de SqlCommand aquí
+            string query = @"SELECT idPatron
+                    FROM PatronProject
+                    WHERE idProjecto = @idProjecto AND status = 1";
+
+            SqlCommand command = CreateBasicCommand(query);
+            command.Parameters.AddWithValue("@idProjecto", idProjecto);
+
+            try
+            {
+                using (SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        int idPatron = Convert.ToInt32(reader["idPatron"]);
+                        Patron patron = new Patron { Id = idPatron };
+                        patrons.Add(patron);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return patrons;
+        }
+
+        //lll
+        public List<Patron> SelectPatronSoloIds(int idProjecto)
+        {
+            query = @"SELECT idPatron
+                    FROM PatronProject
+                    WHERE idProject = @idProject AND status = 1";
+            SqlCommand command = CreateBasicCommand(query);
+            command.Parameters.AddWithValue("@idProject", idProjecto);
+            try
+            {
+                DataTable dataTable = ExecuteDataTableCommand(command);
+                List<Patron> patronList = new List<Patron>();
+
+                foreach (DataRow row in dataTable.Rows)
+                {
+                    Patron patron = new Patron
+                    {
+                        Id = Convert.ToInt32(row["idPatron"]),
+
+                    };
+                    patronList.Add(patron);
+                }
+
+                return patronList;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+
+        public int DeletePatronProjectByProjectId(int idProject)
+        {
+            query = @"DELETE FROM PatronProject WHERE idProject = @idProject";
+            SqlCommand command = CreateBasicCommand(query);
+            command.Parameters.AddWithValue("@idProject", idProject);
+            try
+            {
+                return ExecuteBasicCommand(command);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

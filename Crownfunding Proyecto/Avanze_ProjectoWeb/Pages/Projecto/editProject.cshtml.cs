@@ -19,10 +19,10 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
         public PaginaUnoModeldos Projecto { get; set; }
         public List<string> ApoyosRequeridos { get; set; } = new List<string>();
 
-        
+
         public List<Project> listaDeProyectos { get; set; } = new List<Project>();
 
-       
+
         public string? save { get; set; }
 
         public string successMessage = "";
@@ -36,10 +36,16 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
         CategoryImpl cat = new CategoryImpl();
         SocialMedia ca = new SocialMedia();
         SocialMediaImpl ck = new SocialMediaImpl();
+
+        ProjectImpl kj = new ProjectImpl();
+        [BindProperty]
+        public List<Patron> ListaPatron { get; set; } = new List<Patron>();
         public void OnGet(int id)
         {
+            if (SessionClass.SessionRole == "Admin" || SessionClass.SessionRole == "User")
+            {
 
-            idrecu = id;
+                idrecu = id;
             Categorias = cat.SelectList();
 
             // Mostrar el nombre del usuario en la vista
@@ -69,18 +75,39 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
             Projecto.Redes = ck.Get(id).mediaLink;
             Projecto.Tipo = Convert.ToString(k.categoryId);
 
+                List<Patron> patrons = kj.SelectPatronSoloIds(id);
 
 
-            foreach (Description item in hi.GetAll(id))
+
+
+                string concatenatedIds = string.Empty;
+
+                foreach (var patron in patrons)
+                {
+                    if (patron.Id < 10)
+                    {
+                        concatenatedIds += "0" + patron.Id + ",";
+                    }
+                    if (patron.Id > 9)
+                    {
+                        concatenatedIds += patron.Id + ",";
+                    }
+
+                }
+
+                Projecto.ListaApoyos = concatenatedIds;
+                ListaPatron = kj.SelectPatron();
+
+                foreach (Description item in hi.GetAll(id))
             {
                 if (item.type == "DescripcionGeneral")
                 {
                     Projecto.DescripcionGeneral = item.description;
                 }
-                else if (item.type == "ListaApoyos")
-                {
-                    Projecto.ListaApoyos = item.description;
-                }
+                //else if (item.type == "ListaApoyos")
+                //{
+                //    Projecto.ListaApoyos = item.description;
+                //}
                 else if (item.type == "DescripcionPlanTiempo")
                 {
                     Projecto.DescripcionPlanTiempo = item.description;
@@ -111,6 +138,18 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
                 }
             }
 
+
+            
+            }
+            else
+            {
+                ListaPatron = kj.SelectPatron();
+                Categorias = cat.SelectList();
+                Response.Redirect("../Index");
+
+            }
+
+           
         }
 
         public void OnPost()
@@ -120,6 +159,7 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
             {
                 errorMessage = "Error en los campos,revisa";
                 Categorias = cat.SelectList();
+                ListaPatron = kj.SelectPatron();
 
             }
             else
@@ -136,7 +176,7 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
                 pro.projectPng = "Not available";
                 pro.productionProcessPng = "Not available";
                 pro.finalProductPng = "Not available";
-
+                pro.userCampaingId = SessionClass.SessionId; //cambio id
                 pro.campaingVideo = Projecto.Link;
                 pro.categoryId = int.Parse(Projecto.Tipo);
 
@@ -154,7 +194,7 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
                 List<Description> listaDescripciones = new List<Description>
                     {
                         new Description("DescripcionGeneral", Projecto.DescripcionGeneral,idProjecto),
-                        new Description("ListaApoyos", Projecto.ListaApoyos,idProjecto),
+                       // new Description("ListaApoyos", Projecto.ListaApoyos,idProjecto),
                         new Description("DescripcionPlanTiempo", Projecto.DescripcionPlanTiempo,idProjecto),
                         new Description("DescripcionObjetivo", Projecto.DescripcionObjetivo,idProjecto),
                         new Description("DescripcionPorque", Projecto.DescripcionPorque,idProjecto),
@@ -171,7 +211,28 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
 
                 }
 
-             
+
+
+                p = new ProjectImpl();
+                p.DeletePatronProjectByProjectId(idProjecto);
+
+                //insercion de tablas porjecto y patron
+                string idSinComa = Projecto.ListaApoyos.TrimEnd(',');
+                foreach (string apoyoId in idSinComa.Split(','))
+                {
+                    string idSinCeros = apoyoId;
+
+                    if (apoyoId.Length > 1 && apoyoId[0] == '0')
+                    {
+                        idSinCeros = apoyoId.TrimStart('0');
+                    }
+
+                    int id = int.Parse(idSinCeros);
+                    p.InsertPatronProject(id, idProjecto);
+                }
+
+
+
 
 
 

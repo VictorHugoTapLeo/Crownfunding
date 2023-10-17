@@ -1,11 +1,13 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-
+using CrowdFundingDAO.Implementation;
+using CrowdFundingDAO.Model;
 
 namespace Avanze_ProjectoWeb.Pages.Projecto
 {
     public class RestablecimientoContraseñaModel : PageModel
     {
+      
         [BindProperty]
         public string NuevaContraseña { get; set; }
 
@@ -14,6 +16,7 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
 
         public IActionResult OnPost()
         {
+           
             // Aquí puedes agregar lógica para verificar si las contraseñas coinciden
             if (NuevaContraseña != ConfirmarContraseña)
             {

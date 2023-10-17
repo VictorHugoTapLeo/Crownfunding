@@ -60,3 +60,9 @@ C:\Users\Victor Hugo\Desktop\proyecto sistemas\Crownfunding\Crownfunding Proyect
 C:\Users\Victor Hugo\Desktop\proyecto sistemas\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.csproj.CoreCompileInputs.cache
 C:\Users\Victor Hugo\Desktop\proyecto sistemas\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.dll
 C:\Users\Victor Hugo\Desktop\proyecto sistemas\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.pdb
+C:\Users\carst\OneDrive\Escritorio\donde\nuevo-modificar para subir martes 1017\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\bin\Debug\CrowdFundingDAO.dll
+C:\Users\carst\OneDrive\Escritorio\donde\nuevo-modificar para subir martes 1017\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\bin\Debug\CrowdFundingDAO.pdb
+C:\Users\carst\OneDrive\Escritorio\donde\nuevo-modificar para subir martes 1017\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.csproj.AssemblyReference.cache
+C:\Users\carst\OneDrive\Escritorio\donde\nuevo-modificar para subir martes 1017\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.csproj.CoreCompileInputs.cache
+C:\Users\carst\OneDrive\Escritorio\donde\nuevo-modificar para subir martes 1017\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.dll
+C:\Users\carst\OneDrive\Escritorio\donde\nuevo-modificar para subir martes 1017\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.pdb

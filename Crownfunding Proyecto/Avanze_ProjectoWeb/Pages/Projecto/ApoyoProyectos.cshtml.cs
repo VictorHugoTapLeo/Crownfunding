@@ -29,10 +29,22 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
         
         public void OnGet()  //public void OnGet(int id)
         {
-            mp= pi.Get(2); //el id deberiaser recibido en elonget 
-            //mp = pi.Get(id);
-            idA = mp.id;
-            Titulo = mp.title;
+            if (SessionClass.SessionRole == "Admin" || SessionClass.SessionRole == "User")
+            {
+                mp = pi.Get(2); //el id deberiaser recibido en elonget/deberia ser el boton de vista de projecto quue mande su id 
+                                //mp = pi.Get(id);
+                idA = mp.id;
+                Titulo = mp.title;
+            }
+            else
+            {
+               
+                Response.Redirect("../Index");
+
+            }
+ 
+
+           
 
         }
         public void OnPost()
@@ -45,7 +57,7 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
             Support sm = new Support();
             sm.projectId= idA;
             sm.supporterId = 1; //se necesita connectar usurios para esto //cuando este listoo hacer fk con suaruio
-            sm.UserID = 1;
+            sm.UserID = SessionClass.SessionId; //cambio id 
             sm.supportType = TypoApoyo;
             sm.supportVerification = DescriApoyo;
 
