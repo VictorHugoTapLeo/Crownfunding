@@ -5,7 +5,6 @@
     align-items: center;
     padding: 20px;
 }
-
 /* Estilo del contenedor de la imagen */
 .image-container {
     flex: 1; /* La imagen ocupará 1/3 del ancho del contenedor principal */
@@ -32,6 +31,33 @@
     border-radius: 10px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+.content-container2 {
+    flex: 2;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente la imagen */
+    text-align:center;/* Alinea el texto a la izquierda */
+    border-radius: 10px;
+}
+
+    .content-container2 img {
+        max-width: 50%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+
+
+
+
+.content-container2 h3 {
+}
+.comentarios {
+    flex: 1; /* La imagen ocupará 1/3 del ancho del contenedor principal */
+    padding: 10px; /* Espaciado opcional alrededor de la imagen */
+}
+
 
 /* Estilo de los botones */
 .button-container {
@@ -80,22 +106,22 @@ body {
 .textP {
     color: #4D4D4D;
     font-weight: bold;
-    font-size:10px;
+    font-size:12px;
 }
 .text1 {
     font-weight: bold;
     color: black;
-    font-size: 18px;
+    font-size: 20px;
 }
 .text2 {
     font-weight: bold;
     color: black;
-    font-size: 20px;
+    font-size: 22px;
 }
 .text3 {
     font-weight: bold;
     color: black;
-    font-size: 15px;
+    font-size: 17px;
 }
 .button1 {
     background-color: #F34479;
@@ -105,13 +131,35 @@ body {
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s, color 0.3s;
-    font-size: 10px;
+    font-size: 12px;
     font-family: 'Alata', sans-serif;
-    width: 140px; 
-    height: 35px;
+    width: 100%; /* El botón se expandirá para llenar el espacio disponible */
+    height: 50px;
+    margin: 5px; /* Agregamos un margen entre los botones */
 }
 
     .button1:hover {
         background-color: white;
         color: #F34479;
     }
+.top-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* Espacio entre el botón "Aplicar" y los demás botones */
+}
+
+.bottom-buttons {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* Espacio entre los botones "Seguir" y "Visitar Social Media" */
+}
+textarea {
+    border: none; /* Elimina los bordes */
+    border-radius: 10px; /* Agrega bordes redondeados */
+    color: black; /* Color del texto blanco */
+    background-color: white; /* Fondo negro */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px; /* Espacio interior del textarea */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    height: 150px; /* Altura del textarea, ajusta según tus necesidades */
+}

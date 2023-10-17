@@ -21,6 +21,9 @@
                 <input class="input" type="password" id="password" name="password"><br><br>
                 <a class="a" asp-area="" asp-page="/Projecto/recuperarContraseña">¿Olvidaste tu contraseña?</a><br><br>
                 <button class="button2">Iniciar Sesión</button>
+                @if (@CrowdFundingDAO.Model.SessionClass.SessionRole=="Admin"){
+
+                }
             </form>
         </div>
         <div class="box2">

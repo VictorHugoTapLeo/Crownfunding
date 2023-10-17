@@ -29,7 +29,7 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
         
         public void OnGet()  //public void OnGet(int id)
         {
-            mp= pi.Get(4); //el id deberiaser recibido en elonget 
+            mp= pi.Get(2); //el id deberiaser recibido en elonget 
             //mp = pi.Get(id);
             idA = mp.id;
             Titulo = mp.title;
