@@ -3,32 +3,39 @@
 @{
 }
 
-<div class="">
-    <ul class="navbar-nav flex-grow-1">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/formSimple.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="container">
+        <div class="box1">
+            <ul class="navbar-nav flex-grow-1">
 
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-page="/Projecto/PerfilInterfaz">Perfil</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-page="/Projecto/editProjectLista">Editar proyecto</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-page="/Projecto/RestaurarProyecto">Restablecimiento De proyectos</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-page="/Projecto/PeticionesDeProyectos">Revision De proyectos</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-page="/Projecto/ProyectosRealizados">Proyetos Con Trabajo Realizados</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-page="/Projecto/ApoyoProyectos">Apoyo de Proyetos</a>
-        </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Projecto/Proyectos/Busqueda" asp-route-i="0">bus123</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Projecto/editProjectLista">Editar proyectos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Projecto/RestaurarProyecto">Restablecimiento De proyectos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Projecto/ProyectosRealizados">Proyetos Con Trabajo Realizados</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Projecto/PerfilInterfaz">Perfil</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Projecto/PeticionesDeProyectos">Revision De proyectos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" asp-area="" asp-page="/Projecto/ApoyoProyectos">Apoyo a Proyectos</a>
+                </li>
 
-
-        <li class="nav-item">
-            <a class="nav-link text-dark" asp-area="" asp-page="/Projecto/Proyectos/Busqueda" asp-route-i="0">bus123</a>
-        </li>
-
-    </ul>
-</div>
+            </ul>
+        </div>
+    </div>
+</body>

@@ -15,15 +15,19 @@
         <div>
             <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom mb-3">
                 <ul class="navbar-nav flex-grow-1 ulHeader">
-                    <li class="nav-item">
-                        <a class="nav-link headerText" asp-area="" asp-page="/Index">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link headerText" asp-area="" asp-page="/Index">Categoria de proyectos</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link headerText" asp-area="" asp-page="/Projecto/preguntasFrecuentes">Preguntas Frecuentes</a>
-                    </li>
+                    @if (@CrowdFundingDAO.Model.SessionClass.SessionRole != "Admin")
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link headerText" asp-area="" asp-page="/Index">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link headerText" asp-area="" asp-page="/Index">Categoria de proyectos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link headerText" asp-area="" asp-page="/Projecto/preguntasFrecuentes">Preguntas Frecuentes</a>
+                        </li>
+                    }
+
                     @if (@CrowdFundingDAO.Model.SessionClass.SessionRole == "Admin")
                     {
                         <li class="nav-item">
@@ -32,22 +36,26 @@
                         <li>
                             <a class="nav-link headerText" asp-page="/Projecto/Usuarios/CreateUser">Crud Usuarios</a>
                         </li>
+                        <li>
+                            <a class="nav-link headerText" asp-page="/Projecto/paginaUno">Crear Campaña</a>
+                        </li>
                     }
 
                 </ul>
-                <div class="user-actions divB">
-                    <button class="button2" id="iniciar-sesion">Iniciar Sesión</button>
-                    <button class="button1" id="registrate">Registrate</button>
-                    <script>
-                        document.getElementById("iniciar-sesion").addEventListener("click", function () {
-                            window.location.href = "/Index";
-                        });
 
-                        document.getElementById("registrate").addEventListener("click", function () {
-                            window.location.href = "/Projecto/formRegistro";
-                        });
-                    </script>
+                <div class="user-actions divB">
+                    @if (@CrowdFundingDAO.Model.SessionClass.SessionRole != "Admin")
+                    {
+                        <button class="button2" id="iniciar-sesion">Iniciar Sesión</button>
+                        <button class="button1" id="registrate">Registrate</button>
+                    }
+                    else
+                    {
+                        <button class="button2" id="salir">Salir</button>
+                    }
                 </div>
+
+
             </nav>
         </div>
     </header>
@@ -100,4 +108,13 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+<script>
+    document.getElementById("iniciar-sesion").addEventListener("click", function () {
+        window.location.href = "/Index";
+    });
+
+    document.getElementById("registrate").addEventListener("click", function () {
+        window.location.href = "/Projecto/formRegistro";
+    });
+</script>
 </html>

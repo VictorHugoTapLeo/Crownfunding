@@ -21,7 +21,7 @@
                 <input class="input" type="password" id="password" asp-for="@Model.contraseña"><br><br>
                 <a class="a" asp-area="" asp-page="/Projecto/recuperar">¿Olvidaste tu contraseña?</a><br><br>
            
-                <button type="submit" >Iniciar Sesión</button>
+                <button type="submit" class="button1">Iniciar Sesión</button>
         
             </form>
          </div>
@@ -29,7 +29,7 @@
             <h2>¡Bienvenido!</h2>
             <p class="p1">Estamos a tu disposición para ayudarte.</p>
             <p class="p2">¿No tienes cuenta?</p>
-            <button class="button2" id="registrate2">Registrarse</button>
+            <button class="button2" id="registrat">Registrarse</button>
         </div>
     </div>
 </body>
@@ -38,7 +38,7 @@
         window.location.href = "/Projecto/InicioPrincipal";
     });
 
-    document.getElementById("registrate2").addEventListener("click", function () {
+    document.getElementById("registrat").addEventListener("click", function () {
         window.location.href = "/Projecto/formRegistro";
     });
 </script>
