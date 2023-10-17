@@ -25,7 +25,7 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
             // Por ejemplo, actualizar la contraseña en la base de datos.
 
             // Redirige a una página de éxito o cualquier otra página según tus necesidades.
-            return RedirectToPage("/Exito");
+            return RedirectToPage("/Projecto/restablecimientoContraseñaCompletado");
         }
     }
 }

@@ -13,7 +13,7 @@
         <div class="contenido">
             <h1>Los proyectos emprendedores abren un mundo de posibilidades. Ayuda a financiarlo aquí.</h1>
             <p>Deja que el mundo vea y apoye tu trabajo de tus ideas desde cualquier parte.</p>
-            <button class="button1">Iniciar Campaña</button>
+            <button class="button1" id="iniciar-camaña">Iniciar Campaña</button>
         </div>
         <div class="imagenes">
             <img src="~/imagenes/Portada-investigacion-cientifica.jpg" alt="Imagen 1">
@@ -94,7 +94,7 @@
                 Unete hoy mismo a miles
                 de personas.
             </h1>
-            <button class="button1">Iniciar Campaña</button>
+            <button class="button1" id="iniciar-camaña2">Iniciar Campaña</button>
             <button class="button2">Como Funciona</button>
         </div>
         <div class="imagenes">
@@ -103,3 +103,11 @@
     </div>
 
 </body>
+<script>
+    document.getElementById("iniciar-camaña").addEventListener("click", function () {
+        window.location.href = "/Projecto/paginaUno";
+    });
+    document.getElementById("iniciar-camaña2").addEventListener("click", function () {
+        window.location.href = "/Projecto/paginaUno";
+    });
+</script>

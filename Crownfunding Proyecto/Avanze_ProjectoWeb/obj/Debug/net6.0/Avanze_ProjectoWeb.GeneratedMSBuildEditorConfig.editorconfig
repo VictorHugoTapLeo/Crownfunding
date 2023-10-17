@@ -88,12 +88,16 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9cUmVjZWl2ZWRTdXBwb3J0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Victor Hugo/Desktop/proyecto sistemas/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/recuperarContraseña.cshtml]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9ccmVjdXBlcmFyQ29udHJhc2XDsWEuY3NodG1s
+[C:/Users/Victor Hugo/Desktop/proyecto sistemas/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/recuperar.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9ccmVjdXBlcmFyLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Victor Hugo/Desktop/proyecto sistemas/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/restablecimientoContraseña.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9ccmVzdGFibGVjaW1pZW50b0NvbnRyYXNlw7FhLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Victor Hugo/Desktop/proyecto sistemas/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/restablecimientoContraseñaCompletado.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJvamVjdG9ccmVzdGFibGVjaW1pZW50b0NvbnRyYXNlw7FhQ29tcGxldGFkby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Victor Hugo/Desktop/proyecto sistemas/Crownfunding/Crownfunding Proyecto/Avanze_ProjectoWeb/Pages/Projecto/RestaurarProyecto.cshtml]

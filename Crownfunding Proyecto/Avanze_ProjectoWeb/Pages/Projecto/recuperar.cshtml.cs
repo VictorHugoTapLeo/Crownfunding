@@ -1,19 +1,11 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.Logging;
-using System;
 using System.Net;
 using System.Net.Mail;
-using System.Threading.Tasks;
-using System;
 
-using Microsoft.AspNetCore.Http;
-
-using System.ComponentModel.DataAnnotations;
 namespace Avanze_ProjectoWeb.Pages.Projecto
 {
-    public class RecuperarContraseñaModel : PageModel
+    public class recuperarModel : PageModel
     {
         [BindProperty]
         public string Correo { get; set; }
@@ -26,11 +18,11 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
             //int userId = HttpContext.Session.GetInt32("userId") ?? 0;
             //HttpContext.Session.Clear();
             sessionID = HttpContext.Session.GetInt32("SessionID") ?? 0;
-           
-            if (rol != "Admin")
-            {
-                return RedirectToPage("/Index");
-            }
+
+            //if (rol != "Admin")
+            //{
+            //    return RedirectToPage("/Index");
+            //}
             return Page();
 
             // IActionResult
@@ -40,18 +32,18 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
         {
             if (ModelState.IsValid)
             {
-                // Enviar el correo de recuperación de contraseña
-                EnviarCorreoRecuperacionContraseña(Correo);
+                // Enviar el correo de recuperaci�n de contrase�a
+                EnviarCorreoRecuperacionContrase�a(Correo);
 
-                // Redirige a otra página después de enviar el correo
+                // Redirige a otra p�gina despu�s de enviar el correo
                 return RedirectToPage("/CorreoEnviado");
             }
 
-            // Si el modelo no es válido, vuelve a mostrar el formulario
+            // Si el modelo no es v�lido, vuelve a mostrar el formulario
             return Page();
         }
 
-        private void EnviarCorreoRecuperacionContraseña(string destinatario)
+        private void EnviarCorreoRecuperacionContrase�a(string destinatario)
         {
             // Configura el cliente SMTP para enviar el correo
             using (var client = new SmtpClient())
@@ -67,12 +59,12 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
                 var mensaje = new MailMessage
                 {
                     From = new MailAddress("crowdfundingoficialpage@gmail.com", "Crowdfunding"),
-                    Subject = "Recuperación de Contraseña",
-                    Body = "Haz clic en el siguiente enlace para restablecer tu contraseña: [Enlace]",
+                    Subject = "Recuperaci�n de Contrase�a",
+                    Body = "Haz clic en el siguiente enlace para restablecer tu contrase�a: [Enlace]",
                 };
                 mensaje.To.Add(destinatario);
 
-                // Envía el correo
+                // Env�a el correo
                 client.Send(mensaje);
             }
         }

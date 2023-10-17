@@ -19,18 +19,24 @@
                 <input class="input" type="email" id="email" name="email"><br><br>
                 <label for="password">Contraseña</label><br><br>
                 <input class="input" type="password" id="password" name="password"><br><br>
-                <a class="a" asp-area="" asp-page="/Projecto/recuperarContraseña">¿Olvidaste tu contraseña?</a><br><br>
-                <button class="button2">Iniciar Sesión</button>
-                @if (@CrowdFundingDAO.Model.SessionClass.SessionRole=="Admin"){
-
-                }
+                <a class="a" asp-area="" asp-page="/Projecto/recuperar">¿Olvidaste tu contraseña?</a><br><br>
             </form>
+            <button class="button2" id="iniciar-sesion2">Iniciar Sesión</button>
         </div>
         <div class="box2">
             <h2>¡Bienvenido!</h2>
             <p class="p1">Estamos a tu disposición para ayudarte.</p>
             <p class="p2">¿No tienes cuenta?</p>
-            <button class="button2">Registrarse</button>
+            <button class="button2" id="registrate2">Registrarse</button>
         </div>
     </div>
 </body>
+<script>
+    document.getElementById("iniciar-sesion2").addEventListener("click", function () {
+        window.location.href = "/Projecto/InicioPrincipal";
+    });
+
+    document.getElementById("registrate2").addEventListener("click", function () {
+        window.location.href = "/Projecto/formRegistro";
+    });
+</script>

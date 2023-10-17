@@ -1,0 +1,29 @@
+﻿@page
+@model Avanze_ProjectoWeb.Pages.Projecto.restablecimientoContraseñaCompletadoModel
+@{
+}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/formSimple.css" asp-append-version="true" />
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">
+            <h2>Restablecimiento Completado!</h2>
+            <form method="post">
+                <div>
+                    <label>Puedes volver al inicio.</label><br></br>
+                </div>
+                <br>
+            </form>
+            <button type="submit" class="button2" id="iniciar-sesion5">Volver</button>
+        </div>
+    </div>
+</body>
+<script>
+    document.getElementById("iniciar-sesion5").addEventListener("click", function () {
+        window.location.href = "/Index";
+    });
+</script>

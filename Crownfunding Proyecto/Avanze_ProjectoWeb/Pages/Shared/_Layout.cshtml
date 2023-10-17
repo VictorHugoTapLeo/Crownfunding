@@ -22,22 +22,31 @@
                         <a class="nav-link headerText" asp-area="" asp-page="/Index">Categoria de proyectos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link headerText" asp-area="" asp-page="/Projecto/ModalesRevisar">Modales</a>
-                    </li>
-                    <li class="nav-item">
                         <a class="nav-link headerText" asp-area="" asp-page="/Projecto/preguntasFrecuentes">Preguntas Frecuentes</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link headerText" asp-area="" asp-page="/Projecto/ExploradorMomentaneo">Explorador Desarrollador</a>
-                    </li>
-                    <li>
-                        <a class="nav-link headerText" asp-page="/Projecto/Usuarios/CreateUser">Crud Usuarios</a>
-                    </li>
+                    @if (@CrowdFundingDAO.Model.SessionClass.SessionRole == "Admin")
+                    {
+                        <li class="nav-item">
+                            <a class="nav-link headerText" asp-area="" asp-page="/Projecto/ExploradorMomentaneo">Explorador Admin</a>
+                        </li>
+                        <li>
+                            <a class="nav-link headerText" asp-page="/Projecto/Usuarios/CreateUser">Crud Usuarios</a>
+                        </li>
+                    }
 
                 </ul>
                 <div class="user-actions divB">
-                    <button class="button2">Iniciar Sesión</button>
-                    <button class="button1">Registrate</button>
+                    <button class="button2" id="iniciar-sesion">Iniciar Sesión</button>
+                    <button class="button1" id="registrate">Registrate</button>
+                    <script>
+                        document.getElementById("iniciar-sesion").addEventListener("click", function () {
+                            window.location.href = "/Index";
+                        });
+
+                        document.getElementById("registrate").addEventListener("click", function () {
+                            window.location.href = "/Projecto/formRegistro";
+                        });
+                    </script>
                 </div>
             </nav>
         </div>
@@ -66,8 +75,8 @@
             <div class="divBox">
                 <p class="rectangulo">Te ayudamos</p>
                 <a class="enlaces espacioRectangulo" href="/Projecto/preguntasFrecuentes">Preguntas Frecuentes</a>
-                <a class="enlaces" href="https://www.ejemplo.com">.</a>
-                <a class="enlaces" href="https://www.ejemplo.com">.</a>
+                <a class="enlaces" href="">.</a>
+                <a class="enlaces" href="">.</a>
             </div>
             <div class="divBox">
                 <p class="rectangulo">Visita Tambien</p>

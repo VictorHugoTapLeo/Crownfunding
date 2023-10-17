@@ -1,5 +1,5 @@
 ﻿@page
-@model Avanze_ProjectoWeb.Pages.Projecto.RecuperarContraseñaModel
+@model Avanze_ProjectoWeb.Pages.Projecto.recuperarModel
 @{
 }
 <head>
@@ -18,9 +18,13 @@
                     <input type="email" class="input" id="correo" name="correo" required>
                 </div>
                 <br>
-                <button type="submit" class="button2" name="enviarCorreo">Enviar Correo</button>
+                <button type="submit" class="button2" name="enviarCorreo" id="restablecimientoContraseña">Enviar Correo</button>
             </form>
         </div>
     </div>
 </body>
-
+<script>
+    document.getElementById("restablecimientoContraseña").addEventListener("click", function () {
+        window.location.href = "/Projecto/restablecimientoContraseña";
+    });
+</script>
