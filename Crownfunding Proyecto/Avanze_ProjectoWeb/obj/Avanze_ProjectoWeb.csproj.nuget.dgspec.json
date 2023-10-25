@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj": {}
+    "C:\\Users\\Victor Hugo\\Desktop\\final git\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj": {
+    "C:\\Users\\Victor Hugo\\Desktop\\final git\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj",
+        "projectUniqueName": "C:\\Users\\Victor Hugo\\Desktop\\final git\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj",
         "projectName": "Avanze_ProjectoWeb",
-        "projectPath": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj",
+        "projectPath": "C:\\Users\\Victor Hugo\\Desktop\\final git\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj",
         "packagesPath": "C:\\Users\\Victor Hugo\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\obj\\",
+        "outputPath": "C:\\Users\\Victor Hugo\\Desktop\\final git\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -33,8 +33,8 @@
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj": {
-                "projectPath": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj"
+              "C:\\Users\\Victor Hugo\\Desktop\\final git\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj": {
+                "projectPath": "C:\\Users\\Victor Hugo\\Desktop\\final git\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj"
               }
             }
           }
@@ -77,11 +77,11 @@
         }
       }
     },
-    "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj": {
+    "C:\\Users\\Victor Hugo\\Desktop\\final git\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj": {
       "restore": {
-        "projectUniqueName": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj",
+        "projectUniqueName": "C:\\Users\\Victor Hugo\\Desktop\\final git\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj",
         "projectName": "CrowdFundingDAO",
-        "projectPath": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj",
+        "projectPath": "C:\\Users\\Victor Hugo\\Desktop\\final git\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj",
         "frameworks": {
           "net472": {
             "projectReferences": {}

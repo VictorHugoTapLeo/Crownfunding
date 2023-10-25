@@ -174,3 +174,56 @@ body[b-wbmk0jgvxk] {
         height: 1.5px;
         background-color: #F34479;
     }
+/* Estilo para el botón del menú */
+.menu-button[b-wbmk0jgvxk] {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+    padding-right: 30px;
+}
+
+/* Estilo para las barras del botón del menú */
+.bar[b-wbmk0jgvxk] {
+    width: 30px;
+    height: 4px;
+    background-color: #F34479;
+    margin: 6px 0;
+    transition: background-color 0.3s;
+}
+
+/* Estilo para el menú desplegable (inicialmente oculto) */
+.menu[b-wbmk0jgvxk] {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparencia */
+    border-radius: 10px; /* Borde redondeado */
+    padding: 10px;
+    text-align: center;
+    top: 60px; /* Ajusta la posición vertical para que esté más abajo */
+    right: 25px;
+    width: 200px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+    /* Estilo para los enlaces dentro del menú */
+    .menu a[b-wbmk0jgvxk] {
+        display: block;
+        padding: 5px 0;
+        color: #333;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+        /* Cambia el color del texto al pasar el cursor sobre los enlaces */
+        .menu a:hover[b-wbmk0jgvxk] {
+            color: #F34479;
+        }
+    /*.menu a:nth-child(even) {
+            background: rgba(0, 0, 0, 0.2); 
+        }*/
+
+    /* Estilo para el menú desplegado */
+    .menu.active[b-wbmk0jgvxk] {
+        display: block;
+    }

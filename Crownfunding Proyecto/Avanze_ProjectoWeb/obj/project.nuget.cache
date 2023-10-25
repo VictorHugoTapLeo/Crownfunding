@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "XMgHW/u+ULqQHFC2COLNA5H4NVWY2D4wZDret0PVTGh/gUWceGe8q0BMSfmIfLRPrGPVQhBYY1dYZPzL/Vdb5g==",
+  "dgSpecHash": "MsWvTf+NxdWvTQQn8sgmeNmHYfumj4Yjl9KhsmrbI06+JcVR+6z1LcYRsvOYveDmvQd2jdZuPCWLVdze71UJ5A==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Victor Hugo\\Desktop\\crow proyecto\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj",
+  "projectFilePath": "C:\\Users\\Victor Hugo\\Desktop\\final git\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Victor Hugo\\.nuget\\packages\\microsoft.netcore.platforms\\3.1.0\\microsoft.netcore.platforms.3.1.0.nupkg.sha512",
     "C:\\Users\\Victor Hugo\\.nuget\\packages\\microsoft.win32.registry\\4.7.0\\microsoft.win32.registry.4.7.0.nupkg.sha512",
