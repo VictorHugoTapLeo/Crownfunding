@@ -40,7 +40,7 @@
             }
 
             @*enctype="multipart/form-data"*@
-    <form method="post"  >
+    <form method="post"  enctype="multipart/form-data">
          <input  asp-for="Projecto.id"/>
 
         <div class="row">
@@ -210,9 +210,6 @@
 
 
         
-
-
- 
         <!-- Sección para la identidad de la campaña revisar desde acaa -->
         <h1>Muestra gráficamente la identidad de la campaña</h1>
         <h2>Imagen del Proyecto</h2>
@@ -220,27 +217,61 @@
 
          <div class="form-group">
         <h4>Imagen del Proyecto</h4>
-        <input dirname="imagen1" type="file" class="form-control-file" name="ImagenProyecto" id="imagenProyecto">
+        <input  type="file" class="custom-button" asp-for="Projecto.projectPng" id="inputProjectPng" >
+                <span class="custom-validation" asp-validation-for="Projecto.projectPng"></span>
+        <img id="vistaPreviaImagen" src="#" alt="Vista previa de la imagen" style="max-width: 300px; max-height: 300px;" />
+
     </div>
 
-
+    <div>
+                @{
+    var projectPngBytes = Model.Projecto.projectPngbytes;
+    if (projectPngBytes != null)
+    {
+        <img src="data:image/png;base64,@Convert.ToBase64String(projectPngBytes)" alt="Project image" width="400" height="400"/>
+    }
+        }
+    </div>
+     
         <!-- Sección para el producto final -->
         <h2>Producto final</h2>
         <p>Agrega una imagen ilustrativa de tu producto final</p>
              <div class="form-group">
         <h4>Imagen del Producto Final</h4>
-        <input dirname="imagen2" type="file" class="form-control-file" name="ImagenProductoFinal" id="ImagenProductoFinal">
+          <input  type="file" class="custom-button" asp-for="Projecto.productionProcessPng" id="inputProductionProcessPng" >
+                <span class="custom-validation" asp-validation-for="Projecto.productionProcessPng"></span>
+          <img id="vistaPreviaImagen2" src="#" alt="Vista previa de la imagen" style="max-width: 300px; max-height: 300px;" />
+
     </div>
       
-
+        <div>
+                @{
+    var productionProcessPng = Model.Projecto.productionProcessPngbytes;
+    if (projectPngBytes != null)
+    {
+        <img src="data:image/png;base64,@Convert.ToBase64String(productionProcessPng)" alt="Project image" width="400" height="400"/>
+    }
+        }
+    </div>
         <!-- Sección para el proceso de producción -->
         <h2>Proceso de producción</h2>
         <p>Agrega una imagen del proceso de producción por el cual pasó tu producto final</p>
          <div class="form-group">
         <h4>Imagen del Proceso de Producción</h4>
-        <input dirname="imagen3" type="file" class="form-control-file" name="ImagenProcesoProduccion" id="ImagenProcesoProduccion">
+            <input  type="file" class="custom-button" asp-for="Projecto.finalProductPng" id="inputFinalProductPng" >
+                <span class="custom-validation" asp-validation-for="Projecto.finalProductPng"></span>
+          <img id="vistaPreviaImagen3" src="#" alt="Vista previa de la imagen" style="max-width: 300px; max-height: 300px;" />
+
     </div>
- 
+              <div>
+                            @{
+                var finalProductPngbytes = Model.Projecto.finalProductPngbytes;
+                if (projectPngBytes != null)
+                {
+                    <img src="data:image/png;base64,@Convert.ToBase64String(finalProductPngbytes)" alt="Project image" width="400" height="400"/>
+                }
+                    }
+                </div>
         <br />
        
          
@@ -322,3 +353,29 @@
         }
     };
 </script>
+<script>
+    function mostrarVistaPrevia(input, idVistaPrevia) {
+        var archivo = input.files[0];
+        var lector = new FileReader();
+
+        lector.onload = function (e) {
+            var vistaPrevia = document.getElementById(idVistaPrevia);
+            vistaPrevia.src = e.target.result;
+        }
+
+        lector.readAsDataURL(archivo);
+    }
+
+    document.getElementById('inputProjectPng').addEventListener('change', function () {
+        mostrarVistaPrevia(this, 'vistaPreviaImagen');
+    });
+
+    document.getElementById('inputProductionProcessPng').addEventListener('change', function () {
+        mostrarVistaPrevia(this, 'vistaPreviaImagen2');
+    });
+
+    document.getElementById('inputFinalProductPng').addEventListener('change', function () {
+        mostrarVistaPrevia(this, 'vistaPreviaImagen3');
+    });
+</script>
+

@@ -43,9 +43,9 @@ namespace CrowdFundingDAO.Implementation
                 {
                     t = new Project(int.Parse(table.Rows[0][0].ToString()),
                         table.Rows[0][1].ToString(),
-                        table.Rows[0][2].ToString(),
-                        table.Rows[0][3].ToString(),
-                        table.Rows[0][4].ToString(),
+                        (byte[])table.Rows[0][2],
+                        (byte[])table.Rows[0][3],
+                        (byte[])table.Rows[0][4],
                         table.Rows[0][5].ToString(),
                         int.Parse(table.Rows[0][6].ToString()),
                         int.Parse(table.Rows[0][7].ToString()),

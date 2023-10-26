@@ -125,10 +125,28 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
                 Project pro = new Project();
 
                 pro.title = Projecto.Titulo;
-                 
-                pro.projectPng = "Not available";
-                pro.productionProcessPng = "Not available";
-                pro.finalProductPng = "Not available";
+
+
+                using (var memoryStream = new MemoryStream())
+                {
+                    Projecto.projectPng.CopyTo(memoryStream);
+                    pro.projectPng = memoryStream.ToArray(); // Asignamos los bytes a pro.projectPng
+                }
+
+                using (var memoryStreams = new MemoryStream())
+                {
+                    Projecto.productionProcessPng.CopyTo(memoryStreams);
+                    pro.productionProcessPng = memoryStreams.ToArray(); // Asignamos los bytes a pro.projectPng
+                }
+
+                using (var memoryStreamp = new MemoryStream())
+                {
+                    Projecto.finalProductPng.CopyTo(memoryStreamp);
+                    pro.finalProductPng = memoryStreamp.ToArray(); // Asignamos los bytes a pro.projectPng
+                }
+                //pro.projectPng = "Not available";
+                //pro.productionProcessPng = "Not available";
+                //pro.finalProductPng = "Not available";
                 pro.campaingVideo = Projecto.Link;
                 pro.userCampaingId = SessionClass.SessionId; //cambio id
                 pro.categoryId = int.Parse(Projecto.Tipo);

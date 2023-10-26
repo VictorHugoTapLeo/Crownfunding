@@ -69,7 +69,7 @@ namespace CrowdFundingDAO.Implementation
             command.Parameters.AddWithValue("@projectId", t.projectId);
             command.Parameters.AddWithValue("@supportType", t.supportType);
             command.Parameters.AddWithValue("@supportVerification", t.supportVerification);
-            command.Parameters.AddWithValue("@userID", t.UserID);
+            command.Parameters.AddWithValue("@userID", SessionClass.SessionId);
             //command.Parameters.AddWithValue("@userID", SessionClass.SessionId);
             try
             {

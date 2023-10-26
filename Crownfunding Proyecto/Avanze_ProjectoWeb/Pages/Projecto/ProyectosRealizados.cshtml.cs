@@ -32,9 +32,9 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
             {
                 id = 1,
                 title = "Proyecto 1",
-                projectPng = "imagen1.png",
-                finalProductPng = "producto1.png",
-                productionProcessPng = "proceso1.png",
+                //projectPng = "imagen1.png",
+                //finalProductPng = "producto1.png",
+                //productionProcessPng = "proceso1.png",
                 campaingVideo = "video1.mp4",
                 userCampaingId = 101,
                 categoryId = 201
@@ -42,10 +42,10 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
             projects.Add(new Project
             {
                 id = 2,
-                title = "Proyecto 2",
-                projectPng = "imagen2.png",
-                finalProductPng = "producto2.png",
-                productionProcessPng = "proceso2.png",
+                title = "Proyecto 2sele",
+                //projectPng = "imagen2.png",
+                //finalProductPng = "producto2.png",
+                //productionProcessPng = "proceso2.png",
                 campaingVideo = "video2.mp4",
                 userCampaingId = 102,
                 categoryId = 202
@@ -54,9 +54,9 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
             {
                 id = 3,
                 title = "Proyecto 3",
-                projectPng = "imagen3.png",
-                finalProductPng = "producto3.png",
-                productionProcessPng = "proceso3.png",
+                //projectPng = "imagen3.png",
+                //finalProductPng = "producto3.png",
+                //productionProcessPng = "proceso3.png",
                 campaingVideo = "video3.mp4",
                 userCampaingId = 103,
                 categoryId = 203

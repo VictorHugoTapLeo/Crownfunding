@@ -39,7 +39,7 @@
 
 
     @*enctype="multipart/form-data"*@
-    <form method="post" class="custom-form">
+    <form method="post"  enctype="multipart/form-data" class="custom-form">
         <div >
             <div>
                 <p>Escribe un título y un subtítulo de forma clara y concisa para transmitir rápidamente la esencia de tu proyecto. Ambos aparecerán tanto en la página del proyecto como en la de prelanzamiento. También los verán los posibles patrocinadores si tu proyecto aparece en las páginas de la categoría, en los resultados de búsqueda o en los correos electrónicos que enviamos a nuestra comunidad.</p>
@@ -206,33 +206,46 @@
 
 
 
+       
+
+
+
         <!-- Sección para la identidad de la campaña revisar desde acaa -->
         <h1 class="custom-h1">Muestra gráficamente la identidad de la campaña</h1>
         <h2 class="custom-h2">Imagen del Proyecto</h2>
         <p class="custom-p">Agrega una imagen que represente claramente tu proyecto y que se vea bien en diferentes tamaños, ya que aparecerá en la página de tu proyecto, en el sitio web y (cuando se comparta) en las redes sociales. Tu imagen debe tener al menos 1024x576 píxeles. Se recortará en una proporción de 16:9. Evita imágenes con banners, distintivos o texto que podrían ser ilegibles en formatos más pequeños y ser penalizadas por el algoritmo de Facebook. Además, reducen tus posibilidades de aparecer en la página de inicio.</p>
         <div class="custom-form-group">
             <h4>Imagen del Proyecto</h4>
-            <input dirname="imagen1" type="file" class="custom-button" name="ImagenProyecto" id="imagenProyecto">
+            <input  type="file" class="custom-button" asp-for="Projecto.projectPng" id="inputProjectPng">
+                <span class="custom-validation" asp-validation-for="Projecto.projectPng"></span>
+       <img id="vistaPreviaImagen" src="#" alt="Vista previa de la imagen" style="max-width: 300px; max-height: 300px;" />
+
         </div>
+        <!-- Agrega esto en el lugar donde quieres mostrar la vista previa -->
+ 
         <br></br>
 
         <!-- Sección para el producto final -->
         <h2 class="custom-h2">Producto final</h2>
         <p class="custom-p">Agrega una imagen ilustrativa de tu producto final</p>
         <div class="custom-form-group">
-            <h4>Imagen del Producto Final</h4>
-            <input dirname="imagen2" type="file" class="custom-button" name="ImagenProductoFinal" id="ImagenProductoFinal">
-        </div>
+           <input  type="file" class="custom-button" asp-for="Projecto.productionProcessPng" id="inputProductionProcessPng">
+                <span class="custom-validation" asp-validation-for="Projecto.productionProcessPng"></span>
+        <img id="vistaPreviaImagen2" src="#" alt="Vista previa de la imagen" style="max-width: 300px; max-height: 300px;" />
+
+            </div>
         <br></br>
 
         <!-- Sección para el proceso de producción -->
         <h2 class="custom-h2">Proceso de producción</h2>
         <p class="custom-p">Agrega una imagen del proceso de producción por el cual pasó tu producto final</p>
         <div class="custom-form-group">
-            <h4>Imagen del Proceso de Producción</h4>
-            <input dirname="imagen3" type="file" class="custom-button" name="ImagenProcesoProduccion" id="ImagenProcesoProduccion">
-        </div>
+           <input  type="file" class="custom-button" asp-for="Projecto.finalProductPng" id="inputFinalProductPng" >
+                <span class="custom-validation" asp-validation-for="Projecto.finalProductPng"></span>
+         <img id="vistaPreviaImagen3" src="#" alt="Vista previa de la imagen" style="max-width: 300px; max-height: 300px;" />
 
+            </div>
+       
         <br></br>
 
 
@@ -317,4 +330,31 @@
         }
     };
 </script>
+
+<script>
+    function mostrarVistaPrevia(input, idVistaPrevia) {
+        var archivo = input.files[0];
+        var lector = new FileReader();
+
+        lector.onload = function (e) {
+            var vistaPrevia = document.getElementById(idVistaPrevia);
+            vistaPrevia.src = e.target.result;
+        }
+
+        lector.readAsDataURL(archivo);
+    }
+
+    document.getElementById('inputProjectPng').addEventListener('change', function () {
+        mostrarVistaPrevia(this, 'vistaPreviaImagen');
+    });
+
+    document.getElementById('inputProductionProcessPng').addEventListener('change', function () {
+        mostrarVistaPrevia(this, 'vistaPreviaImagen2');
+    });
+
+    document.getElementById('inputFinalProductPng').addEventListener('change', function () {
+        mostrarVistaPrevia(this, 'vistaPreviaImagen3');
+    });
+</script>
+
 

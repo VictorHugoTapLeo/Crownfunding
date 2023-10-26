@@ -71,7 +71,10 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
             Projecto = new PaginaUnoModeldos();
             Projecto.id = id;
             Projecto.Titulo = k.title;
-            Projecto.Link = k.campaingVideo;
+                Projecto.projectPngbytes = k.projectPng;
+                Projecto.productionProcessPngbytes = k.productionProcessPng;
+                Projecto.finalProductPngbytes = k.finalProductPng;
+                Projecto.Link = k.campaingVideo;
             Projecto.Redes = ck.Get(id).mediaLink;
             Projecto.Tipo = Convert.ToString(k.categoryId);
 
@@ -173,9 +176,26 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
               pro.id= Projecto.id;
                 pro.title = Projecto.Titulo;
 
-                pro.projectPng = "Not available";
-                pro.productionProcessPng = "Not available";
-                pro.finalProductPng = "Not available";
+                using (var memoryStream = new MemoryStream())
+                {
+                    Projecto.projectPng.CopyTo(memoryStream);
+                    pro.projectPng = memoryStream.ToArray(); // Asignamos los bytes a pro.projectPng
+                }
+
+                using (var memoryStreams = new MemoryStream())
+                {
+                    Projecto.productionProcessPng.CopyTo(memoryStreams);
+                    pro.productionProcessPng = memoryStreams.ToArray(); // Asignamos los bytes a pro.projectPng
+                }
+
+                using (var memoryStreamp = new MemoryStream())
+                {
+                    Projecto.finalProductPng.CopyTo(memoryStreamp);
+                    pro.finalProductPng = memoryStreamp.ToArray(); // Asignamos los bytes a pro.projectPng
+                }
+                //pro.projectPng = "Not available";
+                //pro.productionProcessPng = "Not available";
+                //pro.finalProductPng = "Not available";
                 pro.userCampaingId = SessionClass.SessionId; //cambio id
                 pro.campaingVideo = Projecto.Link;
                 pro.categoryId = int.Parse(Projecto.Tipo);

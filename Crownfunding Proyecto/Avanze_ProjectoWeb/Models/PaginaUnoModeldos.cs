@@ -54,5 +54,23 @@ namespace Avanze_ProjectoWeb.Models
         [Required(ErrorMessage = "Agreges categorias.")]
         public string? Tipo { get; set; }
 
+        [Required(ErrorMessage = "Sube una imagen")]
+        public IFormFile? projectPng { get; set; }
+        public byte[]? projectPngbytes { get; set; }
+
+
+
+        [Required(ErrorMessage = "Sube una imagen")]
+        public IFormFile? productionProcessPng { get; set; }
+        public byte[]? productionProcessPngbytes { get; set; }
+
+
+        [Required(ErrorMessage = "Sube una imagen")]
+        public IFormFile? finalProductPng { get; set; }
+        public byte[]? finalProductPngbytes { get; set; }
+
+
+
+
     }
 }
