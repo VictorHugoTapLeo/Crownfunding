@@ -1,8 +1,15 @@
 ﻿@page
 @model Avanze_ProjectoWeb.Pages.Projecto.paginaUnoModel
 @{
-	   ViewData["Title"] = "Crear una campaña";
-     
+	ViewData["Title"] = "Crear una campaña";
+    @if (@CrowdFundingDAO.Model.SessionClass.SessionRole != "")
+    {
+        Layout = "_LayoutLogin";
+    }
+    else
+    {
+        Layout = "_Layout";
+    }
 }
 <head>
     <meta charset="utf-8" />

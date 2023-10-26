@@ -2,6 +2,14 @@
 @model PrivacyModel
 @{
     ViewData["Title"] = "Privacy Policy";
+    @if (@CrowdFundingDAO.Model.SessionClass.SessionRole != "")
+    {
+        Layout = "_LayoutLogin";
+    }
+    else
+    {
+        Layout = "_Layout";
+    }
 }
 <h1>@ViewData["Title"]</h1>
 

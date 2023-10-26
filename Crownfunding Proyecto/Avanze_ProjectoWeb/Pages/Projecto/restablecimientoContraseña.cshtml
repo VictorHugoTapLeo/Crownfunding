@@ -1,6 +1,14 @@
 ﻿@page 
 @model Avanze_ProjectoWeb.Pages.Projecto.RestablecimientoContraseñaModel
 @{
+    @if (@CrowdFundingDAO.Model.SessionClass.SessionRole != "")
+    {
+        Layout = "_LayoutLogin";
+    }
+    else
+    {
+        Layout = "_Layout";
+    }
 }
 <head>
     <meta charset="utf-8" />

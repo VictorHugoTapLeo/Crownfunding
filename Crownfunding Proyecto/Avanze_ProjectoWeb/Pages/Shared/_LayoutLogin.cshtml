@@ -16,17 +16,17 @@
         <div>
             <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom mb-3">
                 <ul class="navbar-nav flex-grow-1 ulHeader">
-                        <li class="nav-item">
-                            <a class="nav-link headerText" asp-area="" asp-page="/Projecto/preguntasFrecuentes">Preguntas Frecuentes</a>
+                        <li class="">
+                            <a class="nav-link " asp-area="" asp-page="/Projecto/preguntasFrecuentes">Preguntas Frecuentes</a>
                         </li>
-                        <li class="nav-item">
-                        <a class="nav-link headerText" asp-area="" asp-page="/Projecto/Proyectos/Busqueda">Busqueda</a>
+                        <li class="">
+                        <a class="nav-link " asp-area="" asp-page="/Projecto/Proyectos/Busqueda">Busqueda</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link headerText" asp-area="" asp-page="/Projecto/ProyectosRealizados">Proyectos Finalizados</a>
+                        <li class="">
+                            <a class="nav-link " asp-area="" asp-page="/Projecto/ProyectosRealizados">Proyectos Finalizados</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link headerText" asp-area="" asp-page="/Projecto/paginaUno">Crear Campaña</a>
+                        <li class="">
+                            <a class="nav-link " asp-area="" asp-page="/Projecto/paginaUno">Crear Campaña</a>
                         </li>
                 </ul>
 
@@ -41,14 +41,14 @@
                 <div class="menu" id="menu">
                     @if (@CrowdFundingDAO.Model.SessionClass.SessionRole == "Admin")
                     {
-                        <a href="/Projecto/RestaurarProyecto">Restablecimiento de Proyectos</a>
-                        <a href="/Projecto/PeticionesDeProyectos">Revision de Proyectos</a>
+                        <a href="/Projecto/RestaurarProyecto">Restablecer Proyectos</a>
+                        <a href="/Projecto/PeticionesDeProyectos">Solicitudes de Proyectos</a>
                         <a href="/Projecto/editProjectLista">Editar Proyectos</a>
                         <a href="/Projecto/Usuarios/Index">Administracion Usuarios</a>
                         
                     }
                     <a href="/Projecto/PerfilInterfaz">Perfil</a>
-                    <a href="#">Cerrar Session</a>
+                    <a href="/Index">Cerrar Session</a>
                 </div>
 
             </nav>

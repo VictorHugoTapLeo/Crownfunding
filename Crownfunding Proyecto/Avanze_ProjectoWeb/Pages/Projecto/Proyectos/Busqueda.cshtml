@@ -1,67 +1,61 @@
 ﻿@page
 @model Avanze_ProjectoWeb.Pages.Projecto.Proyectos.BusquedaModel
 @{
+    @if (@CrowdFundingDAO.Model.SessionClass.SessionRole != "")
+    {
+        Layout = "_LayoutLogin";
+    }
+    else
+    {
+        Layout = "_Layout";
+    }
 }
-<style>
-    .containerr {
-        position: relative;
-    }
+<head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/proyectos.css" asp-append-version="true" />
+</head>
 
-    .overlay {
-        position: absolute;
-        top: 100%; /* Coloca la lista debajo del botón */
-        left: 12%;
-        z-index: 9999;
-        background-color: white;
-        border: 1px solid #ccc;
-        padding: 10px;
-    }
+<body>
+    <h2>Catalogo</h2>
+    <!-- Contenido del formulario aquí -->
+    <div class="alineado">
 
-    #mostrarLista {
-        z-index: 2;
-    }
-</style>
-<div>
-    <form>
-    <div class="container-fluid" >
-            
-            <!-- Contenido del formulario aquí -->
-            <div class="row">
-                <h1>Catalogo</h1>
-                <div class="col-2">
-                    <div class="containerr text-center">
-                        <button id="mostrarLista" type="button" class="btn btn-dark">Mostrar Lista</button>
-                        <ul id="listaTiqueable" class="overlay list-group" style="display:none;">
-                            <li class="list-group-item">
-                                <input type="checkbox" id="item1" name="item1" value="TestCategory">
-                                <label for="item1">TestCategory</label>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-8">
-                    <div class="form-group">
-                        <input type="text" class="form-control " name="Busqueda" id="Busqueda"/>
-                    </div>
-                </div>
-                <div class="col-2">
-                    <input type="submit" class="btn btn-light" value="Enviar" />
-                </div>
+        <form>
+            <button id="mostrarLista" type="button" class="buttonNegro">Mostrar Lista</button>
+            <ul id="listaTiqueable">
+                <li>
+                    <input type="checkbox" id="item1" name="item1" value="TestCategory">
+                    <label for="item1">TestCategory</label>
+                </li>
+            </ul>
+            <input type="text" class="input" name="Busqueda" id="Busqueda" />
+            <input type="submit" class="buttonBlanco" value="Enviar" />
 
-            
-            </div>
-        
-
+        </form>
     </div>
-    </form>
-
-    <div>
-        @foreach (string proyecto in Model.Projects)
+     
+    <br></br>
+    <div class="proyecto-container">
+        @foreach (var proyecto in Model.Projects)
         {
-            <h1>@proyecto</h1>
-            <br />
+            <div class="proyecto">
+                <div class="titleProyect">
+                    <span>@proyecto.Item1</span>
+                </div>
+                <div>
+                    <img src="https://www.smartick.es/blog/wp-content/uploads/cuadrado.png">
+                </div>
+                <br>
+                <div>
+                    <p>
+                        <b>@proyecto.Item2</b>
+                    </p>
+                </div>
+            </div>
         }
     </div>
+
     <script>
         // JavaScript para mostrar/ocultar la lista al hacer clic en el botón
         document.getElementById("mostrarLista").addEventListener("click", function () {
@@ -73,4 +67,5 @@
             }
         });
     </script>
-</div>
+</body>
+

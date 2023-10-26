@@ -186,7 +186,7 @@ namespace CrowdFundingDAO.Implementation
             query = @"SELECT P.id, P.title , D.description
                         FROM Project P
                         INNER JOIN Description D ON D.projectId = P.id
-                        WHERE P.status > 0 AND P.userCampaingId = @id AND D.type = 'Description'";
+                        WHERE P.status > 0 AND P.userCampaingId = @id AND D.type = 'DescripcionGeneral'";
             SqlCommand command = CreateBasicCommand(query);
             command.Parameters.AddWithValue("@id", id);
 
@@ -219,7 +219,39 @@ namespace CrowdFundingDAO.Implementation
                         FROM Project P
                         INNER JOIN Support S ON P.id = S.projectId
                         INNER JOIN Description D ON D.projectId = P.id
-                        WHERE P.status = 2 AND S.supporterId = @id AND D.type = 'Description'";
+                        WHERE P.status = 2 AND S.supporterId = @id AND D.type = 'DescripcionGeneral'";
+            SqlCommand command = CreateBasicCommand(query);
+            command.Parameters.AddWithValue("@id", id);
+
+            try
+            {
+                DataTable table = ExecuteDataTableCommand(command);
+
+                foreach (DataRow row in table.Rows)
+                {
+                    int i = Convert.ToInt32(row["id"]);
+                    string title = row["title"].ToString();
+                    string description = row["description"].ToString();
+
+                    projects.Add((i, title, description));
+                }
+
+                return projects;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public List<(int, string, string)> GetMyFollows(int id)
+        {
+            List<(int, string, string)> projects = new List<(int, string, string)>();
+
+            query = @"SELECT P.id, P.title , D.description
+                        FROM FollowedProject F
+                        INNER JOIN Project P ON P.id = F.idProject
+                        INNER JOIN Description D ON D.projectId = P.id
+                        WHERE P.status > 0 AND F.status = 1 AND F.idUser = @id AND D.type = 'DescripcionGeneral'";
             SqlCommand command = CreateBasicCommand(query);
             command.Parameters.AddWithValue("@id", id);
 
@@ -315,10 +347,16 @@ namespace CrowdFundingDAO.Implementation
             }
         }
 
-        public List<string> Serch(List<string> cat, string palabra)
+        public List<(string, string)> Serch(List<string> cat, string palabra)
         {
-            List<string> Proyects = new List<string>();
-            query = @"SELECT P.title 
+            List<(string, string)> Proyects = new List<(string, string)>();
+            query = @"SELECT P.title,ISNULL(
+                               STUFF((SELECT '/ ' + PV.name
+                                      FROM Project P2
+                                      INNER JOIN PatronProject PP2 ON P2.id = PP2.idProject
+                                      INNER JOIN PatronProvided PV ON PP2.idPatron = PV.id
+                                      WHERE P2.id = P.id
+                                      FOR XML PATH('')), 1, 2, ''),'N/A' )AS concatenated_names
                         FROM Project P
                         INNER JOIN Category C ON C.id = P.categoryId
                         WHERE P.title LIKE '%'+@palabra+'%'";
@@ -326,7 +364,7 @@ namespace CrowdFundingDAO.Implementation
             string categorys = "AND(";
             foreach (string i in cat)
             {
-                categorys += "C.name = '"+ i + "' OR ";
+                categorys += "C.name = '" + i + "' OR ";
             }
             categorys = ")";
             if (categorys.Length > 9)
@@ -334,7 +372,7 @@ namespace CrowdFundingDAO.Implementation
                 query += categorys;
             }
             SqlCommand command = CreateBasicCommand(query);
-            command.Parameters.AddWithValue("@palabra", palabra );
+            command.Parameters.AddWithValue("@palabra", palabra);
 
             try
             {
@@ -342,7 +380,7 @@ namespace CrowdFundingDAO.Implementation
 
                 foreach (DataRow row in table.Rows)
                 {
-                    Proyects.Add(row["title"].ToString());
+                    Proyects.Add((row["title"].ToString(), row["concatenated_names"].ToString()));
                 }
 
                 return Proyects;

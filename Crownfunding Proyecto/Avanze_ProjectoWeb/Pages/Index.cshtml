@@ -2,9 +2,11 @@
 @model IndexModel
 @{
     ViewData["Title"] = "Home page";
-    Layout = "_Layout"; //no logeado layout
-    //Layout = "_LayoutLogin"; //logeado layout
+    Layout = "_Layout";
+
 }
+
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -31,16 +33,8 @@
             <h2>¡Bienvenido!</h2>
             <p class="p1">Estamos a tu disposición para ayudarte.</p>
             <p class="p2">¿No tienes cuenta?</p>
-            <button class="button2" id="registrat">Registrarse</button>
+            <a class="button2" href="/Projecto/formRegistro">Registrate</a>
         </div>
     </div>
-</body>
-<script>
-    document.getElementById("iniciar-sesion2").addEventListener("click", function () {
-        window.location.href = "/Projecto/InicioPrincipal";
-    });
 
-    document.getElementById("registrat").addEventListener("click", function () {
-        window.location.href = "/Projecto/formRegistro";
-    });
-</script>
+</body>

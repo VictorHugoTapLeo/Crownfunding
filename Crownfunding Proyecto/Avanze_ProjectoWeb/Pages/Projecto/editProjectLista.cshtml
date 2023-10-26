@@ -1,6 +1,14 @@
 ﻿@page
 @model Avanze_ProjectoWeb.Pages.Projecto.editProjectListaModel
 @{
+    @if (@CrowdFundingDAO.Model.SessionClass.SessionRole != "")
+    {
+        Layout = "_LayoutLogin";
+    }
+    else
+    {
+        Layout = "_Layout";
+    }
 }
 
 <head>
@@ -10,7 +18,7 @@
 </head>
 
 <body>
-    <h2>Products List</h2>
+    <h2>Lista de Proyectos</h2>
     <br>
 
     <table class="styled-table">

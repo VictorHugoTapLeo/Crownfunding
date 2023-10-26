@@ -9,6 +9,7 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
     {
         public List<(int,string, string)>? myProjects;
         public List<(int, string, string)>? mySupports;
+        public List<(int, string, string)>? myFollows;
         public int NCampañas = 0;
         public int NSeguidas = 0;
         public int NApoyadas = 0;
@@ -25,8 +26,9 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
             p = new ProjectImpl();
             myProjects = p.GetMyProjects(SessionClass.SessionId);
             mySupports = p.GetMySupports(SessionClass.SessionId);
+            myFollows = p.GetMyFollows(SessionClass.SessionId);
             NCampañas = myProjects.Count;
-            NSeguidas = 2;
+            NSeguidas = myFollows.Count;
             NApoyadas = mySupports.Count;
 
             //Codigo Cristian--Muestra los proyectos correspondiwentes al usuario logeado

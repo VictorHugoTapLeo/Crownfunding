@@ -105,3 +105,66 @@ small {
 .button-green:hover {
     color: #79C37C;
 }
+
+
+.buttonBlanco {
+    background-color: white;
+    color: black;
+    min-width: 100px; /* Establece un ancho mínimo */
+    min-height: 25px; /* Establece una altura mínima */
+    border-color: black;
+    border-radius: 5px;
+}
+
+    .buttonBlanco:hover {
+        opacity: 0.8;
+    }
+
+.buttonNegro {
+    background-color: black;
+    color: white;
+    min-width: 140px; /* Establece un ancho mínimo */
+    min-height: 50px; /* Establece una altura mínima */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .buttonNegro:hover {
+        opacity: 0.8;
+    }
+#listaTiqueable {
+    display: none; /* Inicialmente, la lista está oculta */
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 300px; /* Ancho máximo que se ajustará al contenido */
+    text-align: center; /* Centrar el contenido */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombreado */
+}
+
+    /* Estilo para los elementos de la lista */
+    #listaTiqueable li {
+        list-style: none;
+        margin: 10px 0;
+    }
+
+.input {
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    height: 30px;
+    width: 700px;
+    text-align: center;
+}
+.alineado {
+    display: flex;
+    flex-direction: row; /* Alineación horizontal */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center;
+}
+    .alineado form > * {
+        margin-right: 20px; /* Espacio entre cada elemento */
+    }

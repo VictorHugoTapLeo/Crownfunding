@@ -1,42 +1,49 @@
 ﻿@page
 @model Avanze_ProjectoWeb.Pages.Projecto.Usuarios.ReceivedSupportModel
 @{
+    @if (@CrowdFundingDAO.Model.SessionClass.SessionRole != "")
+    {
+        Layout = "_LayoutLogin";
+    }
+    else
+    {
+        Layout = "_Layout";
+    }
 }
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/tablas.css" asp-append-version="true" />
+</head>
+<body>
+    <h2>Lista de Proyectos</h2>
+    <br>
 
-
-
-
-
-<input  asp-for="idreci"/>
-
-<h1>Products List</h1>
-<table class="table table-bordered">
-    <thead>
-        <tr>
-            <th> ID </th>
-            <th> Name </th>
-           
-        </tr>
-    </thead>
-    <tbody>
-        @foreach(var sup in Model.SupportsLista)
-        {
-             @if(sup.Status == 1)
-               {
-                 <tr>
-                            <td>@sup.id</td>
-                            <td>@sup.supportType</td>
-                            <td>
-                                <a asp-page="SupportReviewPage" asp-route-id="@sup.id">Hacer Review</a>
-                            </td>
+    <table class="styled-table">
+        <thead>
+            <tr>
+                <th> ID </th>
+                <th> Name </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var sup in Model.SupportsLista)
+            {
+                @if (sup.Status == 1)
+                {
+                    <tr>
+                        <td>@sup.id</td>
+                        <td>@sup.supportType</td>
+                        <td>
+                            <a asp-page="SupportReviewPage" asp-route-id="@sup.id">Hacer Review</a>
+                        </td>
                     </tr>
+                }
+            }
+        </tbody>
+    </table>
+    
+</body>
 
-            
-        
-             }
-            
-            
-        }
-    </tbody>
-</table>
+
 

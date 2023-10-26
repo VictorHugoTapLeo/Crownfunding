@@ -2,6 +2,14 @@
 @model Avanze_ProjectoWeb.Pages.ModalesRevisarModel
 @{
     //para documentacion :https://sweetalert2.github.io/#examples
+    @if (@CrowdFundingDAO.Model.SessionClass.SessionRole != "")
+    {
+        Layout = "_LayoutLogin";
+    }
+    else
+    {
+        Layout = "_Layout";
+    }
 }
 @*El link para estos modales ewsta en layout*@
 <style>

@@ -2,7 +2,6 @@
 
 
 
-
 function toggleMenu() {
     var menu = document.getElementById('menu');
     if (menu.classList.contains('active')) {

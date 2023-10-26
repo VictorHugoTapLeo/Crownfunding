@@ -1,6 +1,14 @@
 ﻿@page
 @model Avanze_ProjectoWeb.Pages.Projecto.editProjectModel
 @{
+    @if (@CrowdFundingDAO.Model.SessionClass.SessionRole != "")
+    {
+        Layout = "_LayoutLogin";
+    }
+    else
+    {
+        Layout = "_Layout";
+    }
 }
 
 

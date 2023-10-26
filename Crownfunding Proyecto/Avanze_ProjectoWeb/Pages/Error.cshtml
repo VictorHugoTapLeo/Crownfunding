@@ -2,6 +2,14 @@
 @model ErrorModel
 @{
     ViewData["Title"] = "Error";
+    @if (@CrowdFundingDAO.Model.SessionClass.SessionRole != "")
+    {
+        Layout = "_LayoutLogin";
+    }
+    else
+    {
+        Layout = "_Layout";
+    }
 }
 
 <h1 class="text-danger">Error.</h1>

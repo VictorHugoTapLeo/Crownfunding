@@ -1,6 +1,14 @@
 ﻿@page
 @model Avanze_ProjectoWeb.Pages.Projecto.TModel
 @{
+    @if (@CrowdFundingDAO.Model.SessionClass.SessionRole != "")
+    {
+        Layout = "_LayoutLogin";
+    }
+    else
+    {
+        Layout = "_Layout";
+    }
 }
 
 <head>
@@ -78,7 +86,14 @@
                         <summary class="contenedor-blanco2">Campañas a las que sigues</summary>
 
                         <div class="pading">
-                            <p>Aquí puedes poner el contenido que deseas que se muestre cuando el usuario haga clic en el título del elemento desplegable.</p>
+                            @foreach (var proyecto in Model.myFollows)
+                            {
+                                <h5> @proyecto.Item2 </h5>
+                                <p> @proyecto.Item3 </p>
+                                <a asp-page="ApoyoProyectos" asp-route-id="@proyecto.Item1">Ver</a>
+                                <br></br>
+                                <hr>
+                            }
                         </div>
                     </details><br>
 
@@ -91,30 +106,12 @@
                             {
                                 <h5> @proyecto.Item2 </h5>
                                 <p> @proyecto.Item3 </p>
-                                <a asp-page="editProject" asp-route-id="@proyecto.Item1">Edit</a>
+                                <a asp-page="ApoyoProyectos" asp-route-id="@proyecto.Item1">Ver</a>
                                 <br></br>
                                 <hr>
                             }
                             @* campañas que yo apoye*@
-                            <table class="styled-table">
-                                <thead>
-                                    <tr>
-                                        <th> ID </th>
-                                        <th> Name </th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach (var prod in Model.SupportedByMe)
-                                    {
-                                        <tr>
-                                            <td>@prod.id</td>
-                                            <td>@prod.title</td>
-
-
-                                        </tr>
-                                    }
-                                </tbody>
-                            </table>
+                            
                         </div>
                     </details><br>
 
@@ -126,38 +123,15 @@
                             {
                                 <h5> @proyecto.Item2 </h5>
                                 <p> @proyecto.Item3 </p>
-                                <a asp-page="editProject" asp-route-id="@proyecto.Item1">Edit</a>
+                                <a asp-page="editProject" asp-route-id="@proyecto.Item1">Editar</a><br></br>
+                                <a asp-page="ReceivedSupport" asp-route-id="@proyecto.Item1" class="btn1">Apoyos recibidos</a>
                                 <br></br>
                                 <hr>
 
                             }
 
                             @*Mis campañas*@
-                            <table class="styled-table">
-                                <thead>
-                                    <tr>
-                                        <th> ID </th>
-                                        <th> Name </th>
-                                        <th></th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @foreach (var prod in Model.ProjectsLista)
-                                    {
-                                        <tr>
-                                            <td>@prod.id</td>
-                                            <td>@prod.title</td>
-
-                                            <td>
-                                                <a class="btn1" asp-page="editProject" asp-route-id="@prod.id"> Edit</a>
-                                                @*boton para ver los apoyos que este proyecto recibio*@
-                                                <a asp-page="ReceivedSupport" asp-route-id="@prod.id" class="btn1">Apoyos recibidos</a>
-
-                                            </td>
-                                        </tr>
-                                    }
-                                </tbody>
-                            </table>
+                            
                         </div>
                     </details><br>
                 </div>

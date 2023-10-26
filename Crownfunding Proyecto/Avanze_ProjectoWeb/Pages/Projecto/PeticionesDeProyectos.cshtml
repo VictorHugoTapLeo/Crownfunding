@@ -2,6 +2,14 @@
 @model Avanze_ProjectoWeb.Pages.Projecto.PeticionesDeProyectosModel
 @{
 	ViewData["Title"] = "Revisiones de Proyectos";
+    @if (@CrowdFundingDAO.Model.SessionClass.SessionRole != "")
+    {
+        Layout = "_LayoutLogin";
+    }
+    else
+    {
+        Layout = "_Layout";
+    }
 }
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
@@ -9,7 +17,7 @@
     <link rel="stylesheet" href="~/css/proyectos.css" asp-append-version="true" />
 </head>
 <body>
-    <h2>Solicitudes de aprobacion</h2>
+    <h2>Solicitudes de Proyectos</h2>
 </body>
 <div class="proyecto-container">
         @foreach (var proyecto in Model.projects)
@@ -26,9 +34,9 @@
                     </div>
                 <div class="button-container">
 
-                    <button class="button button-red" type="submit" name="handler" value="Aceptar" class="btn btn-primary">Aceptar</button>
+                    <button class="button button-green" type="submit" name="handler" value="Aceptar" class="btn btn-primary">Aceptar</button>
 
-                    <button class="button button-green" type="submit" name="handler" value="Rechazar" class="btn btn-danger">Rechazar</button>
+                    <button class="button button-red" type="submit" name="handler" value="Rechazar" class="btn btn-danger">Rechazar</button>
  
                     </div>
                     <div>

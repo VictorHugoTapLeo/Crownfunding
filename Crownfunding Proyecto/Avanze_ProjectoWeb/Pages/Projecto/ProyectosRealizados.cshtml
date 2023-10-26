@@ -2,6 +2,14 @@
 @model Avanze_ProjectoWeb.Pages.Projecto.ProyectosRealizadosModel
 @{
     ViewData["Title"] = "Proyectos Realizados";
+    @if (@CrowdFundingDAO.Model.SessionClass.SessionRole != "")
+    {
+        Layout = "_LayoutLogin";
+    }
+    else
+    {
+        Layout = "_Layout";
+    }
 }
 <!DOCTYPE html>
 <head>
@@ -11,7 +19,7 @@
 </head>
 
 <body>
-    <h2>Proyectos con trabajo realizado</h2>
+    <h2>Proyectos Finalizados</h2>
     <div class="proyecto-container">
         @foreach (var proyecto in Model.projects)
         {
@@ -27,11 +35,11 @@
                     </div>
                     <br>
                     <div class="progress">
-                        <span class="progress-text">7500bs</span>
+                        <span class="progress-text">100%</span>
                     </div>
                     <br>
                     <div>
-                        <small>Meta: 7500Bs.</small>
+                        <small></small>
                     </div>
                     <br>
 

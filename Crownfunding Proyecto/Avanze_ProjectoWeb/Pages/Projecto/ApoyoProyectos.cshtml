@@ -2,6 +2,14 @@
 @model Avanze_ProjectoWeb.Pages.Projecto.ApoyoProyectosModel
 @{
     ViewData["Title"] = "Apoyo de Proyectos";
+    @if (@CrowdFundingDAO.Model.SessionClass.SessionRole != "")
+    {
+        Layout = "_LayoutLogin";
+    }
+    else
+    {
+        Layout = "_Layout";
+    }
 }
 <!DOCTYPE html>
 <html lang="en">

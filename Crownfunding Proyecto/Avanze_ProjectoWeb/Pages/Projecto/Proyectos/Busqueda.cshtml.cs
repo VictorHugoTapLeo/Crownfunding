@@ -8,7 +8,7 @@ namespace Avanze_ProjectoWeb.Pages.Projecto.Proyectos
     public class BusquedaModel : PageModel
     {
         ProjectImpl project = new ProjectImpl();
-        public List<string> Projects = new List<string>();
+        public List<(string, string)> Projects = new List<(string, string)>();
         public void OnGet()
         {
             int count = 0;
@@ -32,7 +32,7 @@ namespace Avanze_ProjectoWeb.Pages.Projecto.Proyectos
                     }
                 }
             }
-            Projects = project.Serch(cat,palabra);
+            Projects = project.Serch(cat, palabra);
         }
     }
 }
