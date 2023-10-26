@@ -27,11 +27,11 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
         public string? DescriApoyo { get; set; }
         
         
-        public void OnGet()  //public void OnGet(int id)
+        public void OnGet(int id )  //public void OnGet(int id)
         {
             if (SessionClass.SessionRole == "Admin" || SessionClass.SessionRole == "User")
             {
-                mp = pi.Get(2); //el id deberiaser recibido en elonget/deberia ser el boton de vista de projecto quue mande su id 
+                mp = pi.Get(id); //el id deberiaser recibido en elonget/deberia ser el boton de vista de projecto quue mande su id 
                                 //mp = pi.Get(id);
                 idA = mp.id;
                 Titulo = mp.title;

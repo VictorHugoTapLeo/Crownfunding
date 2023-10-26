@@ -504,17 +504,6 @@ C:\Users\Victor Hugo\Desktop\final git\Crownfunding\Crownfunding Proyecto\Avanze
 C:\Users\Victor Hugo\Desktop\final git\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.genruntimeconfig.cache
 C:\Users\Victor Hugo\Desktop\final git\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\ref\Avanze_ProjectoWeb.dll
 C:\Users\Victor Hugo\Desktop\final git\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\scopedcss\Pages\Shared\_LayoutLogin.cshtml.rz.scp.css
-C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.csproj.AssemblyReference.cache
-C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.AssemblyInfoInputs.cache
-C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.AssemblyInfo.cs
-C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.csproj.CoreCompileInputs.cache
-C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.MvcApplicationPartsAssemblyInfo.cache
-C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.RazorAssemblyInfo.cache
-C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.RazorAssemblyInfo.cs
-C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.dll
-C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\refint\Avanze_ProjectoWeb.dll
-C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.pdb
 C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\bin\Debug\net6.0\appsettings.Development.json
 C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\bin\Debug\net6.0\appsettings.json
 C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\bin\Debug\net6.0\Avanze_ProjectoWeb.staticwebassets.runtime.json
@@ -531,6 +520,14 @@ C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfundi
 C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\bin\Debug\net6.0\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\bin\Debug\net6.0\CrowdFundingDAO.dll
 C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\bin\Debug\net6.0\CrowdFundingDAO.pdb
+C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.csproj.AssemblyReference.cache
+C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.AssemblyInfoInputs.cache
+C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.AssemblyInfo.cs
+C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.csproj.CoreCompileInputs.cache
+C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.RazorAssemblyInfo.cache
+C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.RazorAssemblyInfo.cs
 C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\scopedcss\Pages\Shared\_Layout.cshtml.rz.scp.css
@@ -538,5 +535,8 @@ C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfundi
 C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\scopedcss\bundle\Avanze_ProjectoWeb.styles.css
 C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\scopedcss\projectbundle\Avanze_ProjectoWeb.bundle.scp.css
 C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.csproj.CopyComplete
+C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.dll
+C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\refint\Avanze_ProjectoWeb.dll
+C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.pdb
 C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\Avanze_ProjectoWeb.genruntimeconfig.cache
 C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\Avanze_ProjectoWeb\obj\Debug\net6.0\ref\Avanze_ProjectoWeb.dll

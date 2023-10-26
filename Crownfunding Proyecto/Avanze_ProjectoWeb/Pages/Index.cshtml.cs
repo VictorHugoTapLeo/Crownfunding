@@ -22,15 +22,26 @@ namespace Avanze_ProjectoWeb.Pages
 
         public void OnGet()
         {
-             
+
+            SessionClass.SessionUserId = "";
+            SessionClass.SessionName = "";
+            SessionClass.SessionLastName = "";
+            SessionClass.SessionUserName = "";
+            SessionClass.SessionPassword = "";
+            SessionClass.SessionRole = "";
+            SessionClass.SessionEmail = "";
         }
         public void OnPost()
         {
             SessionClass.SessionStart = true;
             UserImpl userImpl = new UserImpl();
             User user = userImpl.Login(email, contraseña);
-            SessionClass.SessionId = user.id;
-            SessionClass.SessionRole = user.role;
+            if (user!=null)
+            {
+
+                SessionClass.SessionId = user.id;
+                SessionClass.SessionRole = user.role;
+            } 
             
             //luego es redirecionarw
             
