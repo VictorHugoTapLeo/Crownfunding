@@ -29,33 +29,33 @@
             <h2>Registro</h2>
             <form method="post">
                 <div class="separacion">
-                    <input asp-for="Input.Nombre" type="text" placeholder="Ingrese su nombre Completo" class="input">
+                    <input asp-for="usarioModeloVeri.Nombre" type="text" placeholder="Ingrese su nombre Completo" class="input">
                     <br />
-                    <span asp-validation-for="Input.Nombre"></span>
-                </div>
-
-                <div class ="separacion">
-                    <input asp-for="Input.Apellido" type="text" placeholder="Ingrese su Apellido" class="input">
-                    <br />
-                    <span asp-validation-for="Input.Apellido"></span>
+                    <span asp-validation-for="usarioModeloVeri.Nombre"></span>
                 </div>
 
                 <div class="separacion">
-                    <input asp-for="Input.Correo" name="correo" type="text" placeholder="Ingrese su Correo" class="input">
+                    <input asp-for="usarioModeloVeri.Apellido" type="text" placeholder="Ingrese su Apellido" class="input">
                     <br />
-                    <span asp-validation-for="Input.Correo"></span>
+                    <span asp-validation-for="usarioModeloVeri.Apellido"></span>
                 </div>
 
                 <div class="separacion">
-                    <input asp-for="Input.Contraseña" type="password" name="contraseña" placeholder="Ingrese su Contraseña" class="input">
+                    <input asp-for="usarioModeloVeri.Correo" type="text" placeholder="Ingrese su Correo" class="input">
                     <br />
-                    <span asp-validation-for="Input.Contraseña"></span>
+                    <span asp-validation-for="usarioModeloVeri.Correo"></span>
                 </div>
 
                 <div class="separacion">
-                    <input asp-for="Input.ConfirmarContraseña" id="confirmarcontraseña" type="password" name="confirmarcontraseña" placeholder="Confirmar su Contraseña" class="input">
+                    <input asp-for="usarioModeloVeri.Contraseña" type="password" placeholder="Ingrese su Contraseña" class="input">
                     <br />
-                    <span asp-validation-for="Input.ConfirmarContraseña"></span>
+                    <span asp-validation-for="usarioModeloVeri.Contraseña"></span>
+                </div>
+
+                <div class="separacion">
+                    <input asp-for="usarioModeloVeri.ConfirmarContraseña" id="confirmarcontraseña" type="password" placeholder="Confirmar su Contraseña" class="input">
+                    <br />
+                    <span asp-validation-for="usarioModeloVeri.ConfirmarContraseña"></span>
                 </div>
 
                 <div class="form-check separacion">

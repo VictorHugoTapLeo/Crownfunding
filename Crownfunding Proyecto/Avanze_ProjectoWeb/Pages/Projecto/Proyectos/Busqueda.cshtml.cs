@@ -8,7 +8,7 @@ namespace Avanze_ProjectoWeb.Pages.Projecto.Proyectos
     public class BusquedaModel : PageModel
     {
         ProjectImpl project = new ProjectImpl();
-        public List<(string, string)> Projects = new List<(string, string)>();
+        public List<(string, string, byte[])> Projects = new List<(string, string, byte[])>();
         public void OnGet()
         {
             int count = 0;

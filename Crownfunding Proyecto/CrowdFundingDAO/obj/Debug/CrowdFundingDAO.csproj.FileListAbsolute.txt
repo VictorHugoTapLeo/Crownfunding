@@ -78,3 +78,9 @@ C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfundi
 C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.csproj.CoreCompileInputs.cache
 C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.dll
 C:\Users\carst\OneDrive\Escritorio\donde\avanzecrownfindung-pshimanes\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.pdb
+C:\Users\Sacha4000\Desktop\NUEVO FINAL CFFF\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\bin\Debug\CrowdFundingDAO.dll
+C:\Users\Sacha4000\Desktop\NUEVO FINAL CFFF\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\bin\Debug\CrowdFundingDAO.pdb
+C:\Users\Sacha4000\Desktop\NUEVO FINAL CFFF\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.csproj.AssemblyReference.cache
+C:\Users\Sacha4000\Desktop\NUEVO FINAL CFFF\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.csproj.CoreCompileInputs.cache
+C:\Users\Sacha4000\Desktop\NUEVO FINAL CFFF\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.dll
+C:\Users\Sacha4000\Desktop\NUEVO FINAL CFFF\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Debug\CrowdFundingDAO.pdb

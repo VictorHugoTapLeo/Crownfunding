@@ -34,7 +34,16 @@
                         <input type="hidden" name="proyectoId" value="@proyecto.id" />  
                     </div>
                     <div>
-                        <img src="https://www.smartick.es/blog/wp-content/uploads/cuadrado.png">
+                    @*<img src="https://www.smartick.es/blog/wp-content/uploads/cuadrado.png">*@
+                    <div>
+                        @{
+                            var projectPngBytes = proyecto.projectPng;
+                            if (projectPngBytes != null)
+                            {
+                                <img src="data:image/png;base64,@Convert.ToBase64String(projectPngBytes)" alt="Project image" />
+                            }
+                        }
+                    </div>
                     </div>
                 <div class="button-container">
 

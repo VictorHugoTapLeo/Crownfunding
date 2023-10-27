@@ -33,7 +33,7 @@ namespace CrowdFundingDAO.Implementation
             query = @"SELECT id, title, projectPng, finalProductPng, productionProcessPng, campaingVideo, userCampaingId, categoryId,
                         status,registerDate, ISNULL(lastUpdate,CURRENT_TIMESTAMP),userID
                         FROM Project
-                        WHERE id = @id AND status > 0";
+                        WHERE id = @id AND status >= 0";
             SqlCommand command = CreateBasicCommand(query);
             command.Parameters.AddWithValue("@id", id);
             try
@@ -56,6 +56,7 @@ namespace CrowdFundingDAO.Implementation
                         int.Parse(table.Rows[0][11].ToString())
                         );
                 }
+                return t;
             }
             catch (Exception ex)
             {
@@ -347,10 +348,10 @@ namespace CrowdFundingDAO.Implementation
             }
         }
 
-        public List<(string, string)> Serch(List<string> cat, string palabra)
+        public List<(string, string, byte[])> Serch(List<string> cat, string palabra)
         {
-            List<(string, string)> Proyects = new List<(string, string)>();
-            query = @"SELECT P.title,ISNULL(
+            List<(string, string, byte[])> Proyects = new List<(string, string, byte[])>();
+            query = @"SELECT P.title,P.projectPng,ISNULL(
                                STUFF((SELECT '/ ' + PV.name
                                       FROM Project P2
                                       INNER JOIN PatronProject PP2 ON P2.id = PP2.idProject
@@ -380,7 +381,8 @@ namespace CrowdFundingDAO.Implementation
 
                 foreach (DataRow row in table.Rows)
                 {
-                    Proyects.Add((row["title"].ToString(), row["concatenated_names"].ToString()));
+                    byte[] projectPngBytes = (byte[])row["projectPng"];
+                    Proyects.Add((row["title"].ToString(), row["concatenated_names"].ToString(), projectPngBytes));
                 }
 
                 return Proyects;
@@ -406,11 +408,13 @@ namespace CrowdFundingDAO.Implementation
 
                 foreach (DataRow row in table.Rows)
                 {
+                    byte[] projectPngBytes = (byte[])row["projectPng"]; // Convirtiendo a arreglo de bytes
+
                     Project project = new Project
                     {
                         id = Convert.ToInt32(row["id"]),
                         title = row["title"].ToString(),
-
+                        projectPng = projectPngBytes // Asignando el arreglo de bytes a tu propiedad projectPng
                     };
 
                     projects.Add(project);
@@ -439,11 +443,12 @@ namespace CrowdFundingDAO.Implementation
 
                 foreach (DataRow row in table.Rows)
                 {
+                    byte[] projectPngBytes = (byte[])row["projectPng"];
                     Project project = new Project
                     {
                         id = Convert.ToInt32(row["id"]),
                         title = row["title"].ToString(),
-
+                        projectPng = projectPngBytes
                     };
 
                     projects.Add(project);
@@ -461,8 +466,9 @@ namespace CrowdFundingDAO.Implementation
         {
             query = @"UPDATE Project SET status = -1 ,lastUpdate = CURRENT_TIMESTAMP ,userID = @userID WHERE id = @id";
             SqlCommand command = CreateBasicCommand(query);
-            command.Parameters.AddWithValue("@id", t.id);
+            
             command.Parameters.AddWithValue("@userID", t.UserID);
+            command.Parameters.AddWithValue("@id", t.id);
             try
             {
                 return ExecuteBasicCommand(command);
@@ -485,7 +491,7 @@ namespace CrowdFundingDAO.Implementation
             }
             catch (Exception ex)
             {
-                throw ex;
+                throw ex ;
             }
         }
 

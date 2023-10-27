@@ -31,7 +31,7 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
                     break;
             }
 
-            return RedirectToPage("/Index");
+            return RedirectToPage("");
         }
     }
 }
