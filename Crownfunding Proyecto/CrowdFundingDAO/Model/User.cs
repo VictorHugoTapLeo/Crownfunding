@@ -17,7 +17,8 @@ namespace CrowdFundingDAO.Model
         public string role { get; set; }
         public string email { get; set; }
         public string phoneNumber { get; set; }
-        public User(int id, string name, string lastName, string secondLastName, string userName, string password, string role, string email, string phoneNumber
+        public byte[] userPicture { get; set; }
+        public User(int id, string name, string lastName, string secondLastName, string userName, string password, string role, string email, string phoneNumber,byte[] userPicture
             , byte status, DateTime registerDate, DateTime lastUpdate, int userID)
             : base(status, registerDate, lastUpdate, userID)
         {
@@ -30,8 +31,9 @@ namespace CrowdFundingDAO.Model
             this.role = role;
             this.email = email;
             this.phoneNumber = phoneNumber;
+            this.userPicture = userPicture;
         }
-        public User(int id, string name, string lastName, string secondLastName, string userName, string password, string role, string email, string phoneNumber)
+        public User(int id, string name, string lastName, string secondLastName, string userName, string password, string role, string email, string phoneNumber, byte[] userPicture)
         {
             this.id = id;
             this.name = name;
@@ -42,6 +44,7 @@ namespace CrowdFundingDAO.Model
             this.role = role;
             this.email = email;
             this.phoneNumber = phoneNumber;
+            this.userPicture = userPicture;
         }
         public User()
         { 

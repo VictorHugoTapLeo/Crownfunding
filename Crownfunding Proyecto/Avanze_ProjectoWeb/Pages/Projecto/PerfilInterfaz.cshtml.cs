@@ -19,9 +19,20 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
     
         public List<Project> ProjectsLista { get; set; }
         public List<Project> SupportedByMe { get; set; }
+        [BindProperty]
+        public byte[] fotorwecuperar { get; set; }
+
+        UserImpl uuserImpl;
+        User user;
         //
         public void OnGet()
         {
+            uuserImpl = new UserImpl();
+            user = new User();
+
+            user = uuserImpl.Get(SessionClass.SessionId);
+            fotorwecuperar =user.userPicture;
+
             
             p = new ProjectImpl();
             myProjects = p.GetMyProjects(SessionClass.SessionId);

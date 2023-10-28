@@ -27,8 +27,15 @@
                 <div class="contenedor-blanco">
                     <h2>Mi Perfil</h2>
                     <br>
-                    <img src="https://i.pinimg.com/736x/ff/a6/fb/ffa6fb3b7a67baed50ae80d49046a1d8.jpg" width="200" height="200">
-                    <br>
+                    <div>
+                                @{
+                    var projectPngBytes = Model.fotorwecuperar;
+                    if (projectPngBytes != null)
+                    {
+                        <img src="data:image/png;base64,@Convert.ToBase64String(projectPngBytes)" alt="Foto de usuario" style="max-width: 150px; max-height: 150px;"/>
+                    }
+                        }
+                    </div>
                     <br>
                     <h4> @CrowdFundingDAO.Model.SessionClass.SessionUserName</h4>
                     <a class="textazul" href="#">&#64;@CrowdFundingDAO.Model.SessionClass.SessionUserName</a>

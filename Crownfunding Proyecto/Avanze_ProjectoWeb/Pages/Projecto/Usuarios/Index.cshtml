@@ -38,7 +38,18 @@
                 <!--</script>-->
             </div>
             <div class="content">
-                <img src="https://www.smartick.es/blog/wp-content/uploads/cuadrado.png" alt="Imagen">
+                  <!--dv de imagen ,si recibe losbytes peropor x razon no convierte a imagen-->
+               <div>
+                @{
+                    var projectPngBytes = user.userPicture;
+                    if (projectPngBytes != null)
+                    {
+                        <img src="data:image/png;base64,@Convert.ToBase64String(projectPngBytes)" alt="Project image" width="400" height="400"/>
+                    }
+                        }
+                    </div>
+                
+                
                 <div class="data">
                     <h2>@user.name @user.lastName @user.secondLastName ( @user.userName )</h2>
                     <p>@user.email</p>

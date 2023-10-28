@@ -27,7 +27,7 @@
         </div>
         <div class="box1">
             <h2>Registro</h2>
-            <form method="post">
+            <form method="post" enctype="multipart/form-data">
                 <div class="separacion">
                     <input asp-for="usarioModeloVeri.Nombre" type="text" placeholder="Ingrese su nombre Completo" class="input">
                     <br />
@@ -41,11 +41,25 @@
                 </div>
 
                 <div class="separacion">
+                    <input asp-for="usarioModeloVeri.SegundoApellido" type="text" placeholder="Ingrese su Apellido Materno" class="input">
+                    <br />
+                    <span asp-validation-for="usarioModeloVeri.SegundoApellido"></span>
+                </div>
+                 <div class="separacion">
+                    <input asp-for="usarioModeloVeri.NombreUsuario" type="text" placeholder="Escriba un nombre de usuario" class="input">
+                    <br />
+                    <span asp-validation-for="usarioModeloVeri.NombreUsuario"></span>
+                </div>
+                <div class="separacion">
                     <input asp-for="usarioModeloVeri.Correo" type="text" placeholder="Ingrese su Correo" class="input">
                     <br />
                     <span asp-validation-for="usarioModeloVeri.Correo"></span>
                 </div>
-
+                   <div class="separacion">
+                    <input asp-for="usarioModeloVeri.telefono" type="text" placeholder="Escriba su telefono" class="input">
+                    <br />
+                    <span asp-validation-for="usarioModeloVeri.telefono"></span>
+                </div>
                 <div class="separacion">
                     <input asp-for="usarioModeloVeri.Contraseña" type="password" placeholder="Ingrese su Contraseña" class="input">
                     <br />
@@ -58,6 +72,17 @@
                     <span asp-validation-for="usarioModeloVeri.ConfirmarContraseña"></span>
                 </div>
 
+
+                  
+                    <p class="custom-p">Agrega una foto de perfil</p>
+                    <div class="custom-form-group">
+                       <input  type="file" class="custom-button" asp-for="usarioModeloVeri.fotoUser" id="inputFinalProductPng" >
+                            <span class="custom-validation" asp-validation-for="usarioModeloVeri.fotoUser"></span>
+                     <img id="vistaPreviaImagen3" src="#" alt="Vista previa de la imagen" style="max-width: 150px; max-height: 150px;" />
+
+                        </div>
+       
+                    <br></br>
                 <div class="form-check separacion">
                     <input type="checkbox" id="enviarProyectos" name="enviarProyectos" class="form-check-input" />
                     <label class="check" for="enviarProyectos">Envíenme una combinación semanal de proyectos seleccionados exclusivamente para mí, además de noticias ocasionales de Crowdfunding</label>
@@ -75,5 +100,25 @@
 <script>
     document.getElementById("iniciar-sesion3").addEventListener("click", function () {
         window.location.href = "/Index";
+    });
+</script>
+
+<script>
+    function mostrarVistaPrevia(input, idVistaPrevia) {
+        var archivo = input.files[0];
+        var lector = new FileReader();
+
+        lector.onload = function (e) {
+            var vistaPrevia = document.getElementById(idVistaPrevia);
+            vistaPrevia.src = e.target.result;
+        }
+
+        lector.readAsDataURL(archivo);
+    }
+
+  
+
+    document.getElementById('inputFinalProductPng').addEventListener('change', function () {
+        mostrarVistaPrevia(this, 'vistaPreviaImagen3');
     });
 </script>

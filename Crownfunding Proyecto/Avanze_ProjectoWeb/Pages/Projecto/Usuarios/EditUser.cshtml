@@ -21,7 +21,7 @@
         <div class="box1">
             <h2>Editar Usuario</h2>
 
-            <form method="post">
+            <form method="post" enctype="multipart/form-data">
                 <div>
                     <label for="Name">Nombre</label><br></br>
                     <input type="text" class="input" name="name" id="name" asp-for="User.name" /><br></br>
@@ -61,6 +61,29 @@
                     <input type="tel" class="input" name="phoneNumber" id="phoneNumber" asp-for="User.phoneNumber" /><br></br>
                 </div>
 
+
+                @*CODIGO DE IMAGEN NO DA ,CONFLICTOS CON CODIGO ANTERIOR*@
+                @* <div class="form-group">
+                      <h4>Imagen del Perfil</h4>
+                    <input  type="file" class="custom-button" asp-for="fotoUser" id="inputProjectPng" >
+                            <span class="custom-validation" asp-validation-for="fotoUser"></span>
+                    <img id="vistaPreviaImagen" src="#" alt="Vista previa de la imagen" style="max-width: 150px; max-height: 150px;" />
+
+                </div>
+                <h1>photo previa @Model.photo</h1>
+                <div>
+                            @{
+                var projectPngBytes = Model.photo;
+                if (projectPngBytes != null)
+                {
+                    <img src="data:image/png;base64,@Convert.ToBase64String(projectPngBytes)" alt="Project image" style="max-width: 150px; max-height: 150px;"/>
+                }
+                    }
+                </div>*@
+
+
+
+
                 <!-- Agrega campos para las demás propiedades del usuario aquí -->
 
                 <button type="submit" class="button1">Guardar Cambios</button><br></br>
@@ -69,3 +92,21 @@
         </div>
     </div>
 </body>
+
+<script>
+    function mostrarVistaPrevia(input, idVistaPrevia) {
+        var archivo = input.files[0];
+        var lector = new FileReader();
+
+        lector.onload = function (e) {
+            var vistaPrevia = document.getElementById(idVistaPrevia);
+            vistaPrevia.src = e.target.result;
+        }
+
+        lector.readAsDataURL(archivo);
+    }
+
+    document.getElementById('inputProjectPng').addEventListener('change', function () {
+        mostrarVistaPrevia(this, 'vistaPreviaImagen');
+    });
+</script>

@@ -15,7 +15,7 @@ namespace CrowdFundingDAO.Implementation
         public List<User> SelectAll()
         {
             List<User> users = new List<User>();
-            query = @"SELECT id, name, lastName, secondLastName, userName, password, role, email, phoneNumber, status, registerDate, lastUpdate, userID
+            query = @"SELECT id, name, lastName, secondLastName, userName, password, role, email, phoneNumber, status, registerDate, lastUpdate, userID, userPicture
                     FROM Userr
                     WHERE status = 1
                     ORDER BY 2";
@@ -25,6 +25,8 @@ namespace CrowdFundingDAO.Implementation
                 DataTable table = ExecuteDataTableCommand(command);
                 foreach (DataRow row in table.Rows)
                 {
+                    byte[] userPictureBytes = Encoding.UTF8.GetBytes(row["userPicture"].ToString());
+
                     users.Add(new User(
                         int.Parse(row["id"].ToString()),
                         row["name"].ToString(),
@@ -34,7 +36,8 @@ namespace CrowdFundingDAO.Implementation
                         row["password"].ToString(),
                         row["role"].ToString(),
                         row["email"].ToString(),
-                        row["phoneNumber"].ToString()
+                        row["phoneNumber"].ToString(),
+                        userPictureBytes
                     ));
                 }
             }
@@ -76,7 +79,7 @@ namespace CrowdFundingDAO.Implementation
         public User Get(int id)
         {
             User t = null;
-            query = @"SELECT id, name, lastName, secondLastName, userName, password , role , email, phoneNumber, status,registerDate, ISNULL(lastUpdate,CURRENT_TIMESTAMP),userID
+            query = @"SELECT id, name, lastName, secondLastName, userName, password , role , email, phoneNumber,userPicture, status,registerDate, ISNULL(lastUpdate,CURRENT_TIMESTAMP),userID 
                         FROM Userr
                         WHERE status = 1 AND id = @id";
             SqlCommand command = CreateBasicCommand(query);
@@ -95,11 +98,12 @@ namespace CrowdFundingDAO.Implementation
                         table.Rows[0][6].ToString(),
                         table.Rows[0][7].ToString(),
                         table.Rows[0][8].ToString(),
+                         (byte[])table.Rows[0][9],
                         //BASE
-                        byte.Parse(table.Rows[0][9].ToString()),
-                        DateTime.Parse(table.Rows[0][10].ToString()),
+                        byte.Parse(table.Rows[0][10].ToString()),
                         DateTime.Parse(table.Rows[0][11].ToString()),
-                        int.Parse(table.Rows[0][12].ToString()));
+                        DateTime.Parse(table.Rows[0][12].ToString()),
+                        int.Parse(table.Rows[0][13].ToString()));
                 }
             }
             catch (Exception ex)
@@ -110,8 +114,8 @@ namespace CrowdFundingDAO.Implementation
         }
         public int Insert(User t)
         {
-            query = @"INSERT INTO Userr(name, lastName, secondLastName, userName, password , role , email, phoneNumber,userID) 
-                    VALUES (@name, @lastName, @secondLastName, @userName, HASHBYTES('md5',@password), @role, @email, @phoneNumber, @userID)";
+            query = @"INSERT INTO Userr(name, lastName, secondLastName, userName, password , role , email, phoneNumber,userID,userPicture) 
+                    VALUES (@name, @lastName, @secondLastName, @userName, HASHBYTES('md5',@password), @role, @email, @phoneNumber, @userID,@userPicture)";
             SqlCommand command = CreateBasicCommand(query);
             command.Parameters.AddWithValue("@name", t.name);
             command.Parameters.AddWithValue("@lastName", t.lastName);
@@ -122,6 +126,7 @@ namespace CrowdFundingDAO.Implementation
             command.Parameters.AddWithValue("@email", t.email);
             command.Parameters.AddWithValue("@phoneNumber", t.phoneNumber);
             command.Parameters.AddWithValue("@userID", 1);
+            command.Parameters.AddWithValue("@userPicture", t.userPicture);
             //command.Parameters.AddWithValue("@userID", SessionClass.SessionId);
             try
             {
@@ -134,7 +139,7 @@ namespace CrowdFundingDAO.Implementation
         }
         public DataTable Select()
         {
-            query = @"SELECT id, name, lastName, secondLastName, userName, password , role , email, phoneNumber
+            query = @"SELECT id, name, lastName, secondLastName, userName, password , role , email, phoneNumber ,userPicture
                         FROM Userr
                         WHERE status = 1 
                         ORDER BY 2";
@@ -153,7 +158,7 @@ namespace CrowdFundingDAO.Implementation
 
             query = @"UPDATE Userr SET name = @name , lastName = @lastName, secondLastName = @secondLastName, userName = @userName,
                         role = @role, email = @email, phoneNumber = @phoneNumber, lastUpdate = CURRENT_TIMESTAMP, userID = @UserID
-                        WHERE id = @id";
+                        WHERE id = @id";  //  userPicture = @userPicture
             SqlCommand command = CreateBasicCommand(query);
             command.Parameters.AddWithValue("@id", t.id);
             command.Parameters.AddWithValue("@name", t.name);
@@ -164,6 +169,7 @@ namespace CrowdFundingDAO.Implementation
             command.Parameters.AddWithValue("@email", t.email);
             command.Parameters.AddWithValue("@phoneNumber", t.phoneNumber);
             command.Parameters.AddWithValue("@userID", t.UserID);
+          //  command.Parameters.AddWithValue("@userPicture", t.userPicture);
             try
             {
                 return ExecuteBasicCommand(command);
@@ -178,7 +184,7 @@ namespace CrowdFundingDAO.Implementation
         public User Login(string email, string password)
         {
             User t = null;
-            query = @"SELECT id, name, lastName, secondLastName, userName, password , role , email, phoneNumber, status,registerDate, ISNULL(lastUpdate,CURRENT_TIMESTAMP),userID
+            query = @"SELECT id, name, lastName, secondLastName, userName, password , role , email, phoneNumber,userPicture, status,registerDate, ISNULL(lastUpdate,CURRENT_TIMESTAMP),userID
                         FROM Userr
                         WHERE status = 1 AND email = @email AND password = HASHBYTES('md5',@password)";
             SqlCommand command = CreateBasicCommand(query);
@@ -198,11 +204,13 @@ namespace CrowdFundingDAO.Implementation
                         table.Rows[0][6].ToString(),
                         table.Rows[0][7].ToString(),
                         table.Rows[0][8].ToString(),
+
+                        (byte[])table.Rows[0][9],
                         //BASE
-                        byte.Parse(table.Rows[0][9].ToString()),
-                        DateTime.Parse(table.Rows[0][10].ToString()),
+                        byte.Parse(table.Rows[0][10].ToString()),
                         DateTime.Parse(table.Rows[0][11].ToString()),
-                        int.Parse(table.Rows[0][12].ToString()));
+                        DateTime.Parse(table.Rows[0][12].ToString()),
+                        int.Parse(table.Rows[0][13].ToString()));
                 }
             }
             catch (Exception ex)

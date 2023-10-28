@@ -90,13 +90,20 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
             {
                 us.name = usarioModeloVeri.Nombre;
                 us.lastName = usarioModeloVeri.Apellido;
-                us.secondLastName = "proximamente";
-                us.userName = "proximamente";
+                us.secondLastName = usarioModeloVeri.SegundoApellido;
+                us.userName = usarioModeloVeri.NombreUsuario;
 
                 us.role = "User";
                 us.email = usarioModeloVeri.Correo;
                 us.password = usarioModeloVeri.Contraseña;
-                us.phoneNumber = "proximamente";
+                us.phoneNumber = usarioModeloVeri.telefono;
+
+                using (var memoryStreamp = new MemoryStream())
+                {
+                    usarioModeloVeri.fotoUser.CopyTo(memoryStreamp);
+                    us.userPicture = memoryStreamp.ToArray(); // Asignamos los bytes a pro.projectPng
+                }
+                //us.userPicture = 0;
 
                 usImpl.Insert(us);
 
