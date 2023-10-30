@@ -82,6 +82,37 @@ namespace CrowdFundingDAO.Implementation
             try
             {
                 return ExecuteDataTableCommand(command);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public List<Category> SelectToSerch()
+        {
+            List<Category> list = new List<Category>();
+            query = @"SELECT id, name
+                        FROM Category
+                        WHERE status = 1";
+            SqlCommand command = CreateBasicCommand(query);
+            try
+            {
+                DataTable table = ExecuteDataTableCommand(command);
+
+                foreach (DataRow row in table.Rows)
+                {
+                    Category cate = new Category
+                    {
+                        id = Convert.ToInt32(row["id"]),
+                        name = row["name"].ToString(),
+
+                    };
+
+                    list.Add(cate);
+                }
+                return list;
             }
             catch (Exception ex)
             {

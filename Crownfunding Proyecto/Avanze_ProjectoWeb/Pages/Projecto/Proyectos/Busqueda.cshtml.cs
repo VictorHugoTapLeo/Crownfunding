@@ -2,34 +2,37 @@ using CrowdFundingDAO.Implementation;
 using CrowdFundingDAO.Model;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
+using System.Diagnostics.Metrics;
 
 namespace Avanze_ProjectoWeb.Pages.Projecto.Proyectos
 {
     public class BusquedaModel : PageModel
     {
         ProjectImpl project = new ProjectImpl();
-        public List<(string, string, byte[])> Projects = new List<(string, string, byte[])>();
+        CategoryImpl cateImpl = new CategoryImpl();
+        public List<(int,string, string, byte[])> Projects = new List<(int, string, string, byte[])>();
+        public List<string> cat = new List<string> ();
+        public List<Category> categories = new List<Category>();
         public void OnGet()
         {
-            int count = 0;
-            List<string> cat = new List<string>();
+            categories = cateImpl.SelectToSerch();
+            cat = new List<string>();
             string palabra = "";
             foreach (var parametro in Request.Query)
             {
-                if (count < 25)
-                {
-                    string nombreParametro = parametro.Key;
-                    string valorParametro = parametro.Value;
+                string nombreParametro = parametro.Key;
 
-                    if (nombreParametro != "Busqueda")
+                if (nombreParametro == "category")
+                {
+                    // Recorre los valores de "category" si hay varios
+                    foreach (var valor in parametro.Value)
                     {
-                        cat.Add(parametro.Value);
-                        count++;
+                        cat.Add(valor);
                     }
-                    else
-                    {
-                        palabra = parametro.Value;
-                    }
+                }
+                else if (nombreParametro == "Busqueda")
+                {
+                    palabra = parametro.Value;
                 }
             }
             Projects = project.Serch(cat, palabra);

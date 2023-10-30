@@ -348,10 +348,10 @@ namespace CrowdFundingDAO.Implementation
             }
         }
 
-        public List<(string, string, byte[])> Serch(List<string> cat, string palabra)
+        public List<(int ,string, string, byte[])> Serch(List<string> cat, string palabra)
         {
-            List<(string, string, byte[])> Proyects = new List<(string, string, byte[])>();
-            query = @"SELECT P.title,P.projectPng,ISNULL(
+            List<(int,string, string, byte[])> Proyects = new List<(int,string, string, byte[])>();
+            query = @"SELECT P.id, P.title,P.projectPng,ISNULL(
                                STUFF((SELECT '/ ' + PV.name
                                       FROM Project P2
                                       INNER JOIN PatronProject PP2 ON P2.id = PP2.idProject
@@ -360,21 +360,34 @@ namespace CrowdFundingDAO.Implementation
                                       FOR XML PATH('')), 1, 2, ''),'N/A' )AS concatenated_names
                         FROM Project P
                         INNER JOIN Category C ON C.id = P.categoryId
-                        WHERE P.title LIKE '%'+@palabra+'%'";
-
-            string categorys = "AND(";
+                        WHERE P.status = 2 ";
+            if(palabra != "")
+            {
+                query += " AND P.title LIKE '%' + @palabra + '%'";
+            }
+            string categorys = "AND (";
+            int count = 0;
             foreach (string i in cat)
             {
-                categorys += "C.name = '" + i + "' OR ";
+                count++;  
+                categorys += "C.id = '" + i + "'";  
+
+                
+                if (cat.Count > 1 && count != cat.Count )
+                {
+                    categorys += " OR ";
+                }
             }
-            categorys = ")";
-            if (categorys.Length > 9)
+            categorys += ")";
+            if (count > 0)
             {
                 query += categorys;
             }
             SqlCommand command = CreateBasicCommand(query);
-            command.Parameters.AddWithValue("@palabra", palabra);
-
+            if (palabra != "")
+            {
+                command.Parameters.AddWithValue("@palabra", palabra);
+            }
             try
             {
                 DataTable table = ExecuteDataTableCommand(command);
@@ -382,7 +395,7 @@ namespace CrowdFundingDAO.Implementation
                 foreach (DataRow row in table.Rows)
                 {
                     byte[] projectPngBytes = (byte[])row["projectPng"];
-                    Proyects.Add((row["title"].ToString(), row["concatenated_names"].ToString(), projectPngBytes));
+                    Proyects.Add((int.Parse(row["id"].ToString()), row["title"].ToString(), row["concatenated_names"].ToString(), projectPngBytes));
                 }
 
                 return Proyects;

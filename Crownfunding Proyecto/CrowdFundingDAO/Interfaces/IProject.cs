@@ -13,7 +13,7 @@ namespace CrowdFundingDAO.Interfaces
         int GetLastInsertedProjectId();
         List<(int, string, string)> GetMyProjects(int id);
         List<(int, string, string)> GetMySupports(int id);
-        List<(string, string, byte[])> Serch(List<string> cat, string palabra);
+        List<(int,string, string, byte[])> Serch(List<string> cat, string palabra);
         List<Project> SelectToAcept();
         List<Project> SelectToRestore();
     }
