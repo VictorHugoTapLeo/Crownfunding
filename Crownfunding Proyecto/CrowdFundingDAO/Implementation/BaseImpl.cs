@@ -12,7 +12,7 @@ namespace CrowdFundingDAO.Implementation
     public class BaseImpl
     {
 
-        string connectionString = @"Server=VICTOR;Database=preuba;User Id=sa;Password=1860hugo12;";
+        string connectionString = @"Server=DESKTOP-C5ESB22\SQLEXPRESS;Database=preuba;User Id=sa;Password=SRcuatroK4;";
         internal string query;
         public SqlCommand CreateBasicCommand()
         {

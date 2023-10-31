@@ -634,5 +634,21 @@ namespace CrowdFundingDAO.Implementation
                 throw ex;
             }
         }
+
+        public int Follow(int idPorject)
+        {
+            query = @"EXEC Follow @idUser , @idProject";
+            SqlCommand command = CreateBasicCommand(query);
+            command.Parameters.AddWithValue("@idProject", idPorject);
+            command.Parameters.AddWithValue("@idUser", SessionClass.SessionId);
+            try
+            {
+                return ExecuteBasicCommand(command);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }

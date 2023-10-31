@@ -44,12 +44,8 @@
 <body>
     <div class="divTitle">
         <h2>
-            Kysen - El robot cuadrupedo practico e  <br />
-            inteligente
+            @Model.Titulo
         </h2>
-        <p>
-            El crowdfunding tradicionalmente es una forma de financiación online para obtener el impulso económico.
-        </p>
     </div>
 
     <div class="container">
@@ -59,41 +55,11 @@
         <div class="content-container">
             <div class="centered-content">
                 <br />
-                <div class="progress">
-                    <span class="progress-text"></span>
-                </div>
-                <br />
-
                 <div>
-                    <p class="text1">
-                        32000 Bs.
-                    </p>
-                    <p class="textP">Contribuido de 670000 Bs.</p>
-                </div>
-
-
-                <div>
-                    <p class="text2">Contribuir</p>
-                    <p class="textP">Cantidad de Contactos Generados: </p>
-                </div>
-
-
-                <div class="text3">
-                    <p>Networking Generado</p>
-                    <input type="checkbox" id="" name="" class="form-check-input" />
-                    <label class="textP" for="">
-                        No mostrar publicamente mi <br />
-                        nombre en la asesoria de esta <br />
-                        camapaña
-                    </label>
-                </div>
-                <br />
-                <div>
-                    
-                     <form method="post"  > 
+                     <form method="post"> 
 
                     <h3>Apoyo para el proyecto:</h3>
-                     <input asp-for="idA" />
+                     <input type="hidden" asp-for="idA" />
                      <p>@Model.Titulo</p>
 
                      <select asp-for="@Model.TypoApoyo" class="form-control">
@@ -115,28 +81,27 @@
 
                     </select>
                      <span asp-validation-for="TypoApoyo" ></span> <!-- Mensaje de error para ComentarioMision -->
-           
+                        <br />
                       <textarea asp-for="@Model.DescriApoyo"  rows="3" placeholder="Describe tu apoyo,link,invitacion,etc"></textarea>
-                <span asp-validation-for="DescriApoyo" ></span> <!-- Mensaje de error para ComentarioMision -->
+                    <span asp-validation-for="DescriApoyo" ></span> <!-- Mensaje de error para ComentarioMision -->
            
-                     <button type="submit" >Registrar</button>
+                     
+                        <div class="button-container">
+                            <div class="top-buttons">
+                                <button type="submit" name="handler" value="Aplicar" class="button1">Aplicar</button>
+                            </div>
+                            <div class="bottom-buttons">
+                                <button type="submit" name="handler" value="Seguir" class="button1">Seguir</button>
+                                <button type="button" class="button1">Visitar Social Media</button>
+                            </div>
+                        </div>
                      </form>
                 </div>
                 <br />
-
-            </div>
-            <div class="button-container">
-                <div class="top-buttons">
-                    <button type="submit" value="Aplicar" class="button1">Aplicar</button>
-                </div>
-                <div class="bottom-buttons">
-                    <button type="submit" value="Seguir" class="button1">Seguir</button>
-                    <button type="submit" value="Visitar Social Media" class="button1">Visitar Social Media</button>
-                </div>
             </div>
         </div>
     </div>
-    <br></br>
+    <br>
     <div class="container">
         <div class="content-container2">
             <p class="text1">Historia del proyecto</p>
@@ -158,6 +123,7 @@
             <p class="text1">Comentarios</p>
             <textarea class="textP" rows="3" placeholder="Coloca un comentario"></textarea>
         </div>
+        
     </div>
     
         

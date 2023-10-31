@@ -4,6 +4,7 @@ using CrowdFundingDAO.Implementation;
 using CrowdFundingDAO.Model;
 
 using System.ComponentModel.DataAnnotations;
+using System.IO.Pipelines;
 
 namespace Avanze_ProjectoWeb.Pages.Projecto
 {
@@ -47,26 +48,34 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
            
 
         }
-        public void OnPost()
+        public void OnPost(string handler)
         {
+            
+            var buttonValue = Request.Form["handler"];
+            
+            switch (buttonValue)
+            {
+                case "Aplicar":
+                    if (ModelState.IsValid)
+                    {
+                        si = new SupportImpl();
+                        Support sm = new Support();
+                        sm.projectId = idA;
+                        sm.supporterId = SessionClass.SessionId; //se necesita connectar usurios para esto //cuando este listoo hacer fk con suaruio
+                        sm.UserID = SessionClass.SessionId; //cambio id 
+                        sm.supportType = TypoApoyo;
+                        sm.supportVerification = DescriApoyo;
 
-            if (ModelState.IsValid)
-            { 
+                        si.Insert(sm);
+                    }
+                    break;
+                case "Seguir":
+                    ProjectImpl projectImpl = new ProjectImpl();
 
-            si = new SupportImpl();
-            Support sm = new Support();
-            sm.projectId= idA;
-            sm.supporterId = 1; //se necesita connectar usurios para esto //cuando este listoo hacer fk con suaruio
-            sm.UserID = SessionClass.SessionId; //cambio id 
-            sm.supportType = TypoApoyo;
-            sm.supportVerification = DescriApoyo;
-
-            si.Insert(sm);
-
+                    projectImpl.Follow(idA);
+                    
+                    break;
             }
-
         }
-
-
     }
 }
