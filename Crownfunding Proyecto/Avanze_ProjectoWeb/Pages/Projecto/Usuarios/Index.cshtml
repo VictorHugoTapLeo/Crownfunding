@@ -45,14 +45,14 @@
                                 var projectPngBytes = user.userPicture;
                                 if (projectPngBytes != null)
                                 {
-                                    <img src="data:image/png;base64,@Convert.ToBase64String(projectPngBytes)" alt="Foto de usuario" style="max-width: 350px; max-height: 350px;" />
+                                    <img src="data:image/png;base64,@Convert.ToBase64String(projectPngBytes)" />
                                 }
                             }
                         </div>
                     </div>
                     <div class="col-9">
                         <div class="data">
-                            <h2>@user.name @user.lastName @user.secondLastName ( @user.userName )</h2>
+                            <h2>@user.name @user.lastName @user.secondLastName (@user.userName)</h2>
                             <p>@user.email</p>
                             <p>@user.phoneNumber</p>
                         </div>

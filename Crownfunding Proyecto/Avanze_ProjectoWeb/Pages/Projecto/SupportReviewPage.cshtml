@@ -10,26 +10,39 @@
         Layout = "_Layout";
     }
 }
- <form method="post"  > 
-         <input type="hidden" asp-for="idSupport"/>
-
-          
-            
-           <h1>Se cumplio con lo ofrecido?</h1>
-          <label>
-        <input type="radio" asp-for="verificationStatus" value="1" /> Si
-    </label>
-    <label>
-        <input type="radio" asp-for="verificationStatus" value="0" /> No
-    </label>
-    <span asp-validation-for="verificationStatus"></span> <!-- Mensaje de error para el campo Link -->
-
-    <h1>Observaciones</h1>
-        <textarea asp-for="reviewDescripction"  rows="3" placeholder="Escribe tus comentarios aquí"></textarea>
-    <span asp-validation-for="reviewDescripction" ></span> <!-- Mensaje de error para ComentarioMision -->
-          
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/crearCampaña.css" asp-append-version="true" />
+</head>
+<body>
+    <div class="container text-left">
+        <form method="post">
+            <input type="hidden" asp-for="idSupport" />
 
 
-         <button type="submit" >Registrar Review</button>
 
- </form>
+            <h1 class="custom-h1">Se cumplio con lo ofrecido?</h1>
+            <br>
+            <label>
+                <input type="radio" asp-for="verificationStatus" value="1" /> Si
+            </label>
+            <label>
+                <input type="radio" asp-for="verificationStatus" value="0" /> No
+            </label>
+            <br></br>
+            <span asp-validation-for="verificationStatus"></span> <!-- Mensaje de error para el campo Link -->
+            <h1 class="custom-h1">Observaciones</h1>
+            <br>
+            <textarea class="custom-textarea" asp-for="reviewDescripction" rows="3" placeholder="Escribe tus comentarios aquí"></textarea>
+            <span asp-validation-for="reviewDescripction"></span> <!-- Mensaje de error para ComentarioMision -->
+
+
+            <br></br>
+            <button class="custom-button" type="submit">Registrar Review</button>
+
+        </form>
+
+    </div>
+</body>
+ 
