@@ -45,11 +45,20 @@
                 <label for="Password">Contraseña</label>
                 <input type="password" class="input" name="password" id="password" asp-for="User.password" />
                 </div> *@
+                @if (@CrowdFundingDAO.Model.SessionClass.SessionRole == "Admin")
+                {
+                    <div>
+                        <label for="Role">Rol</label><br></br>
+                        <input type="text" class="input" name="role" id="role" asp-for="User.role" /><br></br>
+                    </div>
+                }
+                else
+                {
+                    <div>
+                        <input type="hidden" class="input" name="role" id="role" asp-for="User.role" /><br></br>
+                    </div>
+                }
 
-                <div>
-                    <label for="Role">Rol</label><br></br>
-                    <input type="text" class="input" name="role" id="role" asp-for="User.role" /><br></br>
-                </div>
 
                 <div>
                     <label for="Email">Correo Electrónico</label><br></br>
@@ -87,7 +96,19 @@
                 <!-- Agrega campos para las demás propiedades del usuario aquí -->
 
                 <button type="submit" class="button1">Guardar Cambios</button><br></br>
-                <a asp-page="Index" class="button2 text-no-underline">Cancelar</a>
+                @if (@CrowdFundingDAO.Model.SessionClass.SessionRole == "Admin" && CrowdFundingDAO.Model.SessionClass.IsChange == false)
+                {
+                    <a asp-page="Index" class="button2 text-no-underline">Cancelar</a>
+                }
+                else if (@CrowdFundingDAO.Model.SessionClass.SessionRole == "Admin" && @CrowdFundingDAO.Model.SessionClass.IsChange)
+                {
+                    <a class="button2 text-no-underline" href="/Projecto/PerfilInterfaz">Volver</a>
+                }
+                else
+                {
+                    <a class="button2 text-no-underline" href="/Projecto/PerfilInterfaz">Volver</a>
+                }
+
             </form>
         </div>
     </div>

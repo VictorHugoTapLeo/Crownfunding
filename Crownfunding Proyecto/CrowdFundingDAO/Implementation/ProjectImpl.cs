@@ -635,15 +635,39 @@ namespace CrowdFundingDAO.Implementation
             }
         }
 
-        public int Follow(int idPorject)
+        public int Follow(int idProject)
         {
             query = @"EXEC Follow @idUser , @idProject";
             SqlCommand command = CreateBasicCommand(query);
-            command.Parameters.AddWithValue("@idProject", idPorject);
+            command.Parameters.AddWithValue("@idProject", idProject);
             command.Parameters.AddWithValue("@idUser", SessionClass.SessionId);
             try
             {
                 return ExecuteBasicCommand(command);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public bool CheckFollow(int idProject)
+        {
+            query = @"SELECT * FROM FollowedProject WHERE idProject = @idProject AND idUser = @idUser AND status = 1";
+            SqlCommand command = CreateBasicCommand(query);
+            command.Parameters.AddWithValue("@idProject", idProject);
+            command.Parameters.AddWithValue("@idUser", SessionClass.SessionId);
+            try
+            {
+                DataTable dataTable = ExecuteDataTableCommand(command);
+                if(dataTable.Rows.Count > 0)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
             catch (Exception ex)
             {

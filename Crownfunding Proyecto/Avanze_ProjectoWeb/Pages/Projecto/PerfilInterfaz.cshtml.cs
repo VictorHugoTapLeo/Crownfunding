@@ -27,6 +27,7 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
         //
         public void OnGet()
         {
+            SessionClass.IsChange = true;
             uuserImpl = new UserImpl();
             user = new User();
 

@@ -25,7 +25,7 @@ namespace CrowdFundingDAO.Implementation
                 DataTable table = ExecuteDataTableCommand(command);
                 foreach (DataRow row in table.Rows)
                 {
-                    byte[] userPictureBytes = Encoding.UTF8.GetBytes(row["userPicture"].ToString());
+                    //byte[] userPictureBytes = Encoding.UTF8.GetBytes(row["userPicture"].ToString());
 
                     users.Add(new User(
                         int.Parse(row["id"].ToString()),
@@ -37,9 +37,10 @@ namespace CrowdFundingDAO.Implementation
                         row["role"].ToString(),
                         row["email"].ToString(),
                         row["phoneNumber"].ToString(),
-                        userPictureBytes
+                        (byte[])row["userPicture"]
                     ));
                 }
+                
             }
             catch (Exception ex)
             {

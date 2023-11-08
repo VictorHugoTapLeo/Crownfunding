@@ -13,11 +13,9 @@ namespace Avanze_ProjectoWeb.Pages.Projecto.Usuarios
 
         public void OnGet()
         {
+            SessionClass.IsChange = false;
             userDAO = new UserImpl();
             Users = userDAO.SelectAll();
-
-
-           
         }
 
         public IActionResult OnPostDelete(int id)

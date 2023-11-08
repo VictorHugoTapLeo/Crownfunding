@@ -52,6 +52,7 @@ namespace CrowdFundingDAO.Implementation
                         DateTime.Parse(table.Rows[0][7].ToString()),
                         int.Parse(table.Rows[0][8].ToString())
                         );
+                    return t;
                 }
             }
             catch (Exception ex)
@@ -149,5 +150,40 @@ namespace CrowdFundingDAO.Implementation
             }
         }
 
+
+        public Support GetPatron(int id)
+        {
+            Support t = null;
+            query = @"SELECT id , supporterId, projectId, supportType, supportVerification , status,registerDate, ISNULL(lastUpdate,CURRENT_TIMESTAMP),userID
+                        FROM Support
+                        WHERE supporterId = @idSupporter AND projectId = @id AND status = 1";
+            SqlCommand command = CreateBasicCommand(query);
+            command.Parameters.AddWithValue("@id", id);
+            command.Parameters.AddWithValue("@idSupporter", SessionClass.SessionId);
+            try
+            {
+                DataTable table = ExecuteDataTableCommand(command);
+                if (table.Rows.Count > 0)
+                {
+                    t = new Support(int.Parse(table.Rows[0][0].ToString()),
+                        int.Parse(table.Rows[0][1].ToString()),
+                        int.Parse(table.Rows[0][2].ToString()),
+                        table.Rows[0][3].ToString(),
+                        table.Rows[0][4].ToString(),
+                        //BASE
+                        byte.Parse(table.Rows[0][5].ToString()),
+                        DateTime.Parse(table.Rows[0][6].ToString()),
+                        DateTime.Parse(table.Rows[0][7].ToString()),
+                        int.Parse(table.Rows[0][8].ToString())
+                        );
+                    return t;
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            return t;
+        }
     }
 }

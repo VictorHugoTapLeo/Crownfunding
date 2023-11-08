@@ -19,5 +19,6 @@ namespace CrowdFundingDAO.Model
         public static DateTime registerDate = DateTime.Now;
         public static byte SessionPasswordChange;
         public static bool SessionStart = false;
+        public static bool IsChange = false;
     }
 }

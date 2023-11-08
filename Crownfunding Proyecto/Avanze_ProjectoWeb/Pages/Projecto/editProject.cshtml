@@ -39,7 +39,7 @@
     }
     ﻿@*enctype="multipart/form-data"*@
     <form method="post" enctype="multipart/form-data" class="custom-form">
-        <input asp-for="Projecto.id" />
+        <input type="hidden" asp-for="Projecto.id" />
 
         <div>
             <div>
@@ -47,8 +47,8 @@
             </div>
             <div>
                 <div>
-                    <label for="Titulo">Título</label><br>
-                    <input asp-for="Projecto.Titulo" type="text" class="custom-input" placeholder="Escribe el título aquí">
+                    
+                    <input asp-for="Projecto.Titulo" type="hidden" class="custom-input" placeholder="Escribe el título aquí">
                     <span asp-validation-for="Projecto.Titulo" class="custom-validation"></span>
                 </div>
             </div>
