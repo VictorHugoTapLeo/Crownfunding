@@ -360,7 +360,7 @@ namespace CrowdFundingDAO.Implementation
                                       FOR XML PATH('')), 1, 2, ''),'N/A' )AS concatenated_names
                         FROM Project P
                         INNER JOIN Category C ON C.id = P.categoryId
-                        WHERE P.status = 2 ";
+                        WHERE P.status = 2 AND P.userCampaingId !=@idusuarioactual ";
             if(palabra != "")
             {
                 query += " AND P.title LIKE '%' + @palabra + '%'";
@@ -384,6 +384,7 @@ namespace CrowdFundingDAO.Implementation
                 query += categorys;
             }
             SqlCommand command = CreateBasicCommand(query);
+            command.Parameters.AddWithValue("@idusuarioactual", SessionClass.SessionId);
             if (palabra != "")
             {
                 command.Parameters.AddWithValue("@palabra", palabra);

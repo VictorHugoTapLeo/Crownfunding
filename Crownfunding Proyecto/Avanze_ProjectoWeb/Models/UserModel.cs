@@ -19,7 +19,7 @@ namespace Avanze_ProjectoWeb.Models
 
         //[Required(ErrorMessage = "El campo Correo es requerido.")]
         //[EmailAddress(ErrorMessage = "El campo Correo no es una dirección de correo electrónico válida.")]
-        [Required(ErrorMessage = "El campo corre es requerido.")]
+        [Required(ErrorMessage = "El campo correo es requerido.")]
         public string? Correo { get; set; }
 
         //[Required(ErrorMessage = "El campo Contraseña es requerido.")]

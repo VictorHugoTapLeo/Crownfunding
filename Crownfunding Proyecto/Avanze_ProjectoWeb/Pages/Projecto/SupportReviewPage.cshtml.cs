@@ -43,6 +43,7 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
 
                 support.id= idSupport;
                 supportImpl.Delete(support);
+                Response.Redirect("/Projecto/PerfilInterfaz");
 
             }
 

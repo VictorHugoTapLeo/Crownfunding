@@ -13,6 +13,7 @@ namespace CrowdFundingDAO.Model
         public int projectId { get; set; }
         public string supportType { get; set; }
         public string supportVerification { get; set; }
+        public string name { get; set; }
         public Support(int id, int supporterId, int projectId, string supportType, string supportVerification
             , byte status, DateTime registerDate, DateTime lastUpdate, int userID)
             : base(status, registerDate, lastUpdate, userID)
@@ -30,6 +31,15 @@ namespace CrowdFundingDAO.Model
             this.projectId = projectId;
             this.supportType = supportType;
             this.supportVerification = supportVerification;
+        }
+        public Support(int id, int supporterId, int projectId, string supportType, string supportVerification,string name)
+        {
+            this.id = id;
+            this.supporterId = supporterId;
+            this.projectId = projectId;
+            this.supportType = supportType;
+            this.supportVerification = supportVerification;
+            this.name = name;
         }
         public Support(int id)
         {

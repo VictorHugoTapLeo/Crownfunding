@@ -12,6 +12,7 @@ namespace Avanze_ProjectoWeb.Pages
         private readonly ILogger<IndexModel> _logger;
 
         [BindProperty]
+        [Required(ErrorMessage = "Ingrese su Correo")]
         public string email { get; set; }
 
         [BindProperty]

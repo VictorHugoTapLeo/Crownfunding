@@ -8,34 +8,43 @@ namespace Avanze_ProjectoWeb.Models
 
         public int id { get; set; }
         [Required(ErrorMessage = "Es necesario un titulo")]
+        [StringLength(200, ErrorMessage = "{0} el texto no debe superar los {1} caracteres", MinimumLength = 1)]
         public string? Titulo { get; set; } = "";
 
         [Required(ErrorMessage = "El campo DescripcionGeneral es obligatorio.")]
+        [StringLength(1000, ErrorMessage = "{0} el texto no debe superar los {1} caracteres", MinimumLength = 1)]
         public string? DescripcionGeneral { get; set; }
 
         [Required(ErrorMessage = "Debes seleccionar al menos un apoyo requerido.")]
-        [StringLength(maximumLength: 100, MinimumLength = 14, ErrorMessage = "Selecciona al menos 5 apoyos")]
+        [StringLength(maximumLength: 200, MinimumLength = 14, ErrorMessage = "Selecciona al menos 5 apoyos")]
         public string? ListaApoyos { get; set; }
 
      
         //seccion Descripciones
         [Required(ErrorMessage = "Completa este campo")]
+        [StringLength(1000, ErrorMessage = "{0} el texto no debe superar los {1} caracteres", MinimumLength = 1)]
         public string? DescripcionPlanTiempo { get; set; }
+        [StringLength(1000, ErrorMessage = "{0} el texto no debe superar los {1} caracteres", MinimumLength = 1)]
         [Required(ErrorMessage = "Completa este campo")]
         public string? DescripcionObjetivo { get; set; }
+        [StringLength(1000, ErrorMessage = "{0} el texto no debe superar los {1} caracteres", MinimumLength = 1)]
         [Required(ErrorMessage = "Completa este campo")]
         public string? DescripcionPorque { get; set; }
 
         ////seccion vision
         [Required(ErrorMessage = "Completa este campo")]
+        [StringLength(1000, ErrorMessage = "{0} el texto no debe superar los {1} caracteres", MinimumLength = 1)]
         public string? DescripcionQueCrear { get; set; }
         [Required(ErrorMessage = "Completa este campo")]
+        [StringLength(1000, ErrorMessage = "{0} el texto no debe superar los {1} caracteres", MinimumLength = 1)]
         public string? DescripcionComoSurgio { get; set; }
 
         ////seccion sobre ti
         [Required(ErrorMessage = "Completa este campo")]
+        [StringLength(1000, ErrorMessage = "{0} el texto no debe superar los {1} caracteres", MinimumLength = 1)]
         public string? DescripcionQuienEres { get; set; }
         [Required(ErrorMessage = "Completa este campo")]
+        [StringLength(1000, ErrorMessage = "{0} el texto no debe superar los {1} caracteres", MinimumLength = 1)]
         public string? DescripcionRiesgos { get; set; }
 
         //seccion de imagenes : Proximamente
@@ -45,11 +54,12 @@ namespace Avanze_ProjectoWeb.Models
 
         [Required(ErrorMessage = "El campo Link es obligatorio.")]
 
-        [RegularExpression(@"^(https?://)?(www\.)?youtube\.com/watch\?v=[\w-]+$", ErrorMessage = "El formato del enlace de video no es válido.")]
-
+        //[RegularExpression(@"^(https?://)?(www\.)?youtube\.com", ErrorMessage = "El formato del enlace de video no es válido.")]
+        [StringLength(1000, ErrorMessage = "{0} el texto no debe superar los {1} caracteres", MinimumLength = 1)]
         public string? Link { get; set; }
 
         [Required(ErrorMessage = "El campo Redes es obligatorio.")]
+        [StringLength(50, ErrorMessage = "{0} el texto no debe superar los {1} caracteres", MinimumLength = 1)]
         public string? Redes { get; set; }
         [Required(ErrorMessage = "Agreges categorias.")]
         public string? Tipo { get; set; }

@@ -117,8 +117,11 @@ namespace CrowdFundingDAO.Implementation
         //mis metodoss 
         public List<Support> SelectMySupport(int idPro)
         {
-            query = @"SELECT id, supporterId, projectId, supportType, supportVerification,status
-              FROM Support
+            //query = @"SELECT id, supporterId, projectId, supportType, supportVerification,status
+            //  FROM Support
+            //  WHERE status = 1 AND projectId=@id";
+            query = @" SELECT id , supporterId,projectId, supportType, supportVerification,status,(SELECT CONCAT(name, ' ', lastName, ' ',secondLastName) AS nameD FROM Userr WHERE id= supporterId) AS nameD
+              FROM Support 
               WHERE status = 1 AND projectId=@id";
             SqlCommand command = CreateBasicCommand(query);
             command.Parameters.AddWithValue("@id", idPro);
@@ -136,7 +139,8 @@ namespace CrowdFundingDAO.Implementation
                         projectId = Convert.ToInt32(row["projectId"]),
                         supportType = row["supportType"].ToString(),
                         supportVerification = row["supportVerification"].ToString(),
-                        Status = Convert.ToByte(row["status"])
+                        Status = Convert.ToByte(row["status"]),
+                        name = row["nameD"].ToString(),
                     };
 
                     supports.Add(support);

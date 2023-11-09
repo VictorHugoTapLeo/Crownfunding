@@ -16,6 +16,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="~/css/perfil.css" asp-append-version="true" />
     <link rel="stylesheet" href="~/css/tablas.css" asp-append-version="true" />
+    <style>
+        /* Estilo del botón en el encabezado */
+         #miBoton {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            background-color: #007bff; /* Color del botón primario */
+            color: #fff; /* Color del texto */
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        header #miBoton:hover {
+            background-color: #0056b3; /* Cambia el color al pasar el ratón sobre el botón */
+        }
+    </style>
 </head>
 
 <body>
@@ -97,7 +116,7 @@
                             {
                                 <h5> @proyecto.Item2 </h5>
                                 <p> @proyecto.Item3 </p>
-                                <a asp-page="ApoyoProyectos" asp-route-id="@proyecto.Item1">Ver</a>
+                                <a asp-page="ApoyoProyectos" asp-route-id="@proyecto.Item1" id="miBoton">Ver</a>
                                 <br></br>
                                 <hr>
                             }
@@ -113,7 +132,7 @@
                             {
                                 <h5> @proyecto.Item2 </h5>
                                 <p> @proyecto.Item3 </p>
-                                <a asp-page="ApoyoProyectos" asp-route-id="@proyecto.Item1">Ver</a>
+                                <a asp-page="ApoyoProyectos" asp-route-id="@proyecto.Item1" id="miBoton">Ver</a>
                                 <br></br>
                                 <hr>
                             }
@@ -130,8 +149,8 @@
                             {
                                 <h5> @proyecto.Item2 </h5>
                                 <p> @proyecto.Item3 </p>
-                                <a asp-page="editProject" asp-route-id="@proyecto.Item1">Editar</a><br></br>
-                                <a asp-page="ReceivedSupport" asp-route-id="@proyecto.Item1" class="btn1">Apoyos recibidos</a>
+                                <a asp-page="editProject" asp-route-id="@proyecto.Item1" id="miBoton">Editar</a><br></br>
+                                <a asp-page="ReceivedSupport" asp-route-id="@proyecto.Item1" class="btn1" id="miBoton">Apoyos recibidos</a>
                                 <br></br>
                                 <hr>
 

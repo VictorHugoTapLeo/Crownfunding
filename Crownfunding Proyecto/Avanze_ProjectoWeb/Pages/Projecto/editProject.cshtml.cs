@@ -287,6 +287,7 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
 
 
                 Categorias = cat.SelectList();
+                Response.Redirect("/Projecto/PerfilInterfaz");
             }
 
 

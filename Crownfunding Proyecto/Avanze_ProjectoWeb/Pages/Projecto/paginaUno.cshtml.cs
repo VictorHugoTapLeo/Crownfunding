@@ -232,9 +232,9 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
                  
                 ModelState.Clear();
 
+                Response.Redirect("/Projecto/PerfilInterfaz");
 
 
-                
             }
 
             
