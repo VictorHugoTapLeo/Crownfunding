@@ -16,16 +16,16 @@ namespace Avanze_ProjectoWeb.Pages.Projecto.Usuarios
 
             if (User == null)
             {
-                // Si el usuario no se encuentra, puedes redirigir a una página de error o realizar otra acción apropiada.
-                // En este ejemplo, simplemente se muestra un mensaje de error en la vista.
+                // Si el usuario no se encuentra
+               
                 NotFoundMessage = "Usuario no encontrado";
             }
         }
 
         public User User { get; set; }
-        public string NotFoundMessage { get; set; }
+        public string? NotFoundMessage { get; set; }
 
-        public UserImpl UserImpl;
+        public UserImpl? UserImpl;
 
         public IActionResult OnPost(int id)
         {

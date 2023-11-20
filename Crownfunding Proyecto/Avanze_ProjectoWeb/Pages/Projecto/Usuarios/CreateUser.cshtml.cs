@@ -15,7 +15,7 @@ namespace Avanze_ProjectoWeb.Pages.Projecto.Usuarios
 
         public User User { get; set; }
 
-        public UserImpl UserImpl;
+        public UserImpl? UserImpl;
 
         public IActionResult OnPost(User user)
         {

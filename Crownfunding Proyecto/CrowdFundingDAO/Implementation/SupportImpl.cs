@@ -17,7 +17,7 @@ namespace CrowdFundingDAO.Implementation
             query = @"UPDATE Support SET status = 0 ,lastUpdate = CURRENT_TIMESTAMP ,userID = @userID WHERE id = @id";
             SqlCommand command = CreateBasicCommand(query);
             command.Parameters.AddWithValue("@id", t.id);
-          //  command.Parameters.AddWithValue("@userID", t.UserID);
+            //command.Parameters.AddWithValue("@userID", t.UserID);
             command.Parameters.AddWithValue("@userID", 1);
             try
             {
@@ -114,12 +114,10 @@ namespace CrowdFundingDAO.Implementation
                 throw ex;
             }
         }
-        //mis metodoss 
+        //Mis metodos 
         public List<Support> SelectMySupport(int idPro)
         {
-            //query = @"SELECT id, supporterId, projectId, supportType, supportVerification,status
-            //  FROM Support
-            //  WHERE status = 1 AND projectId=@id";
+         
             query = @" SELECT id , supporterId,projectId, supportType, supportVerification,status,(SELECT CONCAT(name, ' ', lastName, ' ',secondLastName) AS nameD FROM Userr WHERE id= supporterId) AS nameD
               FROM Support 
               WHERE status = 1 AND projectId=@id";

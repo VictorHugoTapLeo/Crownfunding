@@ -11,7 +11,7 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
     public class ApoyoProyectosModel : PageModel
     {
          
-        SupportImpl si;
+        SupportImpl? si;
 
         //pagina de apoyos ,recibe id de proyecto al que debe apoyar para hacer la referencia
         Project mp = new Project();
@@ -30,16 +30,15 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
         public bool checkFollow { get; set; }
         public bool checkPatreon { get; set; }
         public int idproaux { get; set; }
-        public byte[] photo { get; set; }
-        public byte[] photo2 { get; set; }
-        Support sup;
-        public void OnGet(int id )  //public void OnGet(int id)
+        public byte[]? photo { get; set; }
+        public byte[]? photo2 { get; set; }
+        Support? sup;
+        public void OnGet(int id )  
         {
             idproaux = id;
             if (SessionClass.SessionRole == "Admin" || SessionClass.SessionRole == "User")
             {
-                mp = pi.Get(id); //el id deberiaser recibido en elonget/deberia ser el boton de vista de projecto quue mande su id 
-                                 //mp = pi.Get(id);
+                mp = pi.Get(id); 
                 idA = mp.id;
                 Titulo = mp.title;
                 photo = mp.projectPng;
@@ -78,8 +77,8 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
                         si = new SupportImpl();
                         Support sm = new Support();
                         sm.projectId = idA;
-                        sm.supporterId = SessionClass.SessionId; //se necesita connectar usurios para esto //cuando este listoo hacer fk con suaruio
-                        sm.UserID = SessionClass.SessionId; //cambio id 
+                        sm.supporterId = SessionClass.SessionId; 
+                        sm.UserID = SessionClass.SessionId; 
                         sm.supportType = TypoApoyo;
                         sm.supportVerification = DescriApoyo;
 

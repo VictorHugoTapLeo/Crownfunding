@@ -19,6 +19,7 @@
 
 <div class="container text-left">
     <h1 class="custom-h1" style="display: none;">@Model.sessionID</h1>
+    @*CORREGIR_BOTON_TAPIA*@
         <button style="padding: 10px; /* Tamaño fijo para el padding vertical y horizontal */
         border-radius: 10px;
         background-color: #79C37C;
@@ -54,11 +55,14 @@
     }
 
     <br />
-    @*enctype="multipart/form-data"*@
+
     <form method="post"  enctype="multipart/form-data" class="custom-form">
         <div >
             <div>
-                <p>Escribe un título y un subtítulo de forma clara y concisa para transmitir rápidamente la esencia de tu proyecto. Ambos aparecerán tanto en la página del proyecto como en la de prelanzamiento. También los verán los posibles patrocinadores si tu proyecto aparece en las páginas de la categoría, en los resultados de búsqueda o en los correos electrónicos que enviamos a nuestra comunidad.</p>
+                <p>Escribe un título y un subtítulo de forma clara y concisa para transmitir rápidamente la esencia de tu proyecto. 
+                    Ambos aparecerán tanto en la página del proyecto como en la de prelanzamiento. También los verán los posibles patrocinadores 
+                    si tu proyecto aparece en las páginas de la categoría, en los resultados de búsqueda o en los correos electrónicos que enviamos
+                    a nuestra comunidad.</p>
             </div>
             <div>
                 <div >
@@ -103,8 +107,6 @@
 
         <input class="custom-input" type="hidden" id="apoyosInput" readonly asp-for="Projecto.ListaApoyos"  />
         <span class="custom-validation" asp-validation-for="Projecto.ListaApoyos"></span>
-
-        <!--sdsdsdsdsdsdsd-->
         <!--primera parte -->
         <div class="distancia">
             <button class="custom-button" type="button">Ir a la siguiente sección</button>
@@ -131,7 +133,8 @@
 
         <div class="custom-form-group text-left">
             <h4>• ¿Qué objetivo tienes?</h4>
-            <p>Una simple explicación sobre las metas que tienes y que tienes la capacidad de alcanzarlas, es decir, eres una persona trabajadora que usará el apoyo de los patrocinadores.</p>
+            <p>Una simple explicación sobre las metas que tienes y que tienes la capacidad de alcanzarlas, es decir,
+                eres una persona trabajadora que usará el apoyo de los patrocinadores.</p>
         </div>
 
         <div class="custom-form-group">
@@ -171,7 +174,8 @@
 
         <div class="custom-form-group text-left">
             <h4>• ¿Cómo surgió la idea para este proyecto?</h4>
-            <p>Cuenta cómo comenzó todo y hasta dónde has llegado en este momento. De esta forma, los patrocinadores pueden entender qué tipo de trabajo ofreces y cómo lo manejas.</p>
+            <p>Cuenta cómo comenzó todo y hasta dónde has llegado en este momento. De esta forma,
+                los patrocinadores pueden entender qué tipo de trabajo ofreces y cómo lo manejas.</p>
         </div>
 
         <div class="custom-form-group">
@@ -229,7 +233,11 @@
         <!-- Sección para la identidad de la campaña revisar desde acaa -->
         <h1 class="custom-h1">Muestra gráficamente la identidad de la campaña</h1>
         <h2 class="custom-h2">Imagen del Proyecto</h2>
-        <p class="custom-p">Agrega una imagen que represente claramente tu proyecto y que se vea bien en diferentes tamaños, ya que aparecerá en la página de tu proyecto, en el sitio web y (cuando se comparta) en las redes sociales. Tu imagen debe tener al menos 1024x576 píxeles. Se recortará en una proporción de 16:9. Evita imágenes con banners, distintivos o texto que podrían ser ilegibles en formatos más pequeños y ser penalizadas por el algoritmo de Facebook. Además, reducen tus posibilidades de aparecer en la página de inicio.</p>
+        <p class="custom-p">Agrega una imagen que represente claramente tu proyecto y que se vea bien en diferentes tamaños, 
+            ya que aparecerá en la página de tu proyecto, en el sitio web y (cuando se comparta) en las redes sociales.
+            Tu imagen debe tener al menos 1024x576 píxeles. Se recortará en una proporción de 16:9. Evita imágenes con banners,
+            distintivos o texto que podrían ser ilegibles en formatos más pequeños y ser penalizadas por el algoritmo de Facebook.
+            Además, reducen tus posibilidades de aparecer en la página de inicio.</p>
         <div class="custom-form-group">
             <h4>Imagen del Proyecto</h4>
             <input  type="file" class="custom-button" asp-for="Projecto.projectPng" id="inputProjectPng">
@@ -239,7 +247,7 @@
         </div>
         <!-- Agrega esto en el lugar donde quieres mostrar la vista previa -->
  
-        <br></br>
+        <br><br/>
 
         <!-- Sección para el producto final -->
         <h2 class="custom-h2">Producto final</h2>
@@ -250,7 +258,7 @@
         <img id="vistaPreviaImagen2" src="#" alt="Vista previa de la imagen" style="max-width: 300px; max-height: 300px;" />
 
             </div>
-        <br></br>
+        <br><br/>
 
         <!-- Sección para el proceso de producción -->
         <h2 class="custom-h2">Proceso de producción</h2>
@@ -262,7 +270,7 @@
 
             </div>
        
-        <br></br>
+        <br><br/>
 
 
 
@@ -272,7 +280,7 @@
                 <p class="custom-p">Link del video de la crowdfunding</p>
                 <input asp-for="Projecto.Link" class="custom-input" placeholder="https://www.youtube.com/embed/tuvideo">
                 <span asp-validation-for="Projecto.Link" class="custom-validation"></span>
-                <br></br>
+                <br><br/>
             </div>
 
             <div >
@@ -280,7 +288,7 @@
                 <p class="custom-p">Agrega el link de una red social de preferencia para una mejor visualización de la campaña.</p>
                 <input asp-for="Projecto.Redes" class="custom-input" placeholder="Facebook, Twitter o Instagram">
                 <span asp-validation-for="Projecto.Redes" class="custom-validation"></span>
-                <br></br>
+                <br><br/>
             </div>
             
             <div >
@@ -301,8 +309,8 @@
 
 
         </div>
-        <br></br>
-        <!--boton submit-->
+        <br><br/>
+        <!--boton de submit-->
         <button type="submit" class="custom-button">Registrar</button>
 
 
@@ -324,12 +332,11 @@
     if (checkbox.checked) {
         if (!currentValue.includes(checkboxValue)) {
             apoyosInput.value += checkboxValue;
-            // Aquí también puedes agregar el apoyo a la lista en tu modelo C#
-            // Puedes hacerlo a través de JavaScript o haciendo una petición AJAX a tu servidor
+          
         }
     } else {
         apoyosInput.value = currentValue.replace(checkboxValue, '');
-        // También puedes quitar el apoyo de la lista en tu modelo C#
+       
     }
 }
 </script>

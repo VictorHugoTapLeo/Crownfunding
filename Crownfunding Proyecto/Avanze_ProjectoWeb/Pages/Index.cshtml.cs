@@ -49,9 +49,6 @@ namespace Avanze_ProjectoWeb.Pages
                     SessionClass.SessionRole = user.role;
                 }
 
-                //luego es redirecionarw
-
-
                 //para impedir acceso segun rol,se lo pone en cada Onget de cada pagina :
                 if (SessionClass.SessionRole == "Admin" || SessionClass.SessionRole == "User")
                 {
@@ -68,7 +65,7 @@ namespace Avanze_ProjectoWeb.Pages
                 else
                 {
 
-                    //Categorias = cat.SelectList();
+                    
                     Response.Redirect("../Index");
 
                 }

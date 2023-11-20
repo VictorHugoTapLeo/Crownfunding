@@ -47,6 +47,22 @@
             @Model.Titulo
         </h2>
     </div>
+    @*CORREGIR_BOTON_TAPIA*@
+
+       <button style="padding: 10px; /* Tamaño fijo para el padding vertical y horizontal */
+        border-radius: 10px;
+        background-color: #79C37C;
+        color: white;
+        border: 2px solid #79C37C;
+        text-decoration: none;
+        margin-right: 5px;
+        transition: background-color 0.3s, color 0.3s;
+        display: inline-block;
+        align-items: center;
+        justify-content: center;
+        min-width: 100px; /* Establece un ancho mínimo */
+        height: 100%;
+        text-decoration: none;">  <a asp-page="PerfilInterfaz" style ="text-decoration: none; color: white;">Regresar</a></button>
 
     <div class="container">
         <div class="image-container" style="width:800px">
@@ -87,10 +103,10 @@
                         <option value="Asesoría en costos y estructura contable">Asesoría en costos y estructura contable</option>
 
                     </select>
-                     <span asp-validation-for="TypoApoyo" ></span> <!-- Mensaje de error para ComentarioMision -->
+                     <span asp-validation-for="TypoApoyo" ></span> 
                         <br />
                       <textarea asp-for="@Model.DescriApoyo"  rows="3" placeholder="Describe tu apoyo,link,invitacion,etc"></textarea>
-                    <span asp-validation-for="DescriApoyo" ></span> <!-- Mensaje de error para ComentarioMision -->
+                    <span asp-validation-for="DescriApoyo" ></span> 
            
                      
                         <div class="button-container">
@@ -141,9 +157,7 @@
                     <img src="data:image/png;base64,@Convert.ToBase64String(projectPngByte)" alt="Project image" />
                 }
             }
-            <!--
-
-            <img src="https://www.smartick.es/blog/wp-content/uploads/cuadrado.png">-->
+           
             <br>
             <p class="textP">
                 El crowdfunding tradicionalmente es una forma de financiación
@@ -153,16 +167,10 @@
         
         
     </div>
-    
-        
-
 
 
     <!-- Footer End -->
-    <!-- Back to Top 
-   
-
-
+  
     <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>

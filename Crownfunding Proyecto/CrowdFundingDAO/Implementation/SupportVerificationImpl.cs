@@ -181,7 +181,7 @@ namespace CrowdFundingDAO.Implementation
               FROM SupportVerification
               WHERE  status = 1";
             SqlCommand command = CreateBasicCommand(query);
-           // command.Parameters.AddWithValue("@id", id);
+            //command.Parameters.AddWithValue("@id", id);
 
             try
             {

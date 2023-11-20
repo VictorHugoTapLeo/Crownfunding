@@ -25,7 +25,7 @@ namespace CrowdFundingDAO.Implementation
                 DataTable table = ExecuteDataTableCommand(command);
                 foreach (DataRow row in table.Rows)
                 {
-                    //byte[] userPictureBytes = Encoding.UTF8.GetBytes(row["userPicture"].ToString());
+                    
 
                     users.Add(new User(
                         int.Parse(row["id"].ToString()),
@@ -63,18 +63,7 @@ namespace CrowdFundingDAO.Implementation
             {
                 throw ex;
             }
-            //query = @"UPDATE Userr SET status = 0 ,lastUpdate = CURRENT_TIMESTAMP ,userID = @userID WHERE id = @id";
-            //SqlCommand command = CreateBasicCommand(query);
-            //command.Parameters.AddWithValue("@id", t.id);
-            //command.Parameters.AddWithValue("@userID", t.UserID);
-            //try
-            //{
-            //    return ExecuteBasicCommand(command);
-            //}
-            //catch (Exception ex)
-            //{
-            //    throw ex;
-            //}
+         
 
         }
         public User Get(int id)

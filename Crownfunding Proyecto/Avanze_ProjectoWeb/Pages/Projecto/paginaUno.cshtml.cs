@@ -21,10 +21,6 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
 
         [BindProperty]
         public List<Patron> ListaPatron { get; set; } = new List<Patron>();
-
-
-
-
         public string? save { get; set; }
 
         public string successMessage = "";
@@ -40,56 +36,12 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
         public PaginaUnoModeldos nuevo { get; set; }
         public void OnGet()
         {
-            
-
-
-
             if (SessionClass.SessionRole == "Admin" ||SessionClass.SessionRole == "User")
             {
-                 //inserto de categorias 
-            CategoriasInsert = new List<Category>
-        {
-           new Category { name = "Asesoría financiera" },
-            new Category { name = "Asesoría comercial" },
-            new Category { name = "Asesoría en marketing" },
-            new Category { name = "Apoyo en valoración de empresas" },
-            new Category { name = "Asesoría en gestión impositiva" },
-            new Category { name = "Asesoría en desarrollo de marca" },
-            new Category { name = "Apoyo en desarrollo de packaging" },
-            new Category { name = "Apoyo en procesos de innovación" },
-            new Category { name = "Asesoría en investigación de mercados" },
-            new Category { name = "Asesoría en procesos de exportación" },
-            new Category { name = "Asesoría en procesos de importación" },
-            new Category { name = "Asesoría en apertura de mercados internacionales" },
-            new Category { name = "Asesoría en gestión de equipos" },
-            new Category { name = "Asesoría en elevator pitch" },
-            new Category { name = "Asesoría en costos y estructura contable" }
-
-        };
-
-            //insertar categorias ,solo una vez
-
-            //foreach (var categoria in CategoriasInsert)
-            //{
-            //    cat.Insert(categoria);
-            //}
-           // vaciado de categorias al select
-
-            Categorias = cat.SelectList();
-            // Mostrar el nombre del usuario en la vista
-
-            HttpContext.Session.SetInt32("SessionID", 0);
-                //sessionID = HttpContext.Session.GetInt32("SessionID") ?? 0;
+        
+               // vaciado de categorias al select
+                Categorias = cat.SelectList();
                 sessionID = sessionID +SessionClass.SessionRole;
-                //preuba para edit 
-                //ProjectImpl j = new ProjectImpl();
-
-                //Project k = new Project();
-
-                //k = j.Get(2);
-
-                //nuevo = new PaginaUnoModeldos();
-                //nuevo.Titulo = k.title;
                 ListaPatron = kj.SelectPatron();
 
             }
@@ -100,11 +52,6 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
                 Response.Redirect("../Index");
 
             }
-
-
-             
-
-
         }
 
         public void OnPost()
@@ -144,9 +91,7 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
                     Projecto.finalProductPng.CopyTo(memoryStreamp);
                     pro.finalProductPng = memoryStreamp.ToArray(); // Asignamos los bytes a pro.projectPng
                 }
-                //pro.projectPng = "Not available";
-                //pro.productionProcessPng = "Not available";
-                //pro.finalProductPng = "Not available";
+               
                 pro.campaingVideo = Projecto.Link;
                 pro.userCampaingId = SessionClass.SessionId; //cambio id
                 pro.categoryId = int.Parse(Projecto.Tipo);
@@ -158,14 +103,13 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
                 ca.projectId = p.ids;
                 ck.Insert(ca);
 
-
-                int idProjecto = p.ids;
                 //idProjecto debe ser el mismo id con el que el projecto de arriba es insertado a tu tabla 
-                //descripciones :
+                int idProjecto = p.ids;
+               
                 List<Description> listaDescripciones = new List<Description>
                     {
                         new Description("DescripcionGeneral", Projecto.DescripcionGeneral,idProjecto),
-                       // new Description("ListaApoyos", Projecto.ListaApoyos,idProjecto),
+                      
                         new Description("DescripcionPlanTiempo", Projecto.DescripcionPlanTiempo,idProjecto),
                         new Description("DescripcionObjetivo", Projecto.DescripcionObjetivo,idProjecto),
                         new Description("DescripcionPorque", Projecto.DescripcionPorque,idProjecto),
@@ -183,7 +127,6 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
                 }
 
                 p = new ProjectImpl();
-                //insercion de tablas porjecto y patron
                 string idSinComa = Projecto.ListaApoyos.TrimEnd(',');
                 foreach (string apoyoId in idSinComa.Split(','))
                 {
@@ -198,15 +141,7 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
                     p.InsertPatronProject(id, idProjecto);
                 }
 
-
-
-
-
-
-
-
-
-                //limpiamos casillas
+                //limpiamos los campos
 
                 successMessage = "Informacion enviada exitosamente";
 
@@ -236,36 +171,7 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
 
 
             }
-
-            
-
-
-
-
-
-
-
-
-
-
-        }
-
-        // Método para agregar apoyos requeridos desde el frontend
-
-    }
-
-
-    public class DescriptionL
-    {
-        public string Type { get; set; }
-        public string Descripcion { get; set; }
-        public int IdProyect { get; set; }
-
-        public DescriptionL(string type, string descripcion,int idProyect)
-        {
-            Type = type;
-            Descripcion = descripcion;
-            IdProyect = idProyect;
         }
     }
+
 }

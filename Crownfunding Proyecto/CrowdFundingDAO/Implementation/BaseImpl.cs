@@ -12,7 +12,7 @@ namespace CrowdFundingDAO.Implementation
     public class BaseImpl
     {
 
-        string connectionString = @"Server=localhost,1434;Database=Crowdfunding;User Id=sa;Password=P@ssword;";
+        string connectionString = @"Server=COMTORRAX\SQLEXPRESS;Database=preuba;User Id=sa;Password=qwerty;";
         internal string query;
         public SqlCommand CreateBasicCommand()
         {
@@ -89,22 +89,6 @@ namespace CrowdFundingDAO.Implementation
             }
 
 
-            //version chatgtp
-            //query = "SELECT SCOPE_IDENTITY()";
-            //       SqlCommand command = CreateBasicCommand(query);
-            //       try
-            //       {
-            //           command.Connection.Open();
-            //           return command.ExecuteScalar().ToString();
-            //       }
-            //       catch (Exception ex)
-            //       {
-            //           throw ex;
-            //       }
-            //       finally
-            //       {
-            //           command.Connection.Close();
-            //       }
 
         }
 
