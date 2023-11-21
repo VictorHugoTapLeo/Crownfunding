@@ -8,11 +8,11 @@ namespace Avanze_ProjectoWeb.Models
 
         public int id { get; set; }
         [Required(ErrorMessage = "Es necesario un titulo")]
-        [StringLength(200, ErrorMessage = "{0} La descripcion no debe superar los {1} caracteres", MinimumLength = 1)]
+        [StringLength(200, ErrorMessage = "{0} el texto no debe superar los {1} caracteres", MinimumLength = 1)]
         public string? Titulo { get; set; } = "";
 
         [Required(ErrorMessage = "El campo DescripcionGeneral es obligatorio.")]
-        [StringLength(1000, ErrorMessage = "{0} La descripcion no debe superar los {1} caracteres", MinimumLength = 1)]
+        [StringLength(1000, ErrorMessage = "{0} el texto no debe superar los {1} caracteres", MinimumLength = 1)]
         public string? DescripcionGeneral { get; set; }
 
         [Required(ErrorMessage = "Debes seleccionar al menos un apoyo requerido.")]
@@ -22,29 +22,29 @@ namespace Avanze_ProjectoWeb.Models
      
         //seccion Descripciones
         [Required(ErrorMessage = "Completa este campo")]
-        [StringLength(1000, ErrorMessage = "{0} La descripcion no debe superar los {1} caracteres", MinimumLength = 1)]
+        [StringLength(1000, ErrorMessage = "{0} el texto no debe superar los {1} caracteres", MinimumLength = 1)]
         public string? DescripcionPlanTiempo { get; set; }
-        [StringLength(1000, ErrorMessage = "{0} La descripcion no debe superar los {1} caracteres", MinimumLength = 1)]
+        [StringLength(1000, ErrorMessage = "{0} el texto no debe superar los {1} caracteres", MinimumLength = 1)]
         [Required(ErrorMessage = "Completa este campo")]
         public string? DescripcionObjetivo { get; set; }
-        [StringLength(1000, ErrorMessage = "{0} La descripcion no debe superar los {1} caracteres", MinimumLength = 1)]
+        [StringLength(1000, ErrorMessage = "{0} el texto no debe superar los {1} caracteres", MinimumLength = 1)]
         [Required(ErrorMessage = "Completa este campo")]
         public string? DescripcionPorque { get; set; }
 
         ////seccion vision
         [Required(ErrorMessage = "Completa este campo")]
-        [StringLength(1000, ErrorMessage = "{0} La descripcion no debe superar los {1} caracteres", MinimumLength = 1)]
+        [StringLength(1000, ErrorMessage = "{0} el texto no debe superar los {1} caracteres", MinimumLength = 1)]
         public string? DescripcionQueCrear { get; set; }
         [Required(ErrorMessage = "Completa este campo")]
-        [StringLength(1000, ErrorMessage = "{0} La descripcion no debe superar los {1} caracteres", MinimumLength = 1)]
+        [StringLength(1000, ErrorMessage = "{0} el texto no debe superar los {1} caracteres", MinimumLength = 1)]
         public string? DescripcionComoSurgio { get; set; }
 
         ////seccion sobre ti
         [Required(ErrorMessage = "Completa este campo")]
-        [StringLength(1000, ErrorMessage = "{0} La descripcion no debe superar los {1} caracteres", MinimumLength = 1)]
+        [StringLength(1000, ErrorMessage = "{0} el texto no debe superar los {1} caracteres", MinimumLength = 1)]
         public string? DescripcionQuienEres { get; set; }
         [Required(ErrorMessage = "Completa este campo")]
-        [StringLength(1000, ErrorMessage = "{0} La descripcion no debe superar los {1} caracteres", MinimumLength = 1)]
+        [StringLength(1000, ErrorMessage = "{0} el texto no debe superar los {1} caracteres", MinimumLength = 1)]
         public string? DescripcionRiesgos { get; set; }
 
         //seccion de imagenes : Proximamente
@@ -54,15 +54,9 @@ namespace Avanze_ProjectoWeb.Models
 
         [Required(ErrorMessage = "El campo Link es obligatorio.")]
 
-
-        [RegularExpression(@"^(?=.*(?:facebook|twitter|instagram)).*",
-            ErrorMessage = "Este enlace no parece ser de facebook,instagram o twitter")]
-        [MinLength(4, ErrorMessage = "El link proporcionado parece demasiado corto")]
-        [MaxLength(100, ErrorMessage = "Este link es demasiado largo")]
+        //[RegularExpression(@"^(https?://)?(www\.)?youtube\.com", ErrorMessage = "El formato del enlace de video no es válido.")]
+        [StringLength(1000, ErrorMessage = "{0} el texto no debe superar los {1} caracteres", MinimumLength = 1)]
         public string? Link { get; set; }
-
-        [RegularExpression(@"^(https?://)?(www\.)?(facebook\.com/|twitter\.com/|instagram\.com/).+$",
-          ErrorMessage = "El enlace no parece ser de una red social.")]
 
         [Required(ErrorMessage = "El campo Redes es obligatorio.")]
         [StringLength(50, ErrorMessage = "{0} el texto no debe superar los {1} caracteres", MinimumLength = 1)]
