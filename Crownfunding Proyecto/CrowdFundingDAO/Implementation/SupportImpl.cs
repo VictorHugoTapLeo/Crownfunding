@@ -187,5 +187,34 @@ namespace CrowdFundingDAO.Implementation
             }
             return t;
         }
+
+        public List<string> GetPatronProvidedNames(int idUser,int idProject)
+        {
+            List<string> patronProvidedNames = new List<string>();
+            string query = @"SELECT D.name AS PatronProvidedName
+                    FROM PatronProject P
+                    JOIN PatronProvided D ON P.idPatron = D.id
+					JOIN Project K ON P.idProject = K.id
+                    WHERE K.userCampaingId = @idUser AND k.id = @idProject";
+
+            SqlCommand command = CreateBasicCommand(query);
+            command.Parameters.AddWithValue("@idUser", idUser);
+            command.Parameters.AddWithValue("@idProject", idProject);
+            try
+            {
+                DataTable table = ExecuteDataTableCommand(command);
+
+                foreach (DataRow row in table.Rows)
+                {
+                    patronProvidedNames.Add(row["PatronProvidedName"].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return patronProvidedNames;
+        }
     }
 }

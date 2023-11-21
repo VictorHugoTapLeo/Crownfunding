@@ -10,7 +10,7 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
 {
     public class ApoyoProyectosModel : PageModel
     {
-         
+
         SupportImpl? si;
 
         //pagina de apoyos ,recibe id de proyecto al que debe apoyar para hacer la referencia
@@ -26,7 +26,8 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
         [BindProperty]
         [Required(ErrorMessage = "Este campo es necesario")]
         public string? DescriApoyo { get; set; }
-        
+        [BindProperty]
+        public List<string>? MyPatronList { get; set; }
         public bool checkFollow { get; set; }
         public bool checkPatreon { get; set; }
         public int idproaux { get; set; }
@@ -38,6 +39,8 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
             idproaux = id;
             if (SessionClass.SessionRole == "Admin" || SessionClass.SessionRole == "User")
             {
+                 
+
                 mp = pi.Get(id); 
                 idA = mp.id;
                 Titulo = mp.title;
@@ -54,7 +57,8 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
                     checkPatreon=true;
                 }
 
-                checkFollow = pi.CheckFollow(id);
+                checkFollow = pi.CheckFollow(idA);
+                MyPatronList = si.GetPatronProvidedNames(mp.userCampaingId,mp.id);
             }
             else
             {

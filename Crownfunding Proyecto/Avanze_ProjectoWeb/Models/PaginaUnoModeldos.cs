@@ -55,13 +55,13 @@ namespace Avanze_ProjectoWeb.Models
         [Required(ErrorMessage = "El campo Link es obligatorio.")]
 
 
-        [RegularExpression(@"^(?=.*(?:facebook|twitter|instagram)).*",
+        [RegularExpression(@"^(https://youtu\.be/|https://www\.youtube\.com/).+$",
             ErrorMessage = "Este enlace no parece ser de facebook,instagram o twitter")]
         [MinLength(4, ErrorMessage = "El link proporcionado parece demasiado corto")]
         [MaxLength(100, ErrorMessage = "Este link es demasiado largo")]
         public string? Link { get; set; }
 
-        [RegularExpression(@"^(https?://)?(www\.)?(facebook\.com/|twitter\.com/|instagram\.com/).+$",
+        [RegularExpression(@"^(?=.*(?:facebook|twitter|instagram)).*",
           ErrorMessage = "El enlace no parece ser de una red social.")]
 
         [Required(ErrorMessage = "El campo Redes es obligatorio.")]
