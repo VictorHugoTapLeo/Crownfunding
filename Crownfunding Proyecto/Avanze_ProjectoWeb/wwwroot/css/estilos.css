@@ -272,4 +272,7 @@ body {
     }
 
 
-
+.error {
+    color: #F34479;
+    font-size: 12px;
+}
