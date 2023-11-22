@@ -133,7 +133,9 @@ label {
     height: 30px;
     width:225px;
 }
-
+.textAlineado {
+    text-align: center;
+}
 
 .separacion {
     padding-top: 10px;
@@ -142,4 +144,17 @@ label {
 .check {
     color: #B9B9B9;
     font-weight: bold;
+}
+.error {
+    color: #F34479;
+    font-size:12px;
+}
+.custom-button {
+    background-color: #79C37C;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    text-decoration: none;
 }

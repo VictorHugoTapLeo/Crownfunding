@@ -34,23 +34,23 @@
                         <div class="separacion">
                             <input asp-for="usarioModeloVeri.Nombre" type="text" placeholder="Ingrese su nombre Completo" class="input">
                             <br />
-                            <span asp-validation-for="usarioModeloVeri.Nombre"></span>
+                            <span class="error" asp-validation-for="usarioModeloVeri.Nombre"></span>
                         </div>
 
                         <div class="separacion">
                             <input asp-for="usarioModeloVeri.Apellido" type="text" placeholder="Ingrese su Apellido" class="input">
                             <br />
-                            <span asp-validation-for="usarioModeloVeri.Apellido"></span>
+                            <span class="error" asp-validation-for="usarioModeloVeri.Apellido"></span>
                         </div>
                         <div class="separacion">
                             <input asp-for="usarioModeloVeri.SegundoApellido" type="text" placeholder="Ingrese su Apellido Materno" class="input">
                             <br />
-                            <span asp-validation-for="usarioModeloVeri.SegundoApellido"></span>
+                            <span class="error" asp-validation-for="usarioModeloVeri.SegundoApellido"></span>
                         </div>
                         <div class="separacion">
                             <input asp-for="usarioModeloVeri.NombreUsuario" type="text" placeholder="Escriba un nombre de usuario" class="input">
                             <br />
-                            <span asp-validation-for="usarioModeloVeri.NombreUsuario"></span>
+                            <span class="error" asp-validation-for="usarioModeloVeri.NombreUsuario"></span>
                         </div>
                     </div>
                     <div class="col-6">
@@ -58,35 +58,35 @@
                         <div class="separacion">
                             <input asp-for="usarioModeloVeri.Correo" type="text" placeholder="Ingrese su Correo" class="input">
                             <br />
-                            <span asp-validation-for="usarioModeloVeri.Correo"></span>
+                            <span class="error" asp-validation-for="usarioModeloVeri.Correo"></span>
                         </div>
                         <div class="separacion">
                             <input asp-for="usarioModeloVeri.telefono" type="text" placeholder="Escriba su telefono" class="input">
                             <br />
-                            <span asp-validation-for="usarioModeloVeri.telefono"></span>
+                            <span class="error" asp-validation-for="usarioModeloVeri.telefono"></span>
                         </div>
                         <div class="separacion">
                             <input asp-for="usarioModeloVeri.Contraseña" type="password" placeholder="Ingrese su Contraseña" class="input">
                             <br />
-                            <span asp-validation-for="usarioModeloVeri.Contraseña"></span>
+                            <span class="error" asp-validation-for="usarioModeloVeri.Contraseña"></span>
                         </div>
 
                         <div class="separacion">
                             <input asp-for="usarioModeloVeri.ConfirmarContraseña" id="confirmarcontraseña" type="password" placeholder="Confirmar su Contraseña" class="input">
                             <br />
-                            <span asp-validation-for="usarioModeloVeri.ConfirmarContraseña"></span>
+                            <span class="error" asp-validation-for="usarioModeloVeri.ConfirmarContraseña"></span>
                         </div>
                     </div>
                 </div>
-
-                <p class="custom-p">Agrega una foto de perfil</p>
+                
+                <p class="custom-p check">Agrega una foto de perfil</p>
                 <div class="custom-form-group">
                         <input  type="file" class="custom-button" asp-for="usarioModeloVeri.fotoUser" id="inputFinalProductPng" >
-                        <span class="custom-validation" asp-validation-for="usarioModeloVeri.fotoUser"></span>
-                            <img id="vistaPreviaImagen3" src="#" alt="Vista previa de la imagen" style="max-width: 150px; max-height: 150px;" />
+                        <span class="custom-validation error" asp-validation-for="usarioModeloVeri.fotoUser"></span><br><br/>
+                        <img id="vistaPreviaImagen3" src="#" alt="Vista previa de la imagen" style="max-width: 150px; max-height: 150px;" />
                 </div>
        
-                    <br><br/>
+                   
                 <div class="form-check separacion">
                     <input type="checkbox" id="enviarProyectos" name="enviarProyectos" class="form-check-input" />
                     <label class="check" for="enviarProyectos">Envíenme una combinación semanal de proyectos seleccionados exclusivamente para mí, además de noticias ocasionales de Crowdfunding</label>

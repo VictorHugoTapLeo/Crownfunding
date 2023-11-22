@@ -1,0 +1,35 @@
+﻿@page
+@model Avanze_ProjectoWeb.Pages.Projecto.DeleteProjectModel
+@{
+    @if (@CrowdFundingDAO.Model.SessionClass.SessionRole != "")
+    {
+        Layout = "_LayoutLogin";
+    }
+    else
+    {
+        Layout = "_Layout";
+    }
+}
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="~/css/crearCampaña.css" asp-append-version="true" />
+</head>
+
+
+<body>
+    <div class="container">
+        <div class="box1">
+            <h1 class="custom-h1">Eliminar Proyecto</h1>
+
+            <p class="custom-h3">¿Estás seguro de que deseas eliminar este projecto?</p>
+
+            <form method="post">
+
+                <input type="hidden" asp-for="ProjectId" />
+                <button type="submit" class="custom-button">Eliminar</button>
+                <a asp-page="editProjectLista" class="custom-button text-no-underline">Cancelar</a>
+            </form>
+        </div>
+    </div>
+</body>

@@ -27,6 +27,7 @@
               
                 <th> Nombre de Projecto </th>
                 <th></th>
+                 <th></th>
             </tr>
         </thead>
         <tbody>
@@ -37,7 +38,11 @@
                     <td>@prod.title</td>
 
                     <td>
-                        <a class="btn1" asp-page="editProject" asp-route-id="@prod.id"> Edit</a>
+                        <a class="btn1" asp-page="editProject" asp-route-id="@prod.id"> Editar</a>
+
+                    </td>
+                     <td>
+                        <a class="btn1" asp-page="DeleteProject" asp-route-id="@prod.id"> Eliminar</a>
 
                     </td>
                 </tr>
