@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Avanze_ProjectoWeb.props" />
+</Project>

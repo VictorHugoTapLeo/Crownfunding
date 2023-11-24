@@ -18,10 +18,14 @@
           "System.Security.Principal.Windows": "4.7.0"
         },
         "compile": {
-          "ref/netstandard2.0/_._": {}
+          "ref/netstandard2.0/_._": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/Microsoft.Win32.Registry.dll": {}
+          "lib/netstandard2.0/Microsoft.Win32.Registry.dll": {
+            "related": ".xml"
+          }
         },
         "runtimeTargets": {
           "runtimes/unix/lib/netstandard2.0/Microsoft.Win32.Registry.dll": {
@@ -77,10 +81,14 @@
           "runtime.native.System.Data.SqlClient.sni": "4.7.0"
         },
         "compile": {
-          "ref/netcoreapp2.1/System.Data.SqlClient.dll": {}
+          "ref/netcoreapp2.1/System.Data.SqlClient.dll": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netcoreapp2.1/System.Data.SqlClient.dll": {}
+          "lib/netcoreapp2.1/System.Data.SqlClient.dll": {
+            "related": ".xml"
+          }
         },
         "runtimeTargets": {
           "runtimes/unix/lib/netcoreapp2.1/System.Data.SqlClient.dll": {
@@ -100,10 +108,14 @@
           "System.Security.Principal.Windows": "4.7.0"
         },
         "compile": {
-          "ref/netstandard2.0/_._": {}
+          "ref/netstandard2.0/_._": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/System.Security.AccessControl.dll": {}
+          "lib/netstandard2.0/System.Security.AccessControl.dll": {
+            "related": ".xml"
+          }
         },
         "runtimeTargets": {
           "runtimes/win/lib/netcoreapp2.0/System.Security.AccessControl.dll": {
@@ -115,10 +127,14 @@
       "System.Security.Principal.Windows/4.7.0": {
         "type": "package",
         "compile": {
-          "ref/netcoreapp3.0/_._": {}
+          "ref/netcoreapp3.0/_._": {
+            "related": ".xml"
+          }
         },
         "runtime": {
-          "lib/netstandard2.0/System.Security.Principal.Windows.dll": {}
+          "lib/netstandard2.0/System.Security.Principal.Windows.dll": {
+            "related": ".xml"
+          }
         },
         "runtimeTargets": {
           "runtimes/unix/lib/netcoreapp2.1/System.Security.Principal.Windows.dll": {
@@ -469,19 +485,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\carst\\.nuget\\packages\\": {}
+    "C:\\Users\\Sacha4000\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\carst\\OneDrive\\Escritorio\\donde\\ultimodwelos ultimos\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj",
+      "projectUniqueName": "C:\\Users\\Sacha4000\\Desktop\\CRISFINALSISTEMAS\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj",
       "projectName": "Avanze_ProjectoWeb",
-      "projectPath": "C:\\Users\\carst\\OneDrive\\Escritorio\\donde\\ultimodwelos ultimos\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj",
-      "packagesPath": "C:\\Users\\carst\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\carst\\OneDrive\\Escritorio\\donde\\ultimodwelos ultimos\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\obj\\",
+      "projectPath": "C:\\Users\\Sacha4000\\Desktop\\CRISFINALSISTEMAS\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\Avanze_ProjectoWeb.csproj",
+      "packagesPath": "C:\\Users\\Sacha4000\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Sacha4000\\Desktop\\CRISFINALSISTEMAS\\Crownfunding\\Crownfunding Proyecto\\Avanze_ProjectoWeb\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\carst\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Sacha4000\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -489,14 +505,15 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "projectReferences": {
-            "C:\\Users\\carst\\OneDrive\\Escritorio\\donde\\ultimodwelos ultimos\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj": {
-              "projectPath": "C:\\Users\\carst\\OneDrive\\Escritorio\\donde\\ultimodwelos ultimos\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj"
+            "C:\\Users\\Sacha4000\\Desktop\\CRISFINALSISTEMAS\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj": {
+              "projectPath": "C:\\Users\\Sacha4000\\Desktop\\CRISFINALSISTEMAS\\Crownfunding\\Crownfunding Proyecto\\CrowdFundingDAO\\CrowdFundingDAO.csproj"
             }
           }
         }
@@ -522,7 +539,8 @@
           "net47",
           "net471",
           "net472",
-          "net48"
+          "net48",
+          "net481"
         ],
         "assetTargetFallback": true,
         "warn": true,
@@ -534,7 +552,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
       }
     }
   }

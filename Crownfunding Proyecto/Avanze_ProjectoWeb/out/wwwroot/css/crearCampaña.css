@@ -1,0 +1,140 @@
+﻿
+body {
+    background-color: #F5F5F5;
+    color: #333; /* Letra oscura */
+    /*font-family: 'Alata', sans-serif;*/
+}
+p{
+    color:gray;
+}
+.custom-button {
+    background-color: #79C37C;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+
+}
+.distancia {
+    padding-top: 30px;
+    padding-bottom: 60px;
+}
+.custom-input {
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    color: black;
+    padding: 10px;
+    width:400px;
+}
+
+.custom-textarea {
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    padding: 10px;
+    width: 400px;
+}
+
+.custom-h1,
+.custom-h2,
+.custom-h3,
+.custom-h4 {
+    color: #333; /* Letra oscura */
+}
+
+.custom-alert {
+    background-color: #79C37C;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+}
+
+.apoyo-checkbox:checked + .apoyo-label {
+    background-color: #79C37C;
+    border-radius: 5px;
+    color: white;
+}
+
+/* Estilos para los elementos del formulario */
+.custom-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin: 10px 0;
+}
+
+/* Estilos para los elementos de la sección de imágenes */
+.form-control-file {
+    background-color: #79C37C;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+}
+
+/* Estilos para los selects en el formulario */
+select {
+    background-color: #79C37C;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px;
+}
+
+/* Estilos para el botón de submit */
+button[type="submit"] {
+    background-color: #79C37C;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* Cambiar el color del borde y el fondo del checkbox */
+input[type="checkbox"].very {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 20px; /* Ancho personalizado para el checkbox */
+    height: 20px; /* Altura personalizada para el checkbox */
+    background-color: #79C37C; /* Cambia el color de fondo a verde cuando está marcado */
+    border-radius: 4px; /* Añade esquinas redondeadas al checkbox */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el checkbox */
+    position: relative; /* Necesario para posicionar el símbolo de tique */
+    margin-right: 10px;
+}
+
+    /* Cambiar el color del tique en el checkbox a blanco */
+    input[type="checkbox"].very::after {
+        content: '\2713'; /* Código unicode del símbolo de tique */
+        color: white; /* Cambia el color del tique a blanco */
+        font-size: 16px; /* Tamaño del tique */
+        position: absolute;
+        top: 50%; /* Centra verticalmente el tique en el contenedor */
+        left: 50%; /* Centra horizontalmente el tique en el contenedor */
+        transform: translate(-50%, -50%); /* Alinea el tique en el centro del contenedor */
+        opacity: 0; /* El tique está oculto inicialmente */
+    }
+
+    /* Mostrar el tique cuando el checkbox está marcado */
+    input[type="checkbox"].very:checked::after {
+        opacity: 1; /* Mostrar el tique cuando el checkbox está marcado */
+    }
+.checkbox-label {
+    display: flex; /* Usar un contenedor flex para alinear horizontalmente */
+    align-items: center; /* Centrar verticalmente el contenido */
+    padding-bottom:5px;
+}
+.custom-input-file {
+    background-color: white; /* Fondo blanco */
+    border: none; /* Eliminar bordes */
+    border-radius: 5px; /* Bordes redondeados */
+    padding: 3px 8px; /* Espaciado interno más pequeño */
+    cursor: pointer; /* Cambiar el cursor al pasar por encima */
+}

@@ -1,0 +1,6 @@
+C:\Users\Sacha4000\Desktop\CRISFINALSISTEMAS\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\bin\Release\CrowdFundingDAO.dll
+C:\Users\Sacha4000\Desktop\CRISFINALSISTEMAS\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\bin\Release\CrowdFundingDAO.pdb
+C:\Users\Sacha4000\Desktop\CRISFINALSISTEMAS\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Release\CrowdFundingDAO.csproj.AssemblyReference.cache
+C:\Users\Sacha4000\Desktop\CRISFINALSISTEMAS\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Release\CrowdFundingDAO.csproj.CoreCompileInputs.cache
+C:\Users\Sacha4000\Desktop\CRISFINALSISTEMAS\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Release\CrowdFundingDAO.dll
+C:\Users\Sacha4000\Desktop\CRISFINALSISTEMAS\Crownfunding\Crownfunding Proyecto\CrowdFundingDAO\obj\Release\CrowdFundingDAO.pdb

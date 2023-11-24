@@ -1,0 +1,229 @@
+/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand[b-wbmk0jgvxk] {
+    white-space: normal;
+    text-align: center;
+    word-break: break-all;
+}
+
+a[b-wbmk0jgvxk] {
+    color: #0077cc;
+}
+
+.btn-primary[b-wbmk0jgvxk] {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active[b-wbmk0jgvxk], .nav-pills .show > .nav-link[b-wbmk0jgvxk] {
+    color: #fff;
+    background-color: #1b6ec2;
+    border-color: #1861ac;
+}
+
+.border-top[b-wbmk0jgvxk] {
+    border-top: 1px solid #e5e5e5;
+}
+
+.border-bottom[b-wbmk0jgvxk] {
+    border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow[b-wbmk0jgvxk] {
+    box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy[b-wbmk0jgvxk] {
+    font-size: 1rem;
+    line-height: inherit;
+}
+
+
+
+
+
+
+
+
+
+
+/* boton rosa */
+.button1[b-wbmk0jgvxk] {
+    background-color: #F34479;
+    color: white;
+    border: 2px solid #F34479;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 13px;
+    font-family: 'Alata', sans-serif;
+    width: 125px; /* Ajusta el ancho según tus necesidades */
+    height: 50px;
+}
+
+    .button1:hover[b-wbmk0jgvxk] {
+        background-color: white;
+        color: #F34479;
+    }
+
+/* boton blanco */
+.button2[b-wbmk0jgvxk] {
+    background-color: white;
+    color: #F34479;
+    border: 2px solid #F34479;
+    border-radius: 8px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    font-size: 13px;
+    font-family: 'Alata', sans-serif;
+    width: 125px;
+    height: 50px;
+}
+
+    .button2:hover[b-wbmk0jgvxk] {
+        background-color: #F34479;
+        color: white;
+    }
+
+/* li header */
+.headerText[b-wbmk0jgvxk] {
+    color: #9D9D9D;
+    font-family: 'Alata', sans-serif;
+}
+
+.ulHeader[b-wbmk0jgvxk] {
+    padding-left: 100px;
+}
+
+.divB[b-wbmk0jgvxk] {
+    padding-right: 50px;
+}
+
+
+.containerRender[b-wbmk0jgvxk] {
+    padding-top: 50px;
+    padding-bottom: 150px;
+}
+
+.containerFooter[b-wbmk0jgvxk] {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-left: 80px;
+}
+
+.footer1[b-wbmk0jgvxk] {
+    font-family: 'Alata', sans-serif;
+    background-color: #393939;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+body[b-wbmk0jgvxk] {
+    margin: 0;
+    padding: 0;
+}
+
+.enlaces[b-wbmk0jgvxk] {
+    color: gray;
+    font-size: 11px;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 10px;
+    padding-left: 35px;
+}
+
+.divBox[b-wbmk0jgvxk] {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    flex: 1;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.espacioRectangulo[b-wbmk0jgvxk] {
+    padding-top: 10px;
+}
+
+.rectangulo[b-wbmk0jgvxk] {
+    color: white;
+    font-size: 13px;
+    padding: 2px;
+    margin: 0;
+    position: relative;
+}
+
+    .rectangulo[b-wbmk0jgvxk]::before {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 1.5px;
+        background-color: #F34479;
+    }
+/* Estilo para el botón del menú */
+.menu-button[b-wbmk0jgvxk] {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    padding: 10px;
+    padding-right: 30px;
+}
+
+/* Estilo para las barras del botón del menú */
+.bar[b-wbmk0jgvxk] {
+    width: 30px;
+    height: 4px;
+    background-color: #F34479;
+    margin: 6px 0;
+    transition: background-color 0.3s;
+}
+
+/* Estilo para el menú desplegable (inicialmente oculto) */
+.menu[b-wbmk0jgvxk] {
+    display: none;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.8); /* Transparencia */
+    border-radius: 10px; /* Borde redondeado */
+    padding: 10px;
+    text-align: center;
+    top: 60px; /* Ajusta la posición vertical para que esté más abajo */
+    right: 25px;
+    width: 200px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+    /* Estilo para los enlaces dentro del menú */
+    .menu a[b-wbmk0jgvxk] {
+        display: block;
+        padding: 5px 0;
+        color: #333;
+        text-decoration: none;
+        transition: color 0.3s;
+    }
+
+        /* Cambia el color del texto al pasar el cursor sobre los enlaces */
+        .menu a:hover[b-wbmk0jgvxk] {
+            color: #F34479;
+        }
+    /*.menu a:nth-child(even) {
+            background: rgba(0, 0, 0, 0.2); 
+        }*/
+
+    /* Estilo para el menú desplegado */
+    .menu.active[b-wbmk0jgvxk] {
+        display: block;
+    }

@@ -1,0 +1,171 @@
+﻿
+
+.proyecto-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}
+
+.proyecto {
+    width: calc(33.33% - 20px); 
+    margin: 10px;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+    background-color: white;
+}
+
+    .proyecto img {
+        height: 200px;
+        
+        border-radius: 10px;
+    }
+
+
+body {
+    font-family: 'Alata', sans-serif;
+    background-color: #F5F5F5;
+}
+h2 {
+    font-weight: bold;
+    text-align: center;
+    padding-bottom:40px;
+}
+.progress {
+    background-color: #79C37C;
+    border-radius: 50px; 
+    padding: 10px;
+    text-align: center; 
+}
+
+.progress-text {
+    color: white;
+}
+.titleProyect {
+    font-weight: bold;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    font-size: 22px;
+}
+small {
+    color: #4D4D4D;
+}
+.custom-progress {
+    background-color: #F5F5F5;
+    border-radius: 10px; 
+    padding: 10px;
+    text-align: center;
+    color: #4D4D4D; 
+    font-weight: bold;
+
+}
+.separacion {
+    padding-top: 40px;
+
+}
+
+.button-container {
+    padding-bottom: 30px;
+    padding-top: 30px;
+    text-align: center; /* Alinea los botones horizontalmente en el centro si es necesario */
+}
+
+    .button-container button { 
+        margin-right: 10px; /* Agrega un margen entre los botones si deseas */
+    }
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px; /* Bordes redondeados */
+    color: white;
+    transition: background-color 0.3s, border 0.3s;
+    cursor: pointer;
+    width: 150px; /* Ancho fijo para ambos botones */
+    text-align: center; /* Alineación de texto al centro */
+}
+
+.button-red {
+    background-color: #F96060;
+    border: 2px solid #F96060;
+}
+
+.button-green {
+    background-color: #79C37C;
+    border: 2px solid #79C37C;
+}
+
+.button:hover {
+    background-color: transparent; /* Fondo transparente al pasar el puntero */
+    color:black;
+}
+.button-red:hover {
+    color: #F96060;
+}
+.button-green:hover {
+    color: #79C37C;
+}
+
+
+.buttonBlanco {
+    background-color: white;
+    color: black;
+    min-width: 100px; /* Establece un ancho mínimo */
+    min-height: 25px; /* Establece una altura mínima */
+    border-color: black;
+    border-radius: 5px;
+}
+
+    .buttonBlanco:hover {
+        opacity: 0.8;
+    }
+
+.buttonNegro {
+    background-color: black;
+    color: white;
+    min-width: 140px; /* Establece un ancho mínimo */
+    min-height: 50px; /* Establece una altura mínima */
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    .buttonNegro:hover {
+        opacity: 0.8;
+    }
+#listaTiqueable {
+    display: none; /* Inicialmente, la lista está oculta */
+    position: absolute;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    max-width: 300px; /* Ancho máximo que se ajustará al contenido */
+    text-align: center; /* Centrar el contenido */
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2); /* Sombreado */
+}
+
+    /* Estilo para los elementos de la lista */
+    #listaTiqueable li {
+        list-style: none;
+        margin: 10px 0;
+    }
+
+.input {
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    height: 30px;
+    width: 700px;
+    text-align: center;
+}
+.alineado {
+    display: flex;
+    flex-direction: row; /* Alineación horizontal */
+    justify-content: center; /* Centrar horizontalmente */
+    align-items: center;
+}
+    .alineado form > * {
+        margin-right: 20px; /* Espacio entre cada elemento */
+    }
