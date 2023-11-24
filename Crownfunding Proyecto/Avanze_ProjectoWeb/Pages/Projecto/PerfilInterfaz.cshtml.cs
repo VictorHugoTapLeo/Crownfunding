@@ -15,7 +15,7 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
         public int NApoyadas = 0;
         ProjectImpl p;
 
-        //Codigo Cristian
+        //Codigo cr
     
         public List<Project> ProjectsLista { get; set; }
         public List<Project> SupportedByMe { get; set; }
@@ -43,9 +43,9 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
             NSeguidas = myFollows.Count;
             NApoyadas = mySupports.Count;
 
-            //Codigo Cristian--Muestra los proyectos correspondiwentes al usuario logeado
-            ProjectsLista = p.SelectMyPro(SessionClass.SessionId); //envez de uno tiene que ser el sessionUserID -Pendiente
-            SupportedByMe = p.SupportedProByMe(SessionClass.SessionId);//porjectos a losque yo di apoyo-SessionUserID,igual
+            //Codigo cr-Muestra los proyectos correspondiwentes al usuario logeado
+            ProjectsLista = p.SelectMyPro(SessionClass.SessionId); 
+            SupportedByMe = p.SupportedProByMe(SessionClass.SessionId);
         }
 
 

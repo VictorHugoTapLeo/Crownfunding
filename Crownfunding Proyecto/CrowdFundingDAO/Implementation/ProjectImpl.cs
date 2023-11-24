@@ -62,7 +62,7 @@ namespace CrowdFundingDAO.Implementation
             {
                 throw ex;
             }
-            return t;
+           
         }
         public int ids { get; set; }
         public int idsUp { get; set; }

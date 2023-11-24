@@ -23,46 +23,43 @@
 
             <form method="post">
                 <div>
-                    <label for="Name">Nombre</label><br></br>
-                    <input type="text" class="input" name="name" id="name" asp-for="User.name" /><br></br>
+                    <label for="Name">Nombre</label><br><br/>
+                    <input type="text" class="input" name="name" id="name" asp-for="User.name" /><br><br/>
                 </div>
 
                 <div>
-                    <label for="LastName">Apellido</label><br></br>
-                    <input type="text" class="input" name="lastName" id="lastName" asp-for="User.lastName" /><br></br>
+                    <label for="LastName">Apellido</label><br><br/>
+                    <input type="text" class="input" name="lastName" id="lastName" asp-for="User.lastName" /><br><br/>
                 </div>
 
                 <div>
-                    <label for="SecondLastName">Segundo Apellido</label><br></br>
-                    <input type="text" class="input" name="secondLastName" id="secondLastName" asp-for="User.secondLastName" /><br></br>
+                    <label for="SecondLastName">Segundo Apellido</label><br><br/>
+                    <input type="text" class="input" name="secondLastName" id="secondLastName" asp-for="User.secondLastName" /><br><br/>
                 </div>
 
                 <div>
-                    <label for="UserName">Nombre de Usuario</label><br></br>
-                    <input type="text" class="input" name="userName" id="userName" asp-for="User.userName" /><br></br>
+                    <label for="UserName">Nombre de Usuario</label><br><br/>
+                    <input type="text" class="input" name="userName" id="userName" asp-for="User.userName" /><br><br/>
                 </div>
 
                 <div>
-                    <label for="Password">Contraseña</label><br></br>
-                    <input type="password" class="input" name="password" id="password" asp-for="User.password" /><br></br>
+                    <label for="Password">Contraseña</label><br><br/>
+                    <input type="password" class="input" name="password" id="password" asp-for="User.password" /><br><br/>
                 </div>
-                @* <div class="form-group">
-                <label for="Role">Rol:</label>
-                <input type="text" class="form-control" id="Role" asp-for="User.role" />
-                </div> *@
+             
+                <div>
+                    <label for="Email">Correo Electrónico</label><br><br/>
+                    <input type="email" class="input" name="email" id="email" asp-for="User.email" /><br><br/>
+                </div>
+                <div>
+                    <label for="PhoneNumber">Número de Teléfono</label><br><br/>
+                    <input type="tel" class="input" name="phoneNumber" id="phoneNumber" asp-for="User.phoneNumber" /><br><br/>
+                </div>
 
-                <div>
-                    <label for="Email">Correo Electrónico</label><br></br>
-                    <input type="email" class="input" name="email" id="email" asp-for="User.email" /><br></br>
-                </div>
-                <div>
-                    <label for="PhoneNumber">Número de Teléfono</label><br></br>
-                    <input type="tel" class="input" name="phoneNumber" id="phoneNumber" asp-for="User.phoneNumber" /><br></br>
-                </div>
 
                 <!-- Agrega campos para las demás propiedades del usuario aquí -->
 
-                <button type="submit" class="button1">Guardar</button><br></br>
+                <button type="submit" class="button1">Guardar</button><br><br>
                 <a class="button2 text-no-underline" asp-page="Index">Volver al índice</a>
             </form>
 

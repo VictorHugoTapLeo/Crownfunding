@@ -59,6 +59,7 @@ namespace CrowdFundingDAO.Implementation
             }
             return t;
         }
+        //COMENTARIOPENDIENTE
         public int Insert(Comment t)
         {
             query = @"INSERT INTO Comment ( description,idUser, projectId, userID)

@@ -48,12 +48,7 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
                 idrecu = id;
             Categorias = cat.SelectList();
 
-            // Mostrar el nombre del usuario en la vista
-
-            HttpContext.Session.SetInt32("SessionID", 0);
-            sessionID = HttpContext.Session.GetInt32("SessionID") ?? 0;
-
-            //preuba para edit 
+           
             ProjectImpl j = new ProjectImpl();
 
             Project k = new Project();
@@ -64,19 +59,19 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
 
 
 
+                //GET de los datos a partir de la id
            
-           
-            k = j.Get(id);
+                k = j.Get(id);
 
-            Projecto = new PaginaUnoModeldos();
-            Projecto.id = id;
-            Projecto.Titulo = k.title;
+                Projecto = new PaginaUnoModeldos();
+                Projecto.id = id;
+                Projecto.Titulo = k.title;
                 Projecto.projectPngbytes = k.projectPng;
                 Projecto.productionProcessPngbytes = k.productionProcessPng;
                 Projecto.finalProductPngbytes = k.finalProductPng;
                 Projecto.Link = k.campaingVideo;
-            Projecto.Redes = ck.Get(id).mediaLink;
-            Projecto.Tipo = Convert.ToString(k.categoryId);
+                Projecto.Redes = ck.Get(id).mediaLink;
+                Projecto.Tipo = Convert.ToString(k.categoryId);
 
                 List<Patron> patrons = kj.SelectPatronSoloIds(id);
 
@@ -102,44 +97,41 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
                 ListaPatron = kj.SelectPatron();
 
                 foreach (Description item in hi.GetAll(id))
-            {
-                if (item.type == "DescripcionGeneral")
                 {
-                    Projecto.DescripcionGeneral = item.description;
+                    if (item.type == "DescripcionGeneral")
+                    {
+                        Projecto.DescripcionGeneral = item.description;
+                    }
+               
+                    else if (item.type == "DescripcionPlanTiempo")
+                    {
+                        Projecto.DescripcionPlanTiempo = item.description;
+                    }
+                    else if (item.type == "DescripcionObjetivo")
+                    {
+                        Projecto.DescripcionObjetivo = item.description;
+                    }
+                    else if (item.type == "DescripcionPorque")
+                    {
+                        Projecto.DescripcionPorque = item.description;
+                    }
+                    else if (item.type == "DescripcionQueCrear")
+                    {
+                        Projecto.DescripcionQueCrear = item.description;
+                    }
+                    else if (item.type == "DescripcionComoSurgio")
+                    {
+                        Projecto.DescripcionComoSurgio = item.description;
+                    }
+                    else if (item.type == "DescripcionQuienEres")
+                    {
+                        Projecto.DescripcionQuienEres = item.description;
+                    }
+                    else if (item.type == "DescripcionRiesgos")
+                    {
+                        Projecto.DescripcionRiesgos = item.description;
+                    }
                 }
-                //else if (item.type == "ListaApoyos")
-                //{
-                //    Projecto.ListaApoyos = item.description;
-                //}
-                else if (item.type == "DescripcionPlanTiempo")
-                {
-                    Projecto.DescripcionPlanTiempo = item.description;
-                }
-                else if (item.type == "DescripcionObjetivo")
-                {
-                    Projecto.DescripcionObjetivo = item.description;
-                }
-                else if (item.type == "DescripcionPorque")
-                {
-                    Projecto.DescripcionPorque = item.description;
-                }
-                else if (item.type == "DescripcionQueCrear")
-                {
-                    Projecto.DescripcionQueCrear = item.description;
-                }
-                else if (item.type == "DescripcionComoSurgio")
-                {
-                    Projecto.DescripcionComoSurgio = item.description;
-                }
-                else if (item.type == "DescripcionQuienEres")
-                {
-                    Projecto.DescripcionQuienEres = item.description;
-                }
-                else if (item.type == "DescripcionRiesgos")
-                {
-                    Projecto.DescripcionRiesgos = item.description;
-                }
-            }
 
 
             
@@ -173,7 +165,7 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
 
                 Project pro = new Project();
 
-              pro.id= Projecto.id;
+                pro.id= Projecto.id;
                 pro.title = Projecto.Titulo;
 
                 using (var memoryStream = new MemoryStream())
@@ -185,21 +177,18 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
                 using (var memoryStreams = new MemoryStream())
                 {
                     Projecto.productionProcessPng.CopyTo(memoryStreams);
-                    pro.productionProcessPng = memoryStreams.ToArray(); // Asignamos los bytes a pro.projectPng
+                    pro.productionProcessPng = memoryStreams.ToArray(); // Asignamos los bytes a pro.productionProcessPng
                 }
 
                 using (var memoryStreamp = new MemoryStream())
                 {
                     Projecto.finalProductPng.CopyTo(memoryStreamp);
-                    pro.finalProductPng = memoryStreamp.ToArray(); // Asignamos los bytes a pro.projectPng
+                    pro.finalProductPng = memoryStreamp.ToArray(); // Asignamos los bytes a pro.finalProductPng
                 }
-                //pro.projectPng = "Not available";
-                //pro.productionProcessPng = "Not available";
-                //pro.finalProductPng = "Not available";
-                pro.userCampaingId = SessionClass.SessionId; //cambio id
+               
+                pro.userCampaingId = SessionClass.SessionId; 
                 pro.campaingVideo = Projecto.Link;
                 pro.categoryId = int.Parse(Projecto.Tipo);
-
                 ca.mediaLink = Projecto.Redes;
                 ca.projectId = Projecto.id;
                 ck.Update(ca);
@@ -210,11 +199,10 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
 
                 int idProjecto = Projecto.id;
                 //idProjecto debe ser el mismo id con el que el projecto de arriba es insertado a tu tabla 
-                //descripciones :
+               
                 List<Description> listaDescripciones = new List<Description>
                     {
                         new Description("DescripcionGeneral", Projecto.DescripcionGeneral,idProjecto),
-                       // new Description("ListaApoyos", Projecto.ListaApoyos,idProjecto),
                         new Description("DescripcionPlanTiempo", Projecto.DescripcionPlanTiempo,idProjecto),
                         new Description("DescripcionObjetivo", Projecto.DescripcionObjetivo,idProjecto),
                         new Description("DescripcionPorque", Projecto.DescripcionPorque,idProjecto),
@@ -232,11 +220,11 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
                 }
 
 
-
+                //Insert de Apoyos
                 p = new ProjectImpl();
                 p.DeletePatronProjectByProjectId(idProjecto);
 
-                //insercion de tablas porjecto y patron
+                
                 string idSinComa = Projecto.ListaApoyos.TrimEnd(',');
                 foreach (string apoyoId in idSinComa.Split(','))
                 {
@@ -252,15 +240,7 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
                 }
 
 
-
-
-
-
-
-
-
-
-                //limpiamos casillas
+                //limpiamos los campos
 
                 successMessage = "Informacion enviada exitosamente";
 

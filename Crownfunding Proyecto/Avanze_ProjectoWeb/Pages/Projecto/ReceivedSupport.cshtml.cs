@@ -21,12 +21,10 @@ namespace Avanze_ProjectoWeb.Pages.Projecto.Usuarios
             
 
             SupportImpl su = new SupportImpl();
-            //vaciado de los apoyos de x projecto
+            //vaciado de los apoyos de tus projecto
             idreci = id;
             SupportsLista= su.SelectMySupport(id);
 
-
-            //gg =hh.GetLista();
         }
 
 

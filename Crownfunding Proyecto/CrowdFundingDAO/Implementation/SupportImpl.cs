@@ -17,7 +17,7 @@ namespace CrowdFundingDAO.Implementation
             query = @"UPDATE Support SET status = 0 ,lastUpdate = CURRENT_TIMESTAMP ,userID = @userID WHERE id = @id";
             SqlCommand command = CreateBasicCommand(query);
             command.Parameters.AddWithValue("@id", t.id);
-          //  command.Parameters.AddWithValue("@userID", t.UserID);
+            //command.Parameters.AddWithValue("@userID", t.UserID);
             command.Parameters.AddWithValue("@userID", 1);
             try
             {
@@ -114,12 +114,10 @@ namespace CrowdFundingDAO.Implementation
                 throw ex;
             }
         }
-        //mis metodoss 
+        //Mis metodos 
         public List<Support> SelectMySupport(int idPro)
         {
-            //query = @"SELECT id, supporterId, projectId, supportType, supportVerification,status
-            //  FROM Support
-            //  WHERE status = 1 AND projectId=@id";
+         
             query = @" SELECT id , supporterId,projectId, supportType, supportVerification,status,(SELECT CONCAT(name, ' ', lastName, ' ',secondLastName) AS nameD FROM Userr WHERE id= supporterId) AS nameD
               FROM Support 
               WHERE status = 1 AND projectId=@id";
@@ -188,6 +186,35 @@ namespace CrowdFundingDAO.Implementation
                 throw ex;
             }
             return t;
+        }
+
+        public List<string> GetPatronProvidedNames(int idUser,int idProject)
+        {
+            List<string> patronProvidedNames = new List<string>();
+            string query = @"SELECT D.name AS PatronProvidedName
+                    FROM PatronProject P
+                    JOIN PatronProvided D ON P.idPatron = D.id
+					JOIN Project K ON P.idProject = K.id
+                    WHERE K.userCampaingId = @idUser AND k.id = @idProject";
+
+            SqlCommand command = CreateBasicCommand(query);
+            command.Parameters.AddWithValue("@idUser", idUser);
+            command.Parameters.AddWithValue("@idProject", idProject);
+            try
+            {
+                DataTable table = ExecuteDataTableCommand(command);
+
+                foreach (DataRow row in table.Rows)
+                {
+                    patronProvidedNames.Add(row["PatronProvidedName"].ToString());
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+
+            return patronProvidedNames;
         }
     }
 }

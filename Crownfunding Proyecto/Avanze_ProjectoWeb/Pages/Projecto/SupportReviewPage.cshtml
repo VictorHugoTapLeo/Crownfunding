@@ -30,15 +30,15 @@
             <label>
                 <input type="radio" asp-for="verificationStatus" value="0" /> No
             </label>
-            <br></br>
-            <span asp-validation-for="verificationStatus"></span> <!-- Mensaje de error para el campo Link -->
+            <br><br/>
+            <span asp-validation-for="verificationStatus"></span> 
             <h1 class="custom-h1">Observaciones o sugerencias</h1>
             <br>
             <textarea class="custom-textarea" asp-for="reviewDescripction" rows="3" placeholder="Escribe tus comentarios aquí"></textarea>
-            <span asp-validation-for="reviewDescripction"></span> <!-- Mensaje de error para ComentarioMision -->
+            <span asp-validation-for="reviewDescripction"></span> 
 
 
-            <br></br>
+            <br><br/>
             <button class="custom-button" type="submit">Registrar Review</button>
 
         </form>

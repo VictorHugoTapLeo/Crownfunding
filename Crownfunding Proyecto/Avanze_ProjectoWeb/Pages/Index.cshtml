@@ -20,14 +20,16 @@
             <h2>Inicio de Sesión</h2>
             <form method="post">
                 <label for="email">Email</label><br><br>
+                 <span class="error" asp-validation-for="@Model.email"></span><br>
                 <input class="input" type="email" id="email" asp-for="@Model.email"><br><br>
-                 <span asp-validation-for="@Model.email"></span> <!-- Mensaje de error para ComentarioMision -->
+                
 
                 <label for="password">Contraseña</label><br><br>
+                <span class="error" asp-validation-for="@Model.contraseña"></span><br>
                 <input class="input" type="password" id="password" asp-for="@Model.contraseña"><br><br>
-                 <span asp-validation-for="@Model.contraseña"></span> <!-- Mensaje de error para ComentarioMision -->
+                  
 
-                <a class="a" asp-area="" asp-page="/Projecto/recuperar">¿Olvidaste tu contraseña?</a><br><br>
+                @*<a class="a" asp-area="" asp-page="/Projecto/recuperar">¿Olvidaste tu contraseña?</a><br><br>*@
            
                 <button type="submit" class="button1">Iniciar Sesión</button>
         
@@ -36,7 +38,7 @@
         <div class="box2">
             <h2>¡Bienvenido!</h2>
             <p class="p1">Estamos a tu disposición para ayudarte.</p>
-            <p class="p2">¿No tienes cuenta?</p>
+            <p class="p2">¿Aun no estas registrado?</p>
             <a class="button2" href="/Projecto/formRegistro">Registrate</a>
         </div>
     </div>

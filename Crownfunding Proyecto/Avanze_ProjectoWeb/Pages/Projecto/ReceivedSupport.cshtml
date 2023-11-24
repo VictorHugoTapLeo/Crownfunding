@@ -20,20 +20,11 @@
 <body>
 
     <h2>Lista de Proyectos</h2>
-    <button style="padding: 10px; /* Tamaño fijo para el padding vertical y horizontal */
-        border-radius: 10px;
-        background-color: #F34479;
-        color: white;
-        border: 2px solid #F34479;
-        text-decoration: none;
-        margin-right: 5px;
-        transition: background-color 0.3s, color 0.3s;
-        display: inline-block;
-        align-items: center;
-        justify-content: center;
-        min-width: 100px; /* Establece un ancho mínimo */
-        height: 100%;
-        text-decoration: none;">  <a asp-page="PerfilInterfaz" style ="text-decoration: none; color: white;">Regresar</a></button>
+    <br><br/>
+    <div class="divBnt">
+        <a class="botonSalir" asp-page="PerfilInterfaz">Regresar</a>
+    </div>
+    
     
       
     <br>
@@ -49,6 +40,7 @@
                 
                 <th> Apoyos recibidos </th>
                 <th> Nombre de Patrocinador</th>
+                <th></th>
             </tr>
         </thead>
         <tbody>

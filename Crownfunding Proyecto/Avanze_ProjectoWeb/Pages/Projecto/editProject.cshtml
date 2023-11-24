@@ -17,21 +17,10 @@
 </head>
 
 <div class="container text-left">
-        <button style="padding: 10px; /* Tamaño fijo para el padding vertical y horizontal */
-        border-radius: 10px;
-        background-color: #79C37C;
-        color: white;
-        border: 2px solid #79C37C;
-        text-decoration: none;
-        margin-right: 5px;
-        transition: background-color 0.3s, color 0.3s;
-        display: inline-block;
-        align-items: center;
-        justify-content: center;
-        min-width: 100px; /* Establece un ancho mínimo */
-        height: 100%;
-        text-decoration: none;">  <a asp-page="PerfilInterfaz" style ="text-decoration: none; color: white;">Regresar</a></button>
-
+    <div class="divBnt">
+   <a class="botonSalir" asp-page="PerfilInterfaz" >Regresar</a>
+   </div>
+    <br>
     <h1 class="custom-h1">Crear una campaña</h1>
 
     <h3 class="custom-h3">Presentación del proyecto</h3>
@@ -53,13 +42,15 @@
     }
     <br />
 
-    ﻿@*enctype="multipart/form-data"*@
     <form method="post" enctype="multipart/form-data" class="custom-form">
         <input type="hidden" asp-for="Projecto.id" />
 
         <div>
             <div>
-                <p>Escribe un título y un subtítulo de forma clara y concisa para transmitir rápidamente la esencia de tu proyecto. Ambos aparecerán tanto en la página del proyecto como en la de prelanzamiento. También los verán los posibles patrocinadores si tu proyecto aparece en las páginas de la categoría, en los resultados de búsqueda o en los correos electrónicos que enviamos a nuestra comunidad.</p>
+                <p>Escribe un título y un subtítulo de forma clara y concisa para transmitir rápidamente la esencia de tu proyecto.
+                    Ambos aparecerán tanto en la página del proyecto como en la de prelanzamiento. También los verán los posibles
+                    patrocinadores si tu proyecto aparece en las páginas de la categoría, en los resultados de búsqueda o en los correos
+                    electrónicos que enviamos a nuestra comunidad.</p>
             </div>
             <div>
                 <div>
@@ -79,13 +70,13 @@
             <div>
                 <div>
                     <label for="DescripcionGeneral">Descripción General</label><br>
-                    <textarea asp-for="Projecto.DescripcionGeneral" rows="3" class="custom-textarea">  sdsdsdsd</textarea>
+                    <textarea asp-for="Projecto.DescripcionGeneral" rows="3" class="custom-textarea"></textarea>
                     <span asp-validation-for="Projecto.DescripcionGeneral" class="custom-validation"></span>
                 </div>
             </div>
         </div>
         <br />
-        <!--aumetnar checkboxes-->
+        <!-- checkboxes de apoyo-->
 
 
         <h1 class="apoyos-title">Lista de Apoyos</h1>
@@ -93,7 +84,7 @@
 
         @foreach (var patron in Model.ListaPatron)
         {
-            var formattedId = patron.Id.ToString().PadLeft(2, '0'); // Asegura que tenga dos dígitos
+            var formattedId = patron.Id.ToString().PadLeft(2, '0'); // Vaciado de los apoyos solicitados, Asegura que tenga dos dígitos
             <div>
                 <label>
                     <input type="checkbox" class="very" name="selectedPatrons" value="@formattedId" onclick="actualizarInput(this)" />
@@ -105,13 +96,6 @@
         <input class="custom-input" type="hidden" id="apoyosInput" readonly asp-for="Projecto.ListaApoyos" />
         <span class="custom-validation" asp-validation-for="Projecto.ListaApoyos"></span>
 
-
-
-
-
-
-
-        <!--sdsdsdsdsdsdsd-->
         <!--primera parte -->
         <div class="distancia">
             <button class="custom-button" type="button">Ir a la siguiente sección</button>
@@ -133,7 +117,7 @@
         <div class="custom-form-group">
 
             <textarea class="custom-textarea" asp-for="Projecto.DescripcionPlanTiempo" rows="3" placeholder="Escribe tus comentarios aquí"></textarea>
-            <span class="custom-validation" asp-validation-for="Projecto.DescripcionPlanTiempo"></span> <!-- Mensaje de error para ComentarioMision -->
+            <span class="custom-validation" asp-validation-for="Projecto.DescripcionPlanTiempo"></span> <!-- Mensaje de error -->
 
         </div>
 
@@ -144,7 +128,7 @@
         <div class="custom-form-group">
 
             <textarea class="custom-textarea" asp-for="Projecto.DescripcionObjetivo" rows="3" placeholder="Escribe tus comentarios aquí"></textarea>
-            <span class="custom-validation" asp-validation-for="Projecto.DescripcionObjetivo"></span> <!-- Mensaje de error para ComentarioMision -->
+            <span class="custom-validation" asp-validation-for="Projecto.DescripcionObjetivo"></span> <!-- Mensaje de error -->
 
         </div>
 
@@ -156,7 +140,7 @@
         <div class="custom-form-group">
 
             <textarea class="custom-textarea" asp-for="Projecto.DescripcionPorque" rows="3" placeholder="Escribe tus comentarios aquí"></textarea>
-            <span class="custom-validation" asp-validation-for="Projecto.DescripcionPorque"></span> <!-- Mensaje de error para ComentarioMision -->
+            <span class="custom-validation" asp-validation-for="Projecto.DescripcionPorque"></span> <!-- Mensaje de error -->
 
         </div>
 
@@ -176,7 +160,7 @@
         <div class="custom-form-group">
 
             <textarea class="custom-textarea" asp-for="Projecto.DescripcionQueCrear" rows="3" placeholder="Escribe tus comentarios aquí"></textarea>
-            <span class="custom-validation" asp-validation-for="Projecto.DescripcionQueCrear"></span> <!-- Mensaje de error para ComentarioMision -->
+            <span class="custom-validation" asp-validation-for="Projecto.DescripcionQueCrear"></span> <!-- Mensaje de error -->
 
         </div>
         <div class="custom-form-group text-left">
@@ -186,12 +170,10 @@
         <div class="custom-form-group">
 
             <textarea class="custom-textarea" asp-for="Projecto.DescripcionComoSurgio" rows="3" placeholder="Escribe tus comentarios aquí"></textarea>
-            <span class="custom-validation" asp-validation-for="Projecto.DescripcionComoSurgio"></span> <!-- Mensaje de error para ComentarioMision -->
+            <span class="custom-validation" asp-validation-for="Projecto.DescripcionComoSurgio"></span> <!-- Mensaje de error -->
 
         </div>
-        <!-- Aquí puedes agregar un elemento para comentario si lo deseas -->
-
-
+     
 
         <div class="distancia">
             <button class="custom-button" type="button">Ir a la siguiente sección</button>
@@ -209,7 +191,7 @@
         <div class="custom-form-group">
 
             <textarea class="custom-textarea" asp-for="Projecto.DescripcionQuienEres" rows="3" placeholder="Escribe tus comentarios aquí"></textarea>
-            <span class="custom-validation" asp-validation-for="Projecto.DescripcionQuienEres"></span> <!-- Mensaje de error para ComentarioMision -->
+            <span class="custom-validation" asp-validation-for="Projecto.DescripcionQuienEres"></span> <!-- Mensaje de error -->
 
         </div>
         <div class="custom-form-group text-left">
@@ -219,21 +201,23 @@
         <div class="custom-form-group">
 
             <textarea class="custom-textarea" asp-for="Projecto.DescripcionRiesgos" rows="3" placeholder="Escribe tus comentarios aquí"></textarea>
-            <span class="custom-validation" asp-validation-for="Projecto.DescripcionRiesgos"></span> <!-- Mensaje de error para ComentarioMision -->
+            <span class="custom-validation" asp-validation-for="Projecto.DescripcionRiesgos"></span> <!-- Mensaje de error -->
 
         </div>
-        <!-- Aquí puedes agregar un elemento para comentario si lo deseas -->
+        <!-- -->
 
 
         <div class="distancia">
             <button class="custom-button" type="button">Ir a la siguiente sección</button>
         </div>
 
-
-        <!-- Sección para la identidad de la campaña revisar desde acaa -->
         <h1 class="custom-h1">Muestra gráficamente la identidad de la campaña</h1>
         <h2 class="custom-h2">Imagen del Proyecto</h2>
-        <p class="custom-p">Agrega una imagen que represente claramente tu proyecto y que se vea bien en diferentes tamaños, ya que aparecerá en la página de tu proyecto, en el sitio web y (cuando se comparta) en las redes sociales. Tu imagen debe tener al menos 1024x576 píxeles. Se recortará en una proporción de 16:9. Evita imágenes con banners, distintivos o texto que podrían ser ilegibles en formatos más pequeños y ser penalizadas por el algoritmo de Facebook. Además, reducen tus posibilidades de aparecer en la página de inicio.</p>
+        <p class="custom-p">Agrega una imagen que represente claramente tu proyecto y que se vea bien en diferentes tamaños,
+            ya que aparecerá en la página de tu proyecto, en el sitio web y (cuando se comparta) en las redes sociales.
+            Tu imagen debe tener al menos 1024x576 píxeles. Se recortará en una proporción de 16:9. Evita imágenes con banners,
+            distintivos o texto que podrían ser ilegibles en formatos más pequeños y ser penalizadas por el algoritmo de Facebook.
+            Además, reducen tus posibilidades de aparecer en la página de inicio.</p>
 
         <div class="custom-form-group">
             <h4>Imagen del Proyecto</h4>
@@ -252,7 +236,7 @@
                     <img src="data:image/png;base64,@Convert.ToBase64String(projectPngBytes)" alt="Project image" width="400" height="400" />
                 }
             }
-            <br></br>
+            <br><br/>
         </div>
 
         <!-- Sección para el producto final -->
@@ -306,23 +290,23 @@
             <div>
                 <p class="custom-p">Link del video de la crowdfunding</p>
                 <input asp-for="Projecto.Link" class="custom-input" placeholder="https://www.youtube.com/embed/tuvideo">
-                <span asp-validation-for="Projecto.Link" class="custom-validation"></span> <!-- Mensaje de error para el campo Link -->
-                <br></br>
+                <span asp-validation-for="Projecto.Link" class="custom-validation"></span> 
+                <br><br/>
             </div>
             <div>
                 <h4 class="custom-h4">Social Media</h4>
                 <p class="custom-p">Agrega el link de una red social de preferencia para una mejor visualización de la campaña.</p>
                 <input asp-for="Projecto.Redes" class="custom-input" placeholder="Facebook, Twitter o Instagram">
-                <span class="custom-validation" asp-validation-for="Projecto.Redes"></span> <!-- Mensaje de error para el campo Redes -->
-                <br></br>
+                <span class="custom-validation" asp-validation-for="Projecto.Redes"></span> 
+                <br><br/>
             </div>
-            <!--TODO sql data pull-->
+            <!--Categoria de proyecto-->
             <div>
                 <h4 class="custom-h4">Categoría</h4>
                 <p class="custom-p">Elige una categoría para ayudar a los patrocinadores a encontrar tu proyecto.</p>
                 <select asp-for="Projecto.Tipo" class="custom-select">
                     @{
-                        // Obtén la lista de categorías
+                        // vaciado de la lista de categorías
 
                         foreach (var categoria in Model.Categorias)
                         {
@@ -330,15 +314,15 @@
                         }
                     }
                 </select>
-                <span asp-validation-for="Projecto.Tipo" class="custom-validation"></span> <!-- Mensaje de error para el campo Redes -->
+                <span asp-validation-for="Projecto.Tipo" class="custom-validation"></span> 
 
 
 
             </div>
 
         </div>
-        <br></br>
-        <!--boton submit-->
+        <br><br/>
+        <!--boton de submit-->
         <button type="submit" class="custom-button">Registrar</button>
 
 
@@ -361,12 +345,11 @@
     if (checkbox.checked) {
         if (!currentValue.includes(checkboxValue)) {
             apoyosInput.value += checkboxValue;
-            // Aquí también puedes agregar el apoyo a la lista en tu modelo C#
-            // Puedes hacerlo a través de JavaScript o haciendo una petición AJAX a tu servidor
+           
         }
     } else {
         apoyosInput.value = currentValue.replace(checkboxValue, '');
-        // También puedes quitar el apoyo de la lista en tu modelo C#
+       
     }
 }
 </script>

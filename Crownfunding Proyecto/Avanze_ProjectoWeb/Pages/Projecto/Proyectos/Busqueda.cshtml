@@ -18,7 +18,7 @@
 
 <body>
     <h2>Catalogo</h2>
-    <!-- Contenido del formulario aquí -->
+    
     <div class="alineado">
 
         <form>
@@ -66,8 +66,8 @@
                         <b>@proyecto.Item3</b>
                     </p>
                     <br>
-                    <button id="mostrarLista">    <a asp-page="/Projecto/ApoyoProyectos" asp-route-id="@proyecto.Item1">Visualizar</a>
-                </button>
+                    <a class="botonSalir" asp-page="/Projecto/ApoyoProyectos" asp-route-id="@proyecto.Item1">Visualizar</a>
+                
                  </div>
             </div>
         }
@@ -76,7 +76,7 @@
     </div>
 
     <script>
-        // JavaScript para mostrar/ocultar la lista al hacer clic en el botón
+        // mostrar/ocultar la lista al hacer clic en el botón
         document.getElementById("mostrarLista").addEventListener("click", function () {
             var lista = document.getElementById("listaTiqueable");
             if (lista.style.display === "none" || lista.style.display === "") {

@@ -27,7 +27,7 @@ namespace Avanze_ProjectoWeb.Pages.Projecto
             // Si las contraseñas coinciden, puedes realizar la acción de restablecimiento aquí.
             // Por ejemplo, actualizar la contraseña en la base de datos.
 
-            // Redirige a una página de éxito o cualquier otra página según tus necesidades.
+            // Redirige a una página de éxito 
             return RedirectToPage("/Projecto/restablecimientoContraseñaCompletado");
         }
     }
